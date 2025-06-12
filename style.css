@@ -3,9 +3,61 @@ Theme Name: kuntur-codeteam
 Theme URI: https://github.com/tailpress/tailpress
 Author: codeteam
 Author URI: https://tailpress.io
-Description: A WordPress theme made with TailPress.
+Description: Tema para agencia de viajes y turismo.
 Version: 0.1.0
 License: MIT
 License URI: https://github.com/tailpress/tailpress/blob/master/LICENSE
 Text Domain: codeteam_kuntur
 */
+
+/* Estilos base para plantilla personalizada WordPress */
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tipografía base */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    color: #222;
+    background: #fff;
+    line-height: 1.6;
+}
+
+/* Enlaces */
+a {
+    color: #0073aa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover,
+a:focus {
+    color: #005177;
+    text-decoration: underline;
+}
+
+/* Encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+/* Contenedores */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
