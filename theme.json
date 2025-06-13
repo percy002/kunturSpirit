@@ -11,17 +11,17 @@
         {
           "name": "Primary",
           "slug": "primary",
-          "color": "#2C7FFF"
+          "color": "#3C0C12"
         },
         {
           "name": "Secondary",
           "slug": "secondary",
-          "color": "#FD9A00"
+          "color": "#865042"
         },
         {
           "name": "Dark",
           "slug": "dark",
-          "color": "#18181C"
+          "color": "#424242"
         },
         {
           "name": "Light",

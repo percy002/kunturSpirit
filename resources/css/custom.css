@@ -4,10 +4,8 @@
   font-size: var(--text-lg);
   line-height: var(--text-lg--line-height);
 
-  :where(
-      .entry-content > *:not(li),
-      .block-editor-block-list__layout > *:not(li)
-    ) {
+  :where(.entry-content > *:not(li),
+    .block-editor-block-list__layout > *:not(li)) {
     margin-top: --spacing(6);
     margin-bottom: --spacing(6);
   }
@@ -17,6 +15,9 @@
     font-size: var(--text-2xl);
     line-height: var(--text-2xl--line-height);
     margin-top: --spacing(12);
+
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
   }
 
   :where(h3) {
@@ -81,10 +82,12 @@
     margin-bottom: 0 !important;
   }
 }
-.custom-logo{
+
+.custom-logo {
   height: 100%;
   width: auto;
 }
-.lang-item{
+
+.lang-item {
   list-style: none;
 }

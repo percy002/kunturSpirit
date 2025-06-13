@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
@@ -37,17 +40,6 @@
                             <div class="h-[50px]">
                                 <?php the_custom_logo(); ?>
 
-                            </div>
-                        <?php else: ?>
-                            <div class="flex items-center gap-2">
-                                <a href="<?php echo esc_url(home_url('/')); ?>"
-                                    class="!no-underline lowercase font-medium text-lg">
-                                    <?php bloginfo('name'); ?>
-                                </a>
-                                <?php if ($description = get_bloginfo('description')): ?>
-                                    <span class="text-sm font-light text-dark/80">|</span>
-                                    <span class="text-sm font-light text-dark/80"><?php echo esc_html($description); ?></span>
-                                <?php endif; ?>
                             </div>
                         <?php endif; ?>
                     </div>
@@ -123,7 +115,7 @@
         </header>
 
         <div id="content" class="site-content grow">
-            
+
 
             <?php do_action('tailpress_content_start'); ?>
             <main>
