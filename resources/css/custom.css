@@ -81,3 +81,10 @@
     margin-bottom: 0 !important;
   }
 }
+.custom-logo{
+  height: 100%;
+  width: auto;
+}
+.lang-item{
+  list-style: none;
+}
