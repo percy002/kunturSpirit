@@ -91,3 +91,11 @@
 .lang-item {
   list-style: none;
 }
+
+body {
+  background-repeat: repeat;
+  background-blend-mode: normal;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-attachment: scroll;
+}

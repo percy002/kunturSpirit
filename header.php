@@ -21,7 +21,8 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('bg-white text-zinc-900 antialiased'); ?>>
+<body <?php body_class('bg-cover bg-center'); ?>
+    style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/textura.webp');">
     <?php do_action('tailpress_site_before'); ?>
 
     <div id="page" class="min-h-screen flex flex-col">
