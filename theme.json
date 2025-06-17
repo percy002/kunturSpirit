@@ -19,6 +19,11 @@
           "color": "#865042"
         },
         {
+          "name": "Tertiary",
+          "slug": "tertiary",
+          "color": "#DD9650"
+        },
+        {
           "name": "Dark",
           "slug": "dark",
           "color": "#424242"
@@ -26,7 +31,7 @@
         {
           "name": "Light",
           "slug": "light",
-          "color": "#F4F4F5"
+          "color": "#818181"
         }
       ]
     },

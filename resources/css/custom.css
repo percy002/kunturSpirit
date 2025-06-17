@@ -98,4 +98,36 @@ body {
   background-origin: padding-box;
   background-clip: border-box;
   background-attachment: scroll;
+  font-family: "Oswald", sans-serif;
+  
+}
+section {
+  padding: 30px 0;
+}
+article{
+  box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+h1 {
+  font-size: 40px;
+  line-height: var(--text-5xl--line-height);
+  font-weight: var(--font-weight-semibold);
+  margin-top: --spacing(6);
+  margin-bottom: --spacing(3);
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  text-align: center;
+}
+a{
+  text-decoration: none !important;
+}
+p{
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: var(--font-weight-light);
+  font-size: var(--text-base);
+}
+span{
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+
 }
