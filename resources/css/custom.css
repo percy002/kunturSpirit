@@ -99,14 +99,17 @@ body {
   background-clip: border-box;
   background-attachment: scroll;
   font-family: "Oswald", sans-serif;
-  
+
 }
+
 section {
   padding: 30px 0;
 }
-article{
+
+article {
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
 h1 {
   font-size: 40px;
   line-height: var(--text-5xl--line-height);
@@ -117,17 +120,34 @@ h1 {
   font-style: normal;
   text-align: center;
 }
-a{
+
+button {
+  cursor: pointer !important;
+}
+
+a {
   text-decoration: none !important;
 }
-p{
+
+p {
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: var(--font-weight-light);
   font-size: var(--text-base);
 }
-span{
-    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 
+span {
+  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+
+}
+
+.menu-item::after {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background: url('data:image/svg+xml;utf8,<svg fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>') no-repeat center;
+  margin-left: 0.5rem;
+  color: var(--color-light);
 }

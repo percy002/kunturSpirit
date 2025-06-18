@@ -28,12 +28,12 @@
     <div id="page" class="min-h-screen flex flex-col">
         <?php do_action('tailpress_header'); ?>
 
-        <header class="container mx-auto py-6 fixed top-0 left-0 right-0 z-50 bg-transparente shadow-md">
-            <div class="md:flex md:justify-between md:items-center">
+        <header class="w-full mx-auto py-6 fixed top-0 left-0 right-0 z-50 bg-transparente shadow-md">
+            <div class="container md:flex md:justify-between md:items-center">
                 <div class="">
-                    <a href="">
+                    <button id="openMenu">
                         <i class="fa-solid fa-bars fa-inverse text-2xl"></i>
-                    </a>
+                    </button>
                 </div>
                 <div class="flex justify-between items-center">
                     <div>
@@ -113,6 +113,20 @@
                 </div>
 
             </div>
+            <?php get_template_part('template-parts/menuNavbar'); ?>
+            <script>
+                const openMenu = document.getElementById('openMenu');
+                const closeMenu = document.getElementById('closeMenu');
+                const sideMenu = document.getElementById('sideMenu');
+
+                openMenu.addEventListener('click', () => {
+                    sideMenu.classList.remove('-translate-x-full');
+                });
+
+                closeMenu.addEventListener('click', () => {
+                    sideMenu.classList.add('-translate-x-full');
+                });
+            </script>
         </header>
 
         <div id="content" class="site-content grow">
