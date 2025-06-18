@@ -203,10 +203,10 @@ get_header();
 </section>
 <!-- SECCION SLOGAN -->
 <section>
-    <div class="relative">
+    <div class="relative w-full">
 
-        <div class="bg-transparent relative h-[450px]">
-            <img class="h-full" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
+        <div class="bg-transparent relative h-[450px] ">
+            <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
                 style="filter: drop-shadow(-3px 11px 11px rgba(0,0,0,0.5))">
         </div>
         <div class="absolute top-1/2 -translate-y-1/2 right-[150px] w-[493px] text-white">
@@ -520,6 +520,31 @@ get_header();
     <div class="container flex flex-col gap-10">
         <div class="flex flex-col gap-5">
             <h1>Travel Associations & Certifications</h1>
+
+        </div>
+        <!-- logos enpresas -->
+        <div class="flex gap-8 w-full justify-center items-center h-[70px] flex-wrap">
+            <div class="flex-[1_0_0] h-full flex items-center">
+                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/mincultura.png" alt="logo ministerio de cultura" class="w-32">
+            </div>
+            <div class="flex-[1_0_0] h-full flex items-center">
+                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/protegeme.png" alt="logo ministerio de cultura" class="w-32">
+            </div>
+            <div class="flex-[1_0_0] h-full flex items-center">
+                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/perulogo.png" alt="logo ministerio de cultura" class="w-32">
+            </div>
+            <div class="flex-[1_0_0] h-full flex items-center">
+                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/gercetur.png" alt="logo ministerio de cultura" class="w-32">
+            </div>
+            <div class="flex-[1_0_0] h-full flex items-center">
+                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/promperu.png" alt="logo ministerio de cultura" class="w-32">
+            </div>
+            <div class="flex-[1_0_0] h-full flex items-center">
+                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/tripadvisor.png" alt="logo ministerio de cultura" class="w-32">
+            </div>
+            <div class="flex-[1_0_0] h-full flex items-center">
+                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/safetravels.png" alt="logo ministerio de cultura" class="w-32">
+            </div>
 
         </div>
 
