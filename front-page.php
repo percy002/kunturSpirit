@@ -8,14 +8,9 @@
 get_header();
 ?>
 
-<section>
-    <div class="carousel h-dvh bg-center bg-no-repeat" style="background: linear-gradient(180deg, rgba(65, 24, 13, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/mapi.webp')  0px -233.718px / 100% 132.74% no-repeat;
-
-Colors
-Hex
-Hex
-Background colors
-">
+<section class="py-0">
+    <div class="carousel h-dvh bg-center bg-no-repeat"
+        style="background: linear-gradient(180deg, rgba(65, 24, 13, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/mapi.webp')  0px -233.718px / 100% 132.74% no-repeat;">
 
         <div
             class="flex h-full pt-0 pr-[150px] pl-[150px] pb-[150px] flex-col justify-end gap-5 self-stretch items-center">
@@ -206,16 +201,329 @@ Background colors
         </div>
     </div>
 </section>
+<!-- SECCION SLOGAN -->
 <section>
     <div class="relative">
 
-        <div class="bg-transparent relative h-[600px]">
-            <img class="h-full" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt="">
+        <div class="bg-transparent relative h-[450px]">
+            <img class="h-full" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
+                style="filter: drop-shadow(-3px 11px 11px rgba(0,0,0,0.5))">
         </div>
-        <div class="absolute top-0 left-0">
-            <p>"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de los sueños."</p>
-            <a href="">Contáctenos</a>
+        <div class="absolute top-1/2 -translate-y-1/2 right-[150px] w-[493px] text-white">
+            <h1 class="text-right">"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de los sueños."
+            </h1>
+            <div class="flex justify-end">
+                <a href="" class="py-4 px-12 text-white bg-primary"><span>Contáctenos</span></a>
+            </div>
         </div>
+    </div>
+</section>
+<!-- SECCION DE TOURS PERU -->
+<section>
+    <div class="container flex flex-col gap-5">
+        <h1>Viaje por Perú: ¡Experiencias inolvidables!</h1>
+        <p>
+            Descubrir Perú es embarcarse en una aventura llena de contrastes, historia milenaria y paisajes que quitan
+            el aliento. Desde la majestuosidad de Machu Picchu hasta la inmensidad del desierto de Paracas, cada rincón
+            del país ofrece una experiencia única e inolvidable. En este viaje, te llevaremos por los sabores de su
+            gastronomía, los misterios de sus antiguas civilizaciones y la calidez de su gente. Prepárate para explorar
+            un Perú que va mucho más allá de los destinos turísticos tradicionales.
+        </p>
+    </div>
+    <div class="pt-10 flex flex-col gap-10">
+        <div class="container flex gap-7 justify-center">
+            <!-- card de tours -->
+            <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                <div class="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/camino.jpg" alt="">
+                </div>
+                <!-- contenido tour -->
+                <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                    <!-- etiquetas -->
+                    <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                        <div class="flex items-center gap-1.5 text-sm">
+                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                            <span class="text-light">13 días / 12 noches</span>
+                        </div>
+                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                            <span class="text-sm text-white">GRUPAL / PRIVADO</span>
+                        </div>
+                    </div>
+                    <!-- contenido -->
+                    <div class="flex flex-col gap-1.5">
+                        <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
+                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
+                            Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
+                            cultura y paisajes impresionantes.</p>
+
+                    </div>
+                    <!-- actions -->
+                    <div class="w-full py-2.5 px-5 flex justify-between items-center">
+                        <!-- precio -->
+                        <div class="flex flex-col justify-center" style="flex: 1 0 0">
+                            <!-- oferta -->
+                            <div class="flex gap-1.5 text-xs">
+                                <span>Antes: </span>
+                                <span class="font-bold">US$ 1250</span>
+                            </div>
+                            <span>Desde:</span>
+                            <span class="font-bold">US$ 1200</span>
+                        </div>
+                        <!-- botones -->
+                        <div class="flex gap-1.5 text-white ">
+                            <a href="" class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
+                            <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+            <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                <div class="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/camino.jpg" alt="">
+                </div>
+                <!-- contenido tour -->
+                <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                    <!-- etiquetas -->
+                    <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                        <div class="flex items-center gap-1.5 text-sm">
+                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                            <span class="text-light">13 días / 12 noches</span>
+                        </div>
+                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                            <span class="text-sm text-white">GRUPAL / PRIVADO</span>
+                        </div>
+                    </div>
+                    <!-- contenido -->
+                    <div class="flex flex-col gap-1.5">
+                        <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
+                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
+                            Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
+                            cultura y paisajes impresionantes.</p>
+
+                    </div>
+                    <!-- actions -->
+                    <div class="w-full py-2.5 px-5 flex justify-between items-center">
+                        <!-- precio -->
+                        <div class="flex flex-col justify-center" style="flex: 1 0 0">
+                            <!-- oferta -->
+                            <div class="flex gap-1.5 text-xs">
+                                <span>Antes: </span>
+                                <span class="font-bold">US$ 1250</span>
+                            </div>
+                            <span>Desde:</span>
+                            <span class="font-bold">US$ 1200</span>
+                        </div>
+                        <!-- botones -->
+                        <div class="flex gap-1.5 text-white ">
+                            <a href="" class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
+                            <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+            <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                <div class="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/camino.jpg" alt="">
+                </div>
+                <!-- contenido tour -->
+                <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                    <!-- etiquetas -->
+                    <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                        <div class="flex items-center gap-1.5 text-sm">
+                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                            <span class="text-light">13 días / 12 noches</span>
+                        </div>
+                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                            <span class="text-sm text-white">GRUPAL / PRIVADO</span>
+                        </div>
+                    </div>
+                    <!-- contenido -->
+                    <div class="flex flex-col gap-1.5">
+                        <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
+                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
+                            Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
+                            cultura y paisajes impresionantes.</p>
+
+                    </div>
+                    <!-- actions -->
+                    <div class="w-full py-2.5 px-5 flex justify-between items-center">
+                        <!-- precio -->
+                        <div class="flex flex-col justify-center" style="flex: 1 0 0">
+                            <!-- oferta -->
+                            <div class="flex gap-1.5 text-xs">
+                                <span>Antes: </span>
+                                <span class="font-bold">US$ 1250</span>
+                            </div>
+                            <span>Desde:</span>
+                            <span class="font-bold">US$ 1200</span>
+                        </div>
+                        <!-- botones -->
+                        <div class="flex gap-1.5 text-white ">
+                            <a href="" class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
+                            <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+
+
+        </div>
+        <div class="w-full flex justify-center">
+            <a href="" class="py-4 px-16 bg-primary text-white font-medium !no-underline"><span>VER MÁS
+                    EXPERIENCIAS</span></a>
+        </div>
+    </div>
+</section>
+<section>
+    <div class=""
+        style="background: linear-gradient(0deg, rgba(65, 24, 13, 0.50) 0%, rgba(65, 24, 13, 0.50) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/pallayponcho.webp') lightgray 0px -750.816px / 100% 790.241% no-repeat;">
+        <div class="container py-12 flex gap-12 justify-center items-center">
+            <div class="flex flex-col gap-2.5 text-white">
+                <span class="text-5xl font-medium text-center">Aventuras hechas a tu medida </span>
+                <span class="text-2xl font-normal text-center">Cada viaje con “Kuntur Spirit” es único.</span>
+            </div>
+            <div class="border-r border-white h-24"></div>
+            <div class="">
+                <a href="" class="bg-white text-primary py-4 px-12 font-semibold"><span>CONTACTANOS</span></a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section>
+    <div class="container flex flex-col gap-10">
+        <div class="flex flex-col gap-5">
+            <h1>Aventura - Trekking más populares</h1>
+            <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre
+                aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!</p>
+        </div>
+        <div class="flex justify-center gap-5 items-center">
+            <i class="fa-solid fa-chevron-left"></i>
+            <div class="flex gap-5 items-center">
+                <div class="" style="flex: 1 1 0;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
+                </div>
+                <div class="" style="flex: 1 1 0;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
+                </div>
+                <div class="" style="flex: 1 1 0;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
+                </div>
+                <div class="" style="flex: 1 1 0;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
+                </div>
+
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+
+    </div>
+</section>
+<section>
+    <div class="container flex flex-col gap-10">
+        <div class="flex flex-col gap-5">
+            <h1>Lo que dicen nuestros clientes</h1>
+            <p class="text-center">
+                Estamos orgullosos de cuidar cada detalle de nuestros servicios para nuestros clientes, la satisfacción
+                plena de nuestros viajeros es nuestra mejor recompensa y son ellos nuestros mejores defensores y quienes
+                con frecuencia, nos recomiendan a familiares o amigos cuando planifican un viaje a nuestra región.
+            </p>
+        </div>
+        <div class="flex justify-center gap-5 items-center">
+            <i class="fa-solid fa-chevron-left"></i>
+            <div class="flex gap-5 items-center">
+                <div class="" style="flex: 1 1 0;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
+                </div>
+                <div class="" style="flex: 1 1 0;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
+                </div>
+                <div class="" style="flex: 1 1 0;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
+                </div>
+
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+    </div>
+</section>
+<section>
+    <div class="container flex flex-col gap-10">
+        <div class="flex flex-col gap-5">
+            <h1>¿Por que viajar con Kuntur Spirit?</h1>
+            <p class="text-center">
+                Reserva tu estancia y disfruta de una experiencia única con Tierras de los Andes, especialista en viajes
+                personalizados en Perú.
+            </p>
+        </div>
+        <div class="flex gap-5">
+            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
+                    <p class="text-center text-primary font-semibold">Calidad de servicios </p>
+                    <p class="text-center">Medir la calidad real y detectar defectos en un programa es control de calidad.</p>
+
+                </div>
+            </div>
+            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
+                    <p class="text-center text-primary font-semibold">Viajes a medida</p>
+                    <p class="text-center">Viaje sin preocupaciones con diseño personalizado y satisfacción garantizada.</p>
+
+                </div>
+            </div>
+            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
+                    <p class="text-center text-primary font-semibold">Sostenibilidad</p>
+                    <p class="text-center">Nos preocupamos por preservar el entorno natural y cultural de Perú</p>
+
+                </div>
+            </div>
+            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
+                    <p class="text-center text-primary font-semibold">Espíritu de aventura</p>
+                    <p class="text-center">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
+
+                </div>
+            </div>
+            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
+                    <p class="text-center text-primary font-semibold">Respeto por la comunidad local</p>
+                    <p class="text-center">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<section>
+    <div class="container flex flex-col gap-10">
+        <div class="flex flex-col gap-5">
+            <h1>Información útil para el viajero</h1>
+            <p class="text-center">
+                Encuentre información esencial para su viaje: consejos, recomendaciones y datos prácticos para una
+                experiencia de viaje sin contratiempos.
+            </p>
+        </div>
+
+
+    </div>
+</section>
+<section>
+    <div class="container flex flex-col gap-10">
+        <div class="flex flex-col gap-5">
+            <h1>Travel Associations & Certifications</h1>
+
+        </div>
+
+
     </div>
 </section>
 <?php
