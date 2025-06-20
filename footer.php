@@ -13,10 +13,10 @@
 
 <?php do_action('tailpress_content_after'); ?>
 
-<footer id="colophon" class="bg-light/50 mt-12" role="contentinfo">
-    <div>
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/piedepagina.png" alt="imagen footer" />
-    </div>
+<div class="h-[170px]">
+    <img class="object-bottom object-cover h-full w-full" src="<?php echo get_template_directory_uri(); ?>/assets/images/piedepagina.png" alt="imagen footer" />
+</div>
+<footer id="" class="" role="contentinfo">
 
     <div class="bg-secondary">
         <div class="container flex justify-center gap-5 bg-secondary text-white py-5">

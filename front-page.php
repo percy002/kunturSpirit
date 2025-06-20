@@ -1,6 +1,6 @@
 <?php
 /**
- * Single post template file.
+ * front-page
  *
  * @package TailPress
  */
@@ -15,7 +15,7 @@ get_header();
         <div
             class="flex h-full pt-0 pr-[150px] pl-[150px] pb-[150px] flex-col justify-end gap-5 self-stretch items-center">
             <div class="text-white flex-col gap-2.5 items-center">
-                <h1 class="">Discover the magic of Machu Picchu - your adventure awaits!</h1>
+                <h1 class="text-white">Discover the magic of Machu Picchu - your adventure awaits!</h1>
                 <p class="text-lg font-medium text-center">Kuntur Spirit will craft your perfect Machu Picchu adventure,
                     connecting
                     you
