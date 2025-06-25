@@ -9,14 +9,14 @@ get_header();
 ?>
 
 <section class="py-0">
-    <div class="carousel h-dvh bg-center bg-no-repeat"
-        style="background: linear-gradient(180deg, rgba(65, 24, 13, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/mapi.webp')  0px -233.718px / 100% 132.74% no-repeat;">
+    <div class="carousel h-dvh bg-cover bg-no-repeat " style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/mapi.webp');
+background-position: center bottom;">
 
         <div
-            class="flex h-full pt-0 pr-[150px] pl-[150px] pb-[150px] flex-col justify-end gap-5 self-stretch items-center">
+            class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
             <div class="text-white flex-col gap-2.5 items-center">
                 <h1 class="text-white">Discover the magic of Machu Picchu - your adventure awaits!</h1>
-                <p class="text-lg font-medium text-center">Kuntur Spirit will craft your perfect Machu Picchu adventure,
+                <p class="font-medium text-center">Kuntur Spirit will craft your perfect Machu Picchu adventure,
                     connecting
                     you
                     to the wonders of the Andes and Inca history.</p>
@@ -54,7 +54,7 @@ get_header();
         </p>
     </div>
     <div class="pt-10 flex flex-col gap-10">
-        <div class="container flex gap-7 justify-center">
+        <div class="container flex flex-col lg:flex-row gap-7 justify-center">
             <!-- card de tours -->
             <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
                 <div class="">
@@ -209,14 +209,15 @@ get_header();
     <div class="relative w-full">
 
         <div class="bg-transparent relative h-[450px] ">
-            <img class="w-full" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
+            <img class="h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
                 style="filter: drop-shadow(-3px 11px 11px rgba(0,0,0,0.5))">
         </div>
-        <div class="absolute top-1/2 -translate-y-1/2 right-[150px] w-[493px] text-white">
-            <h1 class="text-right text-white">"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de los sueños."
+        <div class="absolute top-1/2 -translate-y-1/2 sm:right-[150px] w-[493px] text-white">
+            <h1 class="text-right text-white">"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de
+                los sueños."
             </h1>
             <div class="flex justify-end">
-                <a href="" class="py-4 px-12 text-white bg-primary"><span class="text-2xl">Contáctenos</span></a>
+                <a href="" class="py-2.5 lg:py-4 px-10 lg:px-12 text-white bg-primary"><span class="text-xl lg:text-2xl">Contáctenos</span></a>
             </div>
         </div>
     </div>
@@ -234,7 +235,7 @@ get_header();
         </p>
     </div>
     <div class="pt-10 flex flex-col gap-10">
-        <div class="container flex gap-7 justify-center">
+        <div class="container flex flex-col lg:flex-row gap-7 justify-center">
             <!-- card de tours -->
             <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
                 <div class="">
@@ -388,14 +389,14 @@ get_header();
 <section>
     <div class=""
         style="background: linear-gradient(0deg, rgba(65, 24, 13, 0.50) 0%, rgba(65, 24, 13, 0.50) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/pallayponcho.webp') lightgray 0px -750.816px / 100% 790.241% no-repeat;">
-        <div class="container py-12 flex gap-12 justify-center items-center">
+        <div class="container py-12 flex gap-12 justify-center items-center flex-wrap">
             <div class="flex flex-col gap-2.5 text-white">
                 <span class="text-5xl font-medium text-center">Aventuras hechas a tu medida </span>
                 <span class="text-2xl font-normal text-center">Cada viaje con “Kuntur Spirit” es único.</span>
             </div>
-            <div class="border-r border-white h-24"></div>
+            <div class="border-r border-white h-24 hidden lg:block"></div>
             <div class="">
-                <a href="" class="bg-white text-primary py-4 px-12 font-semibold"><span>CONTACTANOS</span></a>
+                <a href="" class="bg-white text-primary py-2.5 lg:py-4 px-10 lg:px-12 font-semibold"><span>CONTACTANOS</span></a>
             </div>
         </div>
     </div>
@@ -409,23 +410,23 @@ get_header();
                 aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!</p>
         </div>
         <div class="flex justify-center gap-5 items-center">
-            <i class="fa-solid fa-chevron-left"></i>
-            <div class="flex gap-5 items-center">
+            <i class="fa-solid fa-chevron-left" style=""></i>
+            <div class="flex gap-5 items-center" style="">
                 <div class="" style="flex: 1 1 0;">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
                 </div>
-                <div class="" style="flex: 1 1 0;">
+                <div class="hidden md:block" style="flex: 1 1 0;">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
                 </div>
-                <div class="" style="flex: 1 1 0;">
+                <div class="hidden lg:block" style="flex: 1 1 0;">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
                 </div>
-                <div class="" style="flex: 1 1 0;">
+                <div class="hidden lg:block" style="flex: 1 1 0;">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
                 </div>
 
             </div>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i class="fa-solid fa-chevron-right" style=""></i>
         </div>
 
 
@@ -447,10 +448,10 @@ get_header();
                 <div class="" style="flex: 1 1 0;">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
                 </div>
-                <div class="" style="flex: 1 1 0;">
+                <div class="hidden md:block" style="flex: 1 1 0;">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
                 </div>
-                <div class="" style="flex: 1 1 0;">
+                <div class="hidden lg:block" style="flex: 1 1 0;">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
                 </div>
 
@@ -469,46 +470,46 @@ get_header();
                 personalizados en Perú.
             </p>
         </div>
-        <div class="flex gap-5">
-            <div class="flex flex-col justify-between py-5 items-center bg-white"
+        <div class="flex flex-wrap gap-5 justify-center">
+            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
                 style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold">Calidad de servicios </p>
-                    <p class="text-center">Medir la calidad real y detectar defectos en un programa es control de
+                    <p class="text-center text-primary font-semibold text-2xl">Calidad de servicios </p>
+                    <p class="text-center text-sm">Medir la calidad real y detectar defectos en un programa es control de
                         calidad.</p>
 
                 </div>
             </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white"
+            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
                 style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold">Viajes a medida</p>
-                    <p class="text-center">Viaje sin preocupaciones con diseño personalizado y satisfacción garantizada.
+                    <p class="text-center text-primary font-semibold text-2xl">Viajes a medida</p>
+                    <p class="text-center text-sm">Viaje sin preocupaciones con diseño personalizado y satisfacción garantizada.
                     </p>
 
                 </div>
             </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white"
+            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
                 style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold">Sostenibilidad</p>
-                    <p class="text-center">Nos preocupamos por preservar el entorno natural y cultural de Perú</p>
+                    <p class="text-center text-primary font-semibold text-2xl">Sostenibilidad</p>
+                    <p class="text-center text-sm">Nos preocupamos por preservar el entorno natural y cultural de Perú</p>
 
                 </div>
             </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white"
+            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
                 style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold">Espíritu de aventura</p>
-                    <p class="text-center">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
+                    <p class="text-center text-primary font-semibold text-2xl">Espíritu de aventura</p>
+                    <p class="text-center text-sm">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
 
                 </div>
             </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white"
+            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
                 style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold">Respeto por la comunidad local</p>
-                    <p class="text-center">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
+                    <p class="text-center text-primary font-semibold text-2xl">Respeto por la comunidad local</p>
+                    <p class="text-center text-sm">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
 
                 </div>
             </div>

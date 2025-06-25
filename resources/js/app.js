@@ -35,7 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.remove('overflow-hidden');
         });
     }
-
+    // Sub menu
+    document.querySelectorAll('.toggle-tours').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const id = this.getAttribute('data-paquete');
+            const toursList = document.getElementById('tours-' + id);
+            if (toursList) {
+                toursList.classList.toggle('hidden');
+            }
+        });
+    });
+    
     // Efecto para header background on scroll
     const header = document.querySelector('header');
     window.addEventListener('scroll', function () {
