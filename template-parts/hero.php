@@ -16,15 +16,17 @@ $heroType = $args['heroType'];
                 </h1>
                 <p class=""><?= $descripcion ?></p>
                 <hr class="border-t-2 border-light w-full">
-                <div class="flex gap-5">
-                    <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center"><?= $duracion ?></span>
-                    <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center">GRUPAL / PRIVADO</span>
-                    <div class="flex gap-2.5 items-center">
-                        <span class="flex items-center">Desde: </span><span
-                            class="text-xl font-extrabold flex items-center"> US$ <?= $precio ?> </span>
+                <?php if ($heroType == "tour"): ?>
+                    <div class="flex gap-5">
+                        <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center"><?= $duracion ?></span>
+                        <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center">GRUPAL / PRIVADO</span>
+                        <div class="flex gap-2.5 items-center">
+                            <span class="flex items-center">Desde: </span><span
+                                class="text-xl font-extrabold flex items-center"> US$ <?= $precio ?> </span>
 
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
 
             </div>
             <a href=""><span class="py-2 px-5 bg-primary text-white font-bold">RESERVAR AHORA</span></a>

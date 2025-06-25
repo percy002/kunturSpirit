@@ -29,7 +29,7 @@
         <?php do_action('tailpress_header'); ?>
 
         <header class="w-full mx-auto py-6 fixed top-0 left-0 right-0 z-50 bg-transparente shadow-md">
-            <div class="container md:flex md:justify-between md:items-center">
+            <div class="container flex justify-between items-center">
                 <div class="">
                     <button id="openMenu">
                         <i class="fa-solid fa-bars fa-inverse text-2xl"></i>
@@ -45,38 +45,9 @@
                         <?php endif; ?>
                     </div>
 
-                    <?php if (has_nav_menu('primary')): ?>
-                        <div class="md:hidden">
-                            <button type="button" aria-label="Toggle navigation" id="primary-menu-toggle">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
-                            </button>
-                        </div>
-                    <?php endif; ?>
                 </div>
 
-                <!-- <div id="primary-navigation" class="hidden md:flex md:bg-transparent gap-6 items-center border border-light md:border-none rounded-xl p-4 md:p-0">
-                    <nav>
-                        <?php if (current_user_can('administrator') && !has_nav_menu('primary')): ?>
-                            <a href="<?php echo esc_url(admin_url('nav-menus.php')); ?>" class="text-sm text-zinc-600"><?php esc_html_e('Edit Menus', 'tailpress'); ?></a>
-                        <?php else: ?>
-                            <?php
-                            wp_nav_menu([
-                                'container_id' => 'primary-menu',
-                                'container_class' => '',
-                                'menu_class' => 'md:flex md:-mx-4 [&_a]:!no-underline',
-                                'theme_location' => 'primary',
-                                'li_class' => 'md:mx-4',
-                                'fallback_cb' => false,
-                            ]);
-                            ?>
-                        <?php endif; ?>
-                    </nav>
-
-                </div> -->
+  
                 <div class="flex gap-5">
                     <div class="flex gap-2.5 text-white">
                         <a href=""><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
@@ -84,7 +55,7 @@
                         <a href=""><i class="fa-brands fa-tiktok text-xl"></i></a>
 
                     </div>
-                    <div class="">
+                    <div class="text-light">
                         |
                     </div>
                     <div class="flex gap-2.5 items-center">
@@ -101,7 +72,7 @@
                         }
                         ?>
                     </div>
-                    <div class="">
+                    <div class="text-light">
                         |
                     </div>
                     <div class="">
@@ -114,19 +85,7 @@
 
             </div>
             <?php get_template_part('template-parts/menuNavbar'); ?>
-            <script>
-                const openMenu = document.getElementById('openMenu');
-                const closeMenu = document.getElementById('closeMenu');
-                const sideMenu = document.getElementById('sideMenu');
-
-                openMenu.addEventListener('click', () => {
-                    sideMenu.classList.remove('-translate-x-full');
-                });
-
-                closeMenu.addEventListener('click', () => {
-                    sideMenu.classList.add('-translate-x-full');
-                });
-            </script>
+            <div id="sideMenuBackdrop" class="fixed inset-0 bg-black opacity-40 z-40 hidden"></div>
         </header>
 
         <div id="content" class="site-content grow">

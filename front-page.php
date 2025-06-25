@@ -90,11 +90,12 @@ get_header();
                                 <span class="font-bold">US$ 1250</span>
                             </div>
                             <span>Desde:</span>
-                            <span class="font-bold">US$ 1200</span>
+                            <span class="font-bold text-primary text-base">US$ 1200</span>
                         </div>
                         <!-- botones -->
                         <div class="flex gap-1.5 text-white ">
-                            <a href="" class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
+                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
                             <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
                         </div>
                     </div>
@@ -135,11 +136,12 @@ get_header();
                                 <span class="font-bold">US$ 1250</span>
                             </div>
                             <span>Desde:</span>
-                            <span class="font-bold">US$ 1200</span>
+                            <span class="font-bold text-primary text-base">US$ 1200</span>
                         </div>
                         <!-- botones -->
                         <div class="flex gap-1.5 text-white ">
-                            <a href="" class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
+                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
                             <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
                         </div>
                     </div>
@@ -180,11 +182,12 @@ get_header();
                                 <span class="font-bold">US$ 1250</span>
                             </div>
                             <span>Desde:</span>
-                            <span class="font-bold">US$ 1200</span>
+                            <span class="font-bold text-primary text-base">US$ 1200</span>
                         </div>
                         <!-- botones -->
                         <div class="flex gap-1.5 text-white ">
-                            <a href="" class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
+                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
                             <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
                         </div>
                     </div>
@@ -210,10 +213,10 @@ get_header();
                 style="filter: drop-shadow(-3px 11px 11px rgba(0,0,0,0.5))">
         </div>
         <div class="absolute top-1/2 -translate-y-1/2 right-[150px] w-[493px] text-white">
-            <h1 class="text-right">"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de los sueños."
+            <h1 class="text-right text-white">"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de los sueños."
             </h1>
             <div class="flex justify-end">
-                <a href="" class="py-4 px-12 text-white bg-primary"><span>Contáctenos</span></a>
+                <a href="" class="py-4 px-12 text-white bg-primary"><span class="text-2xl">Contáctenos</span></a>
             </div>
         </div>
     </div>
@@ -267,11 +270,12 @@ get_header();
                                 <span class="font-bold">US$ 1250</span>
                             </div>
                             <span>Desde:</span>
-                            <span class="font-bold">US$ 1200</span>
+                            <span class="font-bold text-primary text-base">US$ 1200</span>
                         </div>
                         <!-- botones -->
                         <div class="flex gap-1.5 text-white ">
-                            <a href="" class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
+                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
                             <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
                         </div>
                     </div>
@@ -312,11 +316,12 @@ get_header();
                                 <span class="font-bold">US$ 1250</span>
                             </div>
                             <span>Desde:</span>
-                            <span class="font-bold">US$ 1200</span>
+                            <span class="font-bold text-primary text-base">US$ 1200</span>
                         </div>
                         <!-- botones -->
                         <div class="flex gap-1.5 text-white ">
-                            <a href="" class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
+                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
                             <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
                         </div>
                     </div>
@@ -357,11 +362,12 @@ get_header();
                                 <span class="font-bold">US$ 1250</span>
                             </div>
                             <span>Desde:</span>
-                            <span class="font-bold">US$ 1200</span>
+                            <span class="font-bold text-primary text-base">US$ 1200</span>
                         </div>
                         <!-- botones -->
                         <div class="flex gap-1.5 text-white ">
-                            <a href="" class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
+                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
                             <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
                         </div>
                     </div>
@@ -378,6 +384,7 @@ get_header();
         </div>
     </div>
 </section>
+<!-- MENSAJE -->
 <section>
     <div class=""
         style="background: linear-gradient(0deg, rgba(65, 24, 13, 0.50) 0%, rgba(65, 24, 13, 0.50) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/pallayponcho.webp') lightgray 0px -750.816px / 100% 790.241% no-repeat;">
@@ -463,35 +470,42 @@ get_header();
             </p>
         </div>
         <div class="flex gap-5">
-            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+            <div class="flex flex-col justify-between py-5 items-center bg-white"
+                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
                     <p class="text-center text-primary font-semibold">Calidad de servicios </p>
-                    <p class="text-center">Medir la calidad real y detectar defectos en un programa es control de calidad.</p>
+                    <p class="text-center">Medir la calidad real y detectar defectos en un programa es control de
+                        calidad.</p>
 
                 </div>
             </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+            <div class="flex flex-col justify-between py-5 items-center bg-white"
+                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
                     <p class="text-center text-primary font-semibold">Viajes a medida</p>
-                    <p class="text-center">Viaje sin preocupaciones con diseño personalizado y satisfacción garantizada.</p>
+                    <p class="text-center">Viaje sin preocupaciones con diseño personalizado y satisfacción garantizada.
+                    </p>
 
                 </div>
             </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+            <div class="flex flex-col justify-between py-5 items-center bg-white"
+                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
                     <p class="text-center text-primary font-semibold">Sostenibilidad</p>
                     <p class="text-center">Nos preocupamos por preservar el entorno natural y cultural de Perú</p>
 
                 </div>
             </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+            <div class="flex flex-col justify-between py-5 items-center bg-white"
+                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
                     <p class="text-center text-primary font-semibold">Espíritu de aventura</p>
                     <p class="text-center">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
 
                 </div>
             </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white" style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
+            <div class="flex flex-col justify-between py-5 items-center bg-white"
+                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
                 <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
                     <p class="text-center text-primary font-semibold">Respeto por la comunidad local</p>
                     <p class="text-center">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
@@ -525,25 +539,39 @@ get_header();
         <!-- logos enpresas -->
         <div class="flex gap-8 w-full justify-center items-center h-[70px] flex-wrap">
             <div class="flex-[1_0_0] h-full flex items-center">
-                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/mincultura.png" alt="logo ministerio de cultura" class="w-32">
+                <img class="max-h-[70px]"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/mincultura.png"
+                    alt="logo ministerio de cultura" class="w-32">
             </div>
             <div class="flex-[1_0_0] h-full flex items-center">
-                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/protegeme.png" alt="logo ministerio de cultura" class="w-32">
+                <img class="max-h-[70px]"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/protegeme.png"
+                    alt="logo ministerio de cultura" class="w-32">
             </div>
             <div class="flex-[1_0_0] h-full flex items-center">
-                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/perulogo.png" alt="logo ministerio de cultura" class="w-32">
+                <img class="max-h-[70px]"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/perulogo.png"
+                    alt="logo ministerio de cultura" class="w-32">
             </div>
             <div class="flex-[1_0_0] h-full flex items-center">
-                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/gercetur.png" alt="logo ministerio de cultura" class="w-32">
+                <img class="max-h-[70px]"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/gercetur.png"
+                    alt="logo ministerio de cultura" class="w-32">
             </div>
             <div class="flex-[1_0_0] h-full flex items-center">
-                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/promperu.png" alt="logo ministerio de cultura" class="w-32">
+                <img class="max-h-[70px]"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/promperu.png"
+                    alt="logo ministerio de cultura" class="w-32">
             </div>
             <div class="flex-[1_0_0] h-full flex items-center">
-                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/tripadvisor.png" alt="logo ministerio de cultura" class="w-32">
+                <img class="max-h-[70px]"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/tripadvisor.png"
+                    alt="logo ministerio de cultura" class="w-32">
             </div>
             <div class="flex-[1_0_0] h-full flex items-center">
-                <img class="max-h-[70px]" src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/safetravels.png" alt="logo ministerio de cultura" class="w-32">
+                <img class="max-h-[70px]"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/safetravels.png"
+                    alt="logo ministerio de cultura" class="w-32">
             </div>
 
         </div>

@@ -144,12 +144,3 @@ span {
 
 }
 
-.menu-item::after {
-  content: '';
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  background: url('data:image/svg+xml;utf8,<svg fill="none" stroke="black" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>') no-repeat center;
-  margin-left: 0.5rem;
-  color: var(--color-light);
-}
