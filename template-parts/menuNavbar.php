@@ -1,14 +1,14 @@
 <div id="sideMenu"
-    class="fixed top-0 left-0 h-full w-[600px] shadow-lg transform -translate-x-full transition-transform duration-300 z-50 p-12"
+    class="fixed top-0 left-0 h-full max-w-dvw w-[600px] shadow-lg transform -translate-x-full transition-transform duration-300 z-50 p-2.5 lg:p-12"
     style="background: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/textura.webp') lightgray 50% / cover no-repeat;">
-    <div class="pl-8 flex flex-col h-full justify-between">
+    <div class="pl-8 flex flex-col h-full justify-start">
         <div class="w-full flex justify-end">
             <button id="closeMenu" class="text-3xl text-secondary">
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
         <div class="flex flex-col gap-2.5">
-            <div class="pb-8 w-[320px]">
+            <div class="pb-8 w-[160px] lg:w-[320px]">
                 <img src='<?php echo get_template_directory_uri(); ?>/assets/images/logos/logo_color.png'
                     alt="logo kuntur spirit">
             </div>
@@ -29,9 +29,10 @@
                                     <li class="flex flex-col">
                                         <div
                                             class="flex justify-between items-center text-light hover:text-secondary transition">
-                                            <a href="<?php echo esc_url($link); ?>">
+                                            <button class="toggle-tours text-2xl"
+                                                data-paquete="<?php echo esc_attr($paquete->term_id); ?>">
                                                 <?php echo esc_html($paquete->name); ?>
-                                            </a>
+                                            </button>
                                             <button type="button" class="toggle-tours text-2xl"
                                                 data-paquete="<?php echo esc_attr($paquete->term_id); ?>">›</button>
                                         </div>

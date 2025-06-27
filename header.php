@@ -28,9 +28,25 @@
     <div id="page" class="min-h-screen flex flex-col">
         <?php do_action('tailpress_header'); ?>
 
-        <header class="w-full mx-auto py-6 fixed top-0 left-0 right-0 z-50 bg-transparente shadow-md">
-            <div class="container flex justify-between items-center">
-                <div class="">
+        <header class="py-6 fixed top-0 left-0 right-0 z-50 bg-transparente shadow-md">
+            <div class="container flex flex-row-reverse sm:flex-row justify-between items-center">
+                <div class="flex gap-2.5 items-center">
+                    <div class="sm:hidden">
+                        <div class="flex gap-2.5 items-center">
+                        <?php
+                        if (function_exists('pll_the_languages')) {
+                            pll_the_languages(array(
+                                'show_flags' => 1,      // Muestra banderas
+                                'show_names' => 0,      // Muestra nombres de idiomas
+                                'hide_current' => 0,    // Muestra el idioma actual
+                                'dropdown' => 0,         // Muestra como lista, no como dropdown
+                                'raw' => 0  // Mostrar HTML listo para usar
+                        
+                            ));
+                        }
+                        ?>
+                    </div>
+                    </div>
                     <button id="openMenu">
                         <i class="fa-solid fa-bars fa-inverse text-2xl"></i>
                     </button>
@@ -38,7 +54,7 @@
                 <div class="flex justify-between items-center">
                     <div>
                         <?php if (has_custom_logo()): ?>
-                            <div class="h-[50px]">
+                            <div class="h-6 md:h-[50px]">
                                 <?php the_custom_logo(); ?>
 
                             </div>
@@ -48,7 +64,7 @@
                 </div>
 
   
-                <div class="flex gap-5">
+                <div class="gap-5 hidden sm:flex">
                     <div class="flex gap-2.5 text-white">
                         <a href=""><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
                         <a href=""><i class="fa-brands fa-instagram text-xl "></i></a>

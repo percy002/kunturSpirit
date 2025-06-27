@@ -212,7 +212,7 @@ background-position: center bottom;">
             <img class="h-full object-cover 2xl:w-full" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
                 style="filter: drop-shadow(-3px 11px 11px rgba(0,0,0,0.5))">
         </div>
-        <div class="px-2.5 absolute top-1/2 -translate-y-1/2 sm:right-[150px] 2xl:left-1/2 2xl:-translate-1/2 w-[500px] 2xl:w-[1000px] text-white">
+        <div class="px-2.5 absolute top-1/2 -translate-y-1/2 sm:right-[150px] 2xl:left-1/2 2xl:-translate-1/2 w-[500px] max-w-11/12 2xl:w-[1000px] text-white">
             <h1 class="text-right text-white 2xl:text-center">"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de
                 los sueños."
             </h1>
@@ -538,7 +538,7 @@ background-position: center bottom;">
 
         </div>
         <!-- logos enpresas -->
-        <div class="flex gap-8 w-full justify-center items-center h-[70px] flex-wrap justify-center">
+        <div class="flex gap-8 w-full justify-center items-center flex-wrap">
             <div class="flex-[1_0_0] h-full flex items-center min-w-[100px]">
                 <img class="max-h-[70px]"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/mincultura.png"

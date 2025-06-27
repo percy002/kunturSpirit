@@ -7,11 +7,12 @@ $precio = $args['precio'] ?? '';
 $heroType = $args['heroType'];
 ?>
 <section class="py-0">
-    <div class="carousel h-dvh bg-center bg-no-repeat"
-        style="background: linear-gradient(180deg, rgba(65, 24, 13, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%), url('<?= $imagen_url ?>')  0px -233.718px / 100% 132.74% no-repeat;">
 
-        <div class="flex h-full pt-0 pr-[150px] pl-[150px] flex-col justify-center gap-8">
-            <div class="flex text-white flex-col gap-2.5  w-[500px]">
+    <div class="carousel h-dvh"
+        style="background: linear-gradient(180deg, rgba(65, 24, 13, 0.80) 0%, rgba(0, 0, 0, 0.00) 100%), url('<?= esc_url($imagen_url) ?>') center center / cover no-repeat;">
+
+        <div class="flex h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] flex-col justify-center gap-8">
+            <div class="flex text-white flex-col gap-2.5  w-[500px] max-w-11/12">
                 <h1 class="text-start text-[<?php $heroType == "tour" ? '40px' : '64px' ?>] text-white"><?= $title ?>
                 </h1>
                 <p class=""><?= $descripcion ?></p>
