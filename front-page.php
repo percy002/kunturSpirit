@@ -208,15 +208,15 @@ background-position: center bottom;">
 <section>
     <div class="relative w-full">
 
-        <div class="bg-transparent relative h-[450px] ">
-            <img class="h-full object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
+        <div class="bg-transparent relative h-[550px] 2xl:h-[700px] ">
+            <img class="h-full object-cover 2xl:w-full" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
                 style="filter: drop-shadow(-3px 11px 11px rgba(0,0,0,0.5))">
         </div>
-        <div class="container absolute top-1/2 -translate-y-1/2 sm:right-[150px] w-max-[493px] text-white">
-            <h1 class="text-right text-white">"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de
+        <div class="px-2.5 absolute top-1/2 -translate-y-1/2 sm:right-[150px] 2xl:left-1/2 2xl:-translate-1/2 w-[500px] 2xl:w-[1000px] text-white">
+            <h1 class="text-right text-white 2xl:text-center">"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de
                 los sueños."
             </h1>
-            <div class="flex justify-end">
+            <div class="flex justify-end 2xl:justify-center">
                 <a href="" class="py-2.5 lg:py-4 px-10 lg:px-12 text-white bg-primary"><span class="text-xl lg:text-2xl">Contáctenos</span></a>
             </div>
         </div>

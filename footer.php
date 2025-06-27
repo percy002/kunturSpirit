@@ -13,7 +13,7 @@
 
 <?php do_action('tailpress_content_after'); ?>
 
-<div class="h-[170px]">
+<div class="h-[170px] 2xl:h-[280px]">
     <img class="object-bottom object-cover h-full w-full"
         src="<?php echo get_template_directory_uri(); ?>/assets/images/piedepagina.png" alt="imagen footer" />
 </div>
