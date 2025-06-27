@@ -29,11 +29,11 @@ get_header();
 ?>
 <?php get_template_part('template-parts/hero', null, $infoHeroTour); ?>
 
-<div class="flex gap-8 container">
+<div class="lg:flex lg:gap-8 container">
     <!-- CONTENIDO -->
     <div class="flex-2">
         <section id="resumen-tour">
-            <div class="container flex flex-col gap-2.5">
+            <div class="flex flex-col gap-2.5 text-pretty">
                 <h1 class="text-start">Descripción General</h1>
                 <?php echo $descripcion_general ?>
             </div>
@@ -41,7 +41,7 @@ get_header();
 
         <!-- ITINERARIO -->
         <section id="itinerario-tour">
-            <div class="container flex flex-col gap-5">
+            <div class="flex flex-col gap-5">
                 <h1 class="text-start">Itinerario Detallado</h1>
 
                 <!-- CONTENIDO DE ITINERARIO -->
@@ -98,7 +98,7 @@ get_header();
 
         <!-- QUE INCLUYE -->
         <section id="incluye-tour">
-            <div class="container flex flex-col gap-2.5">
+            <div class="flex flex-col gap-2.5">
                 <h1 class="text-start">¿Qué Incluye?</h1>
                 <p>Este paquete ha sido cuidadosamente diseñado para brindarte una experiencia completa, cómoda y sin
                     preocupaciones. </p>
@@ -186,7 +186,7 @@ get_header();
         </section>
         <!-- PRECIO DEL TOUR -->
         <section id="precio-tour">
-            <div class="container">
+            <div class="">
                 <h1 class="text-primary text-start">Precio del Tour</h1>
                 <?php echo $info_precio_tour; ?>
             </div>
