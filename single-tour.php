@@ -29,11 +29,11 @@ get_header();
 ?>
 <?php get_template_part('template-parts/hero', null, $infoHeroTour); ?>
 
-<div class="lg:flex lg:gap-8 container">
+<div class="lg:flex lg:gap-8 container bg-white lg:bg-transparent">
     <!-- CONTENIDO -->
-    <div class="flex-2">
+    <div class="lg:flex-2 bg-white lg:px-5">
         <section id="resumen-tour">
-            <div class="flex flex-col gap-2.5 text-pretty">
+            <div class="flex flex-col gap-2.5">
                 <h1 class="text-start">Descripción General</h1>
                 <?php echo $descripcion_general ?>
             </div>
