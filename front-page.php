@@ -384,24 +384,7 @@ background-position: center bottom;">
                     EXPERIENCIAS</span></a>
         </div>
     </div>
-</section>
-<!-- MENSAJE -->
-<section>
-    <div class=""
-        style="background: linear-gradient(0deg, rgba(65, 24, 13, 0.50) 0%, rgba(65, 24, 13, 0.50) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/pallayponcho.webp') lightgray 0px -750.816px / 100% 790.241% no-repeat;">
-        <div class="container py-12 flex gap-12 justify-center items-center flex-wrap">
-            <div class="flex flex-col gap-2.5 text-white">
-                <span class="text-5xl font-medium text-center">Aventuras hechas a tu medida </span>
-                <span class="text-2xl font-normal text-center">Cada viaje con “Kuntur Spirit” es único.</span>
-            </div>
-            <div class="border-r border-white h-24 hidden lg:block"></div>
-            <div class="">
-                <a href="" class="bg-white text-primary py-2.5 lg:py-4 px-10 lg:px-12 font-semibold"><span>CONTACTANOS</span></a>
-            </div>
-        </div>
-    </div>
-
-</section>
+<?php get_template_part( 'template-parts/mensaje' ) ?>
 <section>
     <div class="container flex flex-col gap-10">
         <div class="flex flex-col gap-5">
@@ -461,63 +444,7 @@ background-position: center bottom;">
 
     </div>
 </section>
-<section>
-    <div class="container flex flex-col gap-10">
-        <div class="flex flex-col gap-5">
-            <h1>¿Por que viajar con Kuntur Spirit?</h1>
-            <p class="text-center">
-                Reserva tu estancia y disfruta de una experiencia única con Tierras de los Andes, especialista en viajes
-                personalizados en Perú.
-            </p>
-        </div>
-        <div class="flex flex-wrap gap-5 justify-center">
-            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
-                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
-                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold text-2xl">Calidad de servicios </p>
-                    <p class="text-center text-sm">Medir la calidad real y detectar defectos en un programa es control de
-                        calidad.</p>
-
-                </div>
-            </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
-                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
-                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold text-2xl">Viajes a medida</p>
-                    <p class="text-center text-sm">Viaje sin preocupaciones con diseño personalizado y satisfacción garantizada.
-                    </p>
-
-                </div>
-            </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
-                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
-                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold text-2xl">Sostenibilidad</p>
-                    <p class="text-center text-sm">Nos preocupamos por preservar el entorno natural y cultural de Perú</p>
-
-                </div>
-            </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
-                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
-                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold text-2xl">Espíritu de aventura</p>
-                    <p class="text-center text-sm">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
-
-                </div>
-            </div>
-            <div class="flex flex-col justify-between py-5 items-center bg-white min-w-[200px] max-w-[300px]"
-                style="flex: 1 0 0; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);">
-                <div class="flex flex-col py-2.5 px-5 items-center gap-1.5">
-                    <p class="text-center text-primary font-semibold text-2xl">Respeto por la comunidad local</p>
-                    <p class="text-center text-sm">Viva y cultive en el día a día el espíritu de aventura en el Perú.</p>
-
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-</section>
+<?php get_template_part('template-parts/porquenosotros') ?>
 <section>
     <div class="container flex flex-col gap-10">
         <div class="flex flex-col gap-5">
@@ -526,55 +453,6 @@ background-position: center bottom;">
                 Encuentre información esencial para su viaje: consejos, recomendaciones y datos prácticos para una
                 experiencia de viaje sin contratiempos.
             </p>
-        </div>
-
-
-    </div>
-</section>
-<section>
-    <div class="container flex flex-col gap-10">
-        <div class="flex flex-col gap-5">
-            <h1>Travel Associations & Certifications</h1>
-
-        </div>
-        <!-- logos enpresas -->
-        <div class="flex gap-8 w-full justify-center items-center flex-wrap">
-            <div class="flex-[1_0_0] h-full flex items-center min-w-[100px]">
-                <img class="max-h-[70px]"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/mincultura.png"
-                    alt="logo ministerio de cultura" class="w-32">
-            </div>
-            <div class="xl:flex-[1_0_0] h-full flex items-center min-w-[100px]">
-                <img class="max-h-[70px]"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/protegeme.png"
-                    alt="logo ministerio de cultura" class="w-32">
-            </div>
-            <div class="xl:flex-[1_0_0] h-full flex items-center min-w-[100px]">
-                <img class="max-h-[70px]"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/perulogo.png"
-                    alt="logo ministerio de cultura" class="w-32">
-            </div>
-            <div class="xl:flex-[1_0_0] h-full flex items-center min-w-[100px]">
-                <img class="max-h-[70px]"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/gercetur.png"
-                    alt="logo ministerio de cultura" class="w-32">
-            </div>
-            <div class="xl:flex-[1_0_0] h-full flex items-center min-w-[100px]">
-                <img class="max-h-[70px]"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/promperu.png"
-                    alt="logo ministerio de cultura" class="w-32">
-            </div>
-            <div class="xl:flex-[1_0_0] h-full flex items-center min-w-[100px]">
-                <img class="max-h-[70px]"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/tripadvisor.png"
-                    alt="logo ministerio de cultura" class="w-32">
-            </div>
-            <div class="xl:flex-[1_0_0] h-full flex items-center min-w-[100px]">
-                <img class="max-h-[70px]"
-                    src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/safetravels.png"
-                    alt="logo ministerio de cultura" class="w-32">
-            </div>
-
         </div>
 
 

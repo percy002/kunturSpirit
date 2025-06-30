@@ -31,7 +31,7 @@
             </div>
             <hr class="border-t-2 border-light w-full">
             <!-- MOSTRAR TODO -->
-            <a href="<?php echo get_term_link('experiencias-cusco', 'paquete'); ?>" class="cursor-pointer">
+            <a href="<?php echo get_term_link('experiencias_cusco', 'paquete'); ?>" class="cursor-pointer">
                 <span class="text-xl">Ver todos</span>
             </a>
         </div>

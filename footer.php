@@ -6,6 +6,8 @@
  * @package TailPress
  */
 ?>
+<?php get_template_part( 'template-parts/colaboradores' ) ?>
+
 </main>
 
 <?php do_action('tailpress_content_end'); ?>
@@ -19,9 +21,9 @@
 </div>
 <footer id="" class="" role="contentinfo">
 
-    <div class="bg-secondary">
+    <div class=" ">
         <div
-            class="container flex flex-col flex-wrap md:flex-row items-center md:items-start justify-center gap-5 md:gap-12 bg-secondary text-white py-5">
+            class="container flex flex-col flex-wrap md:flex-row items-center md:items-start justify-center gap-5 md:gap-12 bg-primary text-white py-5">
             <!-- LOGO -->
             <section class="flex flex-col gap-2.5 items-center py-5 min-w-[200px]">
                 <div class="flex justify-center items-center">
@@ -38,7 +40,7 @@
                     <span>RUC: 20564070654</span>
                 </div>
                 <div class="flex flex-col gap-2.5">
-                    <div class="text-white m-0 text-2xl md:text-start font-normal">Siguenos en:</div>
+                    <div class="text-white m-0 text-2xl md:text-start font-normal">Síguenos en:</div>
                     <div class="flex gap-2.5 text-white">
                         <a href=""><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
                         <a href=""><i class="fa-brands fa-instagram text-xl "></i></a>
