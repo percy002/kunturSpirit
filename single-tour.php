@@ -192,12 +192,14 @@ get_header();
             </div>
         </section>
     </div>
+    <!-- SIDEBAR -->
     <aside class="hidden lg:flex flex-1 flex-col justify-start h-full sticky top-16">
         <section class="">
-            <div class="p-3 bg-primary text-white flex flex-col gap-2.5">
+            <div class="p-3 bg-secondary text-white flex flex-col gap-2.5">
                 <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center w-fit text-base"><?= $duracion ?></span>
                 <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center w-fit text-base">GRUPAL / PRIVADO</span>
-                <span class="text-[10px]">Antes: <span class="text-xs">US$ 1250</span></span>
+                <span class="text-[10px] flex items-center">Antes: <span class="text-xs line-through ml-1">US$
+                        1250</span></span>
                 <span class="text-xl flex items-center gap-2.5">Desde: <span class="text-3xl font-bold">US$
                         <?= $precio ?></span></span>
 
@@ -206,18 +208,32 @@ get_header();
                         Ahora</span></button>
 
             </div>
-            <div class="p-5 flex flex-col gap-1.5" style="background: rgba(0, 0, 0, 0.10);">
-                <a href="#resumen-tour"><span class="text-lg font-bold text-primary">Resumen</span></a>
-                <hr class="border-b-2 border-primary w-full">
-                <a href="#itinerario-tour"><span class="text-lg font-bold text-primary">Itinerario</span></a>
-                <hr class="border-b-2 border-primary w-full">
-                <a href="#incluye-tour"><span class="text-lg font-bold text-primary">Incluye</span></a>
-                <hr class="border-b-2 border-primary w-full">
-                <a href="#mas-informacion"><span class="text-lg font-bold text-primary">Antes de Viajar</span></a>
-                <hr class="border-b-2 border-primary w-full">
-                <a href="#precio-tour"><span class="text-lg font-bold text-primary">Precio</span></a>
+            <div class="p-10 flex flex-col gap-1.5" style="background: rgba(0, 0, 0, 0.10);">
+                <div class="p-5 flex flex-col gap-1.5">
+                    <a href="#resumen-tour" class="flex gap-2.5 items-center text-secondary"><span class="text-lg"><i
+                                class="fa-solid fa-clipboard"></i></span><span
+                            class="text-lg font-bold">Resumen</span></a>
+                    <hr class="border-b-2 border-primary w-full">
+                    <a href="#itinerario-tour" class="flex gap-2.5 items-center text-secondary"><span class="text-lg"><i
+                                class="fa-solid fa-map-location-dot"></i></span><span
+                            class="text-lg font-bold">Itinerario</span></a>
+                    <hr class="border-b-2 border-primary w-full">
+                    <a href="#incluye-tour" class="flex gap-2.5 items-center text-secondary"><span class="text-lg"><i
+                                class="fa-solid fa-clipboard"></i></span><span
+                            class="text-lg font-bold">Incluye</span></a>
+                    <hr class="border-b-2 border-primary w-full">
+                    <a href="#mas-informacion" class="flex gap-2.5 items-center text-secondary"><span class="text-lg"><i
+                                class="fa-solid fa-circle-question"></i></span><span class="text-lg font-bold">Antes de
+                            Viajar</span></a>
+                    <hr class="border-b-2 border-primary w-full">
+                    <a href="#precio-tour" class="flex gap-2.5 items-center text-secondary"><span class="text-lg"><i
+                                class="fa-solid fa-hand-holding-dollar"></i></span><span
+                            class="text-lg font-bold">Precio</span></a>
+                    <hr class="border-b-2 border-primary w-full">
+                </div>
+
                 <div class="mt-2">
-                    <button class="py-1.5 px-5 bg-primary w-fit"><span class="text-2xl text-white font-semibold">Reserva
+                    <button class="py-4 px-10 bg-primary w-fit"><span class="text-xl text-white font-semibold">Reserva
                             Ahora</span></button>
 
                 </div>
@@ -226,8 +242,24 @@ get_header();
         </section>
     </aside>
 </div>
-<!-- DESCRIPCION GENERAL -->
+<div class="fixed bottom-0 w-full lg:hidden"
+    style="background: linear-gradient(180deg, #865042 -70.62%, #41180D 70.62%);">
+    <div class="container flex justify-between items-center ">
+        <div class="text-white flex flex-col gap-2.5 p-5">
+            <span class="text-[10px] flex items-center">Antes: <span class="text-xs line-through ml-1">US$
+                    1250</span></span>
+            <span class="text-xl flex items-center gap-2.5">Desde: <span class="text-3xl font-bold">US$
+                    <?= $precio ?></span></span>
 
+        </div>
+        <button class="bg-white text-primary px-5 py-2.5 text-base font-bold">Consulte Ahora</button>
+        <div class="bg-[#075E54] rounded-4xl p-2">
+            <a href="flex bg-[#075E54] ">
+                <img class="h-10 w-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.webp" alt="">
+            </a>
+        </div>
+    </div>
+</div>
 
 <?php
 get_footer();
