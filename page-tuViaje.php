@@ -3,7 +3,15 @@
 Template Name: Viaje
 */
 get_header();
+$infoHeroTour = array(
+    'imagen_url' => get_template_directory_uri() . "/assets/images/personas.avif",
+    'title' => 'Diseña tu viaje',
+    'heroType' => 'layout',
+);
 ?>
+
+<!-- Tu contenido para la página Nosotros aquí -->
+<?php get_template_part('template-parts/hero', null, $infoHeroTour); ?>
 <section>
     <div class="container flex flex-col gap-1.5">
         <h1>Diseña tu viaje </h1>

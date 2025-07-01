@@ -4,9 +4,6 @@ Template Name: Contacto
 */
 get_header();
 
-$descripcion = get_field('descripcion') ? get_field('descripcion') : 'No disponible';
-$mision = get_field('mision') ? get_field('mision') : 'No disponible';
-$vision = get_field('vision') ? get_field('vision') : 'No disponible';
 $infoHeroTour = array(
     'imagen_url' => get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . "/assets/images/nosotros.webp",
     'title' => 'Contáctenos',
@@ -15,7 +12,6 @@ $infoHeroTour = array(
 ?>
 
 <!-- Tu contenido para la página Nosotros aquí -->
-<?php ?>
 <?php get_template_part('template-parts/hero', null, $infoHeroTour); ?>
 
 <!-- MAPA Y FORMULARIO -->

@@ -6,7 +6,7 @@
  * @package TailPress
  */
 ?>
-<?php get_template_part( 'template-parts/colaboradores' ) ?>
+<?php get_template_part('template-parts/colaboradores') ?>
 
 </main>
 
@@ -102,7 +102,7 @@
 
             <!-- LIBRO DE RECLAMACIONES -->
             <section class="flex flex-col p-0 justify-start py-5 gap-2.5 items-center min-w-[200px]">
-                <a class="" href="">
+                <a class="" href="<?php echo site_url('/libro-de-reclamaciones'); ?>">
                     <img src='<?php echo get_template_directory_uri(); ?>/assets/images/libro.png'
                         alt="libro de reclamaciones">
                 </a>
