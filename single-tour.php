@@ -75,7 +75,27 @@ get_header();
                                 <div>
                                     <?= wp_kses_post($dia['descripcion']) ?>
                                 </div>
+                                <div class="">
+
+                                <?php if (!empty($dia['imagenes'])): ?>
+                                    <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-2 justify-center">
+                                        <?php
+                                        // Mostrar solo las 3 primeras imágenes
+                                        for ($j = 1; $j <= 3; $j++) {
+                                            $img = $dia['imagenes']['imagen_' . $j] ?? '';
+                                            if ($img) {
+                                                // Si es un array de ACF (devuelve array), usa ['url'], si es solo la URL, úsala directo
+                                                $img_url = is_array($img) && isset($img['url']) ? $img['url'] : $img;
+                                                $img_alt = is_array($img) && isset($img['alt']) ? $img['alt'] : 'Imagen del día';
+                                                echo "<img src='" . esc_url($img_url) . "' alt='" . esc_attr($img_alt) . "' class='w-2/3 lg:w-1/4 h-auto object-cover rounded' />";
+                                            }
+                                        }
+                                        ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
                             </section>
+                            
                         </div>
                     <?php endforeach; ?>
                 </div>
