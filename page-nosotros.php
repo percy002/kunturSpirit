@@ -48,7 +48,7 @@ $infoHeroTour = array(
 <section>
     <div class="container flex flex-col gap-1.5">
         <h1>Todos Nuestros Colaboradores</h1>
-        <p>Conoce a todos nuestros colaboradores que hacen de tu viaje, la mejor experiencia de tu vida.</p>
+        <p class="text-center">Conoce a todos nuestros colaboradores que hacen de tu viaje, la mejor experiencia de tu vida.</p>
         <div class="flex justify-center flex-wrap gap-5">
             <div class="flex flex-col items-center pt-5">
                 <img class="rounded-[100px] w-[180px] h-[180px] object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/retrato.webp" alt="">
