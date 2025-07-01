@@ -163,3 +163,85 @@ span {
   font-size: 12px;
 
 }
+
+/* css para cf7 */
+/* Estilos base para Contact Form 7 en tu tema WordPress */
+
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  background: rgba(255, 255, 255, 0.30);
+  border-radius: 20px;
+}
+
+.wpcf7-form label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #000;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form textarea,
+.wpcf7-form select {
+  width: 100%;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.wpcf7-form input:focus,
+.wpcf7-form textarea:focus,
+.wpcf7-form select:focus {
+  border-color: #D88027;
+  outline: none;
+}
+
+.wpcf7-form .wpcf7-submit {
+  width: 100%;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 15px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 20px;
+}
+
+.wpcf7-form .wpcf7-submit:hover {
+  background: #41180D;
+}
+
+.wpcf7-response-output {
+  margin-top: 1rem;
+  padding: 0.75em 1em;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.wpcf7-form input[type="number"],
+.wpcf7-form input[type="date"] {
+  width: 100%;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.wpcf7-form input[type="number"]:focus,
+.wpcf7-form input[type="date"]:focus {
+  border-color: #D88027;
+  outline: none;
+}
+/* fin css para cf7 */
