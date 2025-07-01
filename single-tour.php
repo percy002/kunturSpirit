@@ -10,7 +10,15 @@ $precio = get_field('precio') ? get_field('precio') : 'No disponible';
 $duracion = get_field('duracion') ? get_field('duracion') : 'No disponible';
 
 $descripcion_general = get_field('descripcion_general') ? get_field('descripcion_general') : 'No disponible';
-$dia_1 = get_field('dia_1') ? get_field('dia_1') : 'No disponible';
+
+$dias = [];
+for ($i = 1; $i <= 15; $i++) {
+    $dia = get_field('dia_' . $i);
+    if ($dia && is_array($dia) && !empty($dia['titulo'])) {
+        $dias[$i] = $dia;
+    }
+}
+
 
 $incluye = get_field('incluye') ? get_field('incluye') : 'No disponible';
 $no_incluye = get_field('no_incluye') ? get_field('no_incluye') : 'No disponible';
@@ -47,51 +55,29 @@ get_header();
                 <!-- CONTENIDO DE ITINERARIO -->
                 <div class="flex flex-col">
                     <!-- dia 1 -->
-                    <div class="flex gap-5">
-                        <div class="flex flex-col">
-                            <div
-                                class="flex flex-col rounded-4xl bg-primary text-white w-14 h-14 items-center justify-center p-3">
-                                <span class="font-medium">Día</span>
-                                <span class="text-2xl font-bold">01</span>
-                            </div>
-                            <div class="relative h-full ">
-                                <div class="absolute left-1/2 top-0 h-full border-l-4 border-dashed border-primary">
+                    <?php foreach ($dias as $numero => $dia): ?>
+                        <div class="flex gap-5 mb-4">
+                            <div class="flex flex-col">
+                                <div
+                                    class="flex flex-col rounded-4xl bg-primary text-white w-14 h-14 items-center justify-center p-3">
+                                    <span class="font-medium">Día</span>
+                                    <span class="text-2xl font-bold"><?= str_pad($numero, 2, '0', STR_PAD_LEFT); ?></span>
                                 </div>
-                                <!-- Otros contenidos aquí -->
-                            </div>
-                        </div>
-                        <section class="p-0">
-                            <div class="h-14 flex flex-col justify-center">
-                                <h1 class="text-2xl font-bold text-start m-0"><?= $dia_1['titulo'] ?></h1>
-                            </div>
-                            <div class="">
-                                <?= $dia_1['descripcion'] ?>
-                            </div>
-                        </section>
-                    </div>
-                    <!-- dia 1 -->
-                    <div class="flex gap-5">
-                        <div class="flex flex-col">
-                            <div
-                                class="flex flex-col rounded-4xl bg-primary text-white w-14 h-14 items-center justify-center p-3">
-                                <span class="font-medium">Día</span>
-                                <span class="text-2xl font-bold">02</span>
-                            </div>
-                            <div class="relative h-full ">
-                                <div class="absolute left-1/2 top-0 h-full border-l-4 border-dashed border-primary">
+                                <div class="relative h-full">
+                                    <div class="absolute left-1/2 top-0 h-full border-l-4 border-dashed border-primary">
+                                    </div>
                                 </div>
-                                <!-- Otros contenidos aquí -->
                             </div>
+                            <section class="p-0 flex-1">
+                                <div class="h-14 flex flex-col justify-center">
+                                    <h1 class="text-2xl font-bold text-start m-0"><?= esc_html($dia['titulo']) ?></h1>
+                                </div>
+                                <div>
+                                    <?= wp_kses_post($dia['descripcion']) ?>
+                                </div>
+                            </section>
                         </div>
-                        <section class="p-0">
-                            <div class="h-14 flex flex-col justify-center">
-                                <h1 class="text-2xl font-bold text-start m-0"><?= $dia_1['titulo'] ?></h1>
-                            </div>
-                            <div class="">
-                                <?= $dia_1['descripcion'] ?>
-                            </div>
-                        </section>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
@@ -255,7 +241,8 @@ get_header();
         <button class="bg-white text-primary px-5 py-2.5 text-base font-bold">Consulte Ahora</button>
         <div class="bg-[#075E54] rounded-4xl p-2">
             <a href="flex bg-[#075E54] ">
-                <img class="h-10 w-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.webp" alt="">
+                <img class="h-10 w-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.webp"
+                    alt="">
             </a>
         </div>
     </div>
