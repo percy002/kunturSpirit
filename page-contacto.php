@@ -49,12 +49,14 @@ $infoHeroTour = array(
                         </li>
                     </ul>
                 </div>
-                <div class="w-fulll aspect-video rounded overflow-hidden">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.9922185587297!2d-72.1155793!3d-13.3057894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916ddd1f2fcc7c83%3A0x800271aeaa0c6319!2sKuntur%20Spirit!5e1!3m2!1ses!2spe!4v1751315826144!5m2!1ses!2spe"
-                        class="w-full h-full border-0" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <div class="w-full aspect-video rounded overflow-hidden">
+                    <div class="w-full aspect-video rounded overflow-hidden bg-white shadow-lg border border-gray-200">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7765.45906396025!2d-72.11671625662233!3d-13.30482844199767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916ddd1f2fcc7c83%3A0x800271aeaa0c6319!2sKuntur%20Spirit!5e0!3m2!1ses!2spe!4v1751382562095!5m2!1ses!2spe"
+                            class="w-full h-full border-0" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
             <div class="xl:flex-1">

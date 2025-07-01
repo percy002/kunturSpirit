@@ -21,9 +21,9 @@
 </div>
 <footer id="" class="" role="contentinfo">
 
-    <div class=" ">
+    <div class="bg-primary text-white">
         <div
-            class="container flex flex-col flex-wrap md:flex-row items-center md:items-start justify-center gap-5 md:gap-12 bg-primary text-white py-5">
+            class="container flex flex-col flex-wrap md:flex-row items-center md:items-start justify-center gap-5 md:gap-12  py-5">
             <!-- LOGO -->
             <section class="flex flex-col gap-2.5 items-center py-5 min-w-[200px]">
                 <div class="flex justify-center items-center">
