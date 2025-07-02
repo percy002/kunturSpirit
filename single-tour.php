@@ -250,15 +250,15 @@ get_header();
 </div>
 <div class="fixed bottom-0 w-full lg:hidden"
     style="background: linear-gradient(180deg, #865042 -70.62%, #41180D 70.62%);">
-    <div class="container flex justify-between items-center ">
+    <div class="p-2.5 flex justify-between items-center ">
         <div class="text-white flex flex-col gap-2.5 p-5">
             <span class="text-[10px] flex items-center">Antes: <span class="text-xs line-through ml-1">US$
                     1250</span></span>
-            <span class="text-xl flex items-center gap-2.5">Desde: <span class="text-3xl font-bold">US$
+            <span class="text-sm flex items-center gap-2.5">Desde: <span class="text-sm font-bold">US$
                     <?= $precio ?></span></span>
 
         </div>
-        <button class="bg-white text-primary px-5 py-2.5 text-base font-bold">Consulte Ahora</button>
+        <button class="bg-white text-primary px-2 py-1 text-base font-bold rounded-sm">Consulte Ahora</button>
         <div class="bg-[#075E54] rounded-4xl p-2">
             <a href="flex bg-[#075E54] ">
                 <img class="h-10 w-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.webp"
