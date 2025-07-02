@@ -36,18 +36,44 @@
                                                 ],
                                             ],
                                         ]);
+
+                                        $toursSubMenu = [];
+                                        foreach ($tours as $tour) {
+                                            $toursSubMenu[] = [
+                                                'nombre' => get_the_title($tour->ID),
+                                                'enlace' => get_permalink($tour->ID),
+                                            ];
+                                        }
+
+                                        // Obtener la imagen asociada a la taxonomía
+                                        $img_paquete = get_field('imagen', 'paquete_' . $paquete->term_id);
+                                        $img_url = '';
+                                        if (is_array($img_paquete) && isset($img_paquete['url'])) {
+                                            $img_url = $img_paquete['url'];
+                                        } elseif (is_string($img_paquete)) {
+                                            $img_url = $img_paquete;
+                                        }
+
+                                        $datosPaquete = [
+                                            'link' => $link,
+                                            'id' => $paquete->term_id,
+                                            'nombre' => $paquete->name,
+                                            'descripcion' => $paquete->description,
+                                            'tour' => $toursSubMenu,
+                                            'img_url' => $img_url,
+                                        ];
                                         ?>
                                         <li class="flex flex-col">
                                             <button
                                                 class="toggle-tours flex justify-between items-center text-light hover:text-secondary transition"
-                                                onclick="abrirSubmenu(<?php echo esc_attr($paquete->term_id); ?>)"
+                                                onclick="abrirSubmenu(<?php echo esc_attr(json_encode($datosPaquete)); ?>)"
                                                 data-paquete="<?php echo esc_attr($paquete->term_id); ?>">
                                                 <span class="text-2xl">
                                                     <?php echo esc_html($paquete->name); ?>
                                                 </span>
                                                 <span class="text-2xl"><i class="fa-solid fa-chevron-right"></i></span>
                                             </button>
-                                            <div class="block md:hidden">
+                                            <div class="block lg:hidden">
                                                 <div class="tours-list hidden mt-2 pl-6"
                                                     id="tours-<?php echo esc_attr($paquete->term_id); ?>">
                                                     <?php if ($tours):

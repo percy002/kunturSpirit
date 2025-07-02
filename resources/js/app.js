@@ -53,19 +53,48 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // Sub menu
-    // const submenu = document.querySelector('.submenu');
 
     // submenu derecha
-    window.abrirSubmenu = function (paqueteObj, btn) {
-        if (!submenu.classList.contains('translate-x-full')) {
-            submenu.classList.add('translate-x-full');
+    window.abrirSubmenu = function (paqueteObj) {
+        if (window.innerWidth < 1024) {
             return;
         }
-        console.log('entraste');
+        let $titlePaquete = submenu.querySelector('#tituloPaquete');
+        let $descripcionPaquete = submenu.querySelector('#descripcionPaquete');
+        let $tourList = submenu.querySelector('#tourList');
+        let $imgPaquete = submenu.querySelector('#imgPaquete');
+        let $verTodosTours = submenu.querySelector('#verTodosTours');
 
-        // submenu.innerHTML = `<div class="p-4">ID: ${paqueteObj.id} <br> Nombre: ${paqueteObj.nombre} <br> Descripción: ${paqueteObj.descripcion}</div>`;
-        // submenu.classList.remove('translate-x-full');
+        if ($imgPaquete && paqueteObj.img_url) {
+            $imgPaquete.src = paqueteObj.img_url;
+        }
+        if ($titlePaquete) {
+            $titlePaquete.textContent = paqueteObj.nombre;
+        }
+        if ($descripcionPaquete) {
+            $descripcionPaquete.textContent = paqueteObj.descripcion;
+        }
+        if ($verTodosTours) {
+            $verTodosTours.href = paqueteObj.link || '#'; // Asegúrate de que el enlace esté definido
+        }
+        // mostrar submenu
+        if ($tourList && paqueteObj.tour) {
+            // Limpia el contenido anterior
+            $tourList.innerHTML = '';
+
+            // Recorre los tours y crea los enlaces
+            paqueteObj.tour.forEach(tour => {
+                const a = document.createElement('a');
+                a.href = tour.enlace;
+                a.textContent = tour.nombre;
+                a.className = 'block py-1 text-lg hover:text-secondary';
+                $tourList.appendChild(a);
+            });
+        }
+        // mostrar submenu
+        if (!submenu.classList.contains('translate-x-full')) {
+            submenu.classList.add('translate-x-full');
+        }
     };
 
 
