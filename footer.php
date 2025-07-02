@@ -117,12 +117,12 @@
         </div>
     </div>
     <div class="bg-[#41180D] text-white">
-        <div class="container flex justify-center gap-2.5 items-center py-4 ">
+        <div class="container flex flex-col md:flex-row justify-center gap-2.5 items-center py-4 ">
             <?php do_action('tailpress_footer'); ?>
             <div class="text-sm ">
                 copyright &copy; <?php echo esc_html(date_i18n('Y')); ?> - Kuntur Spirit S.A.C
             </div>
-            <div class="">|</div>
+            <div class="hidden md:block">|</div>
             <div class="">
 
                 Realizado por <a href="" class="font-bold">CodeTeam</a>
