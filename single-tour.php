@@ -14,11 +14,13 @@ $descripcion_general = get_field('descripcion_general') ? get_field('descripcion
 $dias = [];
 for ($i = 1; $i <= 15; $i++) {
     $dia = get_field('dia_' . $i);
+
     if ($dia && is_array($dia) && !empty($dia['titulo'])) {
         $dias[$i] = $dia;
     }
 }
 
+var_dump($dias[1]['imagenes']);
 
 $incluye = get_field('incluye') ? get_field('incluye') : 'No disponible';
 $no_incluye = get_field('no_incluye') ? get_field('no_incluye') : 'No disponible';
@@ -77,25 +79,41 @@ get_header();
                                 </div>
                                 <div class="">
 
-                                <?php if (!empty($dia['imagenes'])): ?>
-                                    <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-2 justify-center">
-                                        <?php
-                                        // Mostrar solo las 3 primeras imágenes
-                                        for ($j = 1; $j <= 3; $j++) {
-                                            $img = $dia['imagenes']['imagen_' . $j] ?? '';
-                                            if ($img) {
-                                                // Si es un array de ACF (devuelve array), usa ['url'], si es solo la URL, úsala directo
-                                                $img_url = is_array($img) && isset($img['url']) ? $img['url'] : $img;
-                                                $img_alt = is_array($img) && isset($img['alt']) ? $img['alt'] : 'Imagen del día';
-                                                echo "<img src='" . esc_url($img_url) . "' alt='" . esc_attr($img_alt) . "' class='w-2/3 lg:w-1/4 h-auto object-cover rounded' />";
+                                    <?php if (!empty($dia['imagenes'])): ?>
+                                        <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-2 justify-center">
+                                            <?php
+                                            // Mostrar solo las 3 primeras imágenes
+                                            for ($j = 1; $j <= 3; $j++) {
+                                                $img = $dia['imagenes']['imagen_' . $j] ?? null;
+
+                                                if ($img) {
+                                                    // Si es ID
+                                                    if (is_numeric($img)) {
+                                                        $img_url = wp_get_attachment_image_url($img, 'full');
+                                                        $img_alt = get_post_meta($img, '_wp_attachment_image_alt', true) ?: 'Imagen del día';
+                                                    }
+                                                    // Si es array
+                                                    elseif (is_array($img)) {
+                                                        $img_url = $img['url'] ?? '';
+                                                        $img_alt = $img['alt'] ?? 'Imagen del día';
+                                                    }
+                                                    // Si es string (URL directa)
+                                                    else {
+                                                        $img_url = $img;
+                                                        $img_alt = 'Imagen del día';
+                                                    }
+
+                                                    if ($img_url) {
+                                                        echo "<img src='" . esc_url($img_url) . "' alt='" . esc_attr($img_alt) . "' class='w-2/3 lg:w-1/4 h-auto object-cover rounded' />";
+                                                    }
+                                                }
                                             }
-                                        }
-                                        ?>
-                                    </div>
-                                <?php endif; ?>
-                            </div>
+                                            ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
                             </section>
-                            
+
                         </div>
                     <?php endforeach; ?>
                 </div>
