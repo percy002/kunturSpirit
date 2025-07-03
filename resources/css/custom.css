@@ -163,7 +163,14 @@ span {
   font-size: 16px;
 
 }
-
+/* estilos wordpres */
+  .current-menu-item{
+    border-left: 5px solid var(--color-primary);
+    padding-left: 10px;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+/* fin estilos wodpress */
 /* css para cf7 */
 /* Estilos base para Contact Form 7 en tu tema WordPress */
 
