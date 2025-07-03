@@ -461,7 +461,7 @@ get_header();
     </div>
     <?php get_template_part('template-parts/mensaje') ?>
     <section>
-        <div class="container flex flex-col gap-10">
+        <div class="container flex flex-col gap-10 md:pr-[150px] md:pl-[150px]">
             <div class="flex flex-col gap-5">
                 <h1>Aventura - Trekking más populares</h1>
                 <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre

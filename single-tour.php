@@ -37,7 +37,7 @@ get_header();
 ?>
 <?php get_template_part('template-parts/hero', null, $infoHeroTour); ?>
 
-<div class="lg:flex lg:gap-8 container bg-white lg:bg-transparent">
+<div class="lg:flex lg:gap-8 container bg-white lg:bg-transparent md:pr-[100px] md:pl-[100px]">
     <!-- CONTENIDO -->
     <div class="lg:flex-2 bg-white lg:px-5">
         <section id="resumen-tour">
