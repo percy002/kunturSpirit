@@ -20,7 +20,6 @@ for ($i = 1; $i <= 15; $i++) {
     }
 }
 
-var_dump($dias[1]['imagenes']);
 
 $incluye = get_field('incluye') ? get_field('incluye') : 'No disponible';
 $no_incluye = get_field('no_incluye') ? get_field('no_incluye') : 'No disponible';
