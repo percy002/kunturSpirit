@@ -8,23 +8,95 @@
 
 get_header();
 ?>
-
 <section class="py-0">
-    <div class="carousel h-dvh bg-cover bg-no-repeat " style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/mapi.webp');
-background-position: center bottom;">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="h-full bg-no-repeat bg-cover"
+                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/mapi.avif'); background-position: center bottom;">
+                    <div
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        <div class="text-white flex-col gap-2.5 items-center">
+                            <h1 class="text-white rop-shadow-lg">Descubre la magia de Machu Picchu – ¡tu aventura te
+                                espera!</h1>
+                            <p class="font-medium text-center">Kuntur Spirit creará tu aventura perfecta en Machu
+                                Picchu,
+                                conectándote con las maravillas de los Andes y la historia Inca.</p>
+                        </div>
+                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
-        <div
-            class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
-            <div class="text-white flex-col gap-2.5 items-center">
-                <h1 class="text-white rop-shadow-lg">Descubre la magia de Machu Picchu – ¡tu aventura te espera!</h1>
-                <p class="font-medium text-center">Kuntur Spirit creará tu aventura perfecta en Machu Picchu, conectándote con las maravillas de los Andes y la historia Inca.</p>
+                    </div>
+                </div>
             </div>
-            <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
+            <!-- cusco -->
+            <div class="swiper-slide">
+                <div class="h-full"
+                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/plazacusco.avif'); background-position: center bottom;">
+                    <div
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        <div class="text-white flex-col gap-2.5 items-center">
+                            <h1 class="text-white rop-shadow-lg">Experiencias Cusco - Vive la historia en cada paso!</h1>
+                            <p class="font-medium text-center">Descubre los secretos de Cusco, la antigua capital inca. Tours auténticos que te conectan con su cultura, arquitectura y misticismo.</p>
+                        </div>
+                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
+                    </div>
+                </div>
+            </div>
+            <!-- peru -->
+            <div class="swiper-slide">
+                <div class="h-full"
+                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/expeperu.avif'); background-position: center bottom;">
+                    <div
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        <div class="text-white flex-col gap-2.5 items-center">
+                            <h1 class="text-white rop-shadow-lg">Experiencias Perú - Explora el Perú de norte a sur!</h1>
+                            <p class="font-medium text-center">Del desierto costero a la selva amazónica, conoce la diversidad cultural y natural de todo un país en rutas diseñadas para sorprenderte.</p>
+                        </div>
+                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- especiales -->
+            <div class="swiper-slide">
+                <div class="h-full"
+                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/especiales.avif'); background-position: center bottom;">
+                    <div
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        <div class="text-white flex-col gap-2.5 items-center">
+                            <h1 class="text-white rop-shadow-lg">Experiencias Especiales - Viajes con alma!</h1>
+                            <p class="font-medium text-center">Rituales ancestrales, turismo vivencial, retiros espirituales y más. Diseñamos experiencias únicas que transforman.</p>
+                        </div>
+                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- trekking -->
+            <div class="swiper-slide">
+                <div class="h-full"
+                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/trekking.avif'); background-position: center bottom;">
+                    <div
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        <div class="text-white flex-col gap-2.5 items-center">
+                            <h1 class="text-white rop-shadow-lg">Experiencias Aventura - Atrévete a sentir la aventura!</h1>
+                            <p class="font-medium text-center">Camina por rutas épicas, respira aire puro y libera adrenalina en paisajes espectaculares. ¡El Perú salvaje te espera!</p>
+                        </div>
+                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
+
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- Paginación -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- Botones de navegación -->
+        <div class="swiper-button-next !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100 "></div>
+        <div class="swiper-button-prev !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  "></div>
     </div>
-
 </section>
+
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
         <h1>Kuntur Spirit</h1>
@@ -207,15 +279,19 @@ background-position: center bottom;">
     <div class="relative w-full">
 
         <div class="bg-transparent relative h-[550px] 2xl:h-[700px] ">
-            <img class="h-full object-cover 2xl:w-full" src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
+            <img class="h-full object-cover 2xl:w-full"
+                src="<?php echo get_template_directory_uri(); ?>/assets/images/laguna.png" alt=""
                 style="filter: drop-shadow(-3px 11px 11px rgba(0,0,0,0.5))">
         </div>
-        <div class="px-2.5 absolute top-1/2 -translate-y-1/2 sm:right-[150px] 2xl:left-1/2 2xl:-translate-1/2 w-[500px] max-w-11/12 2xl:w-[1000px] text-white">
-            <h1 class="text-right text-white 2xl:text-center">"No nos dedicamos al negocio de los viajes. Nos dedicamos al negocio de
+        <div
+            class="px-2.5 absolute top-1/2 -translate-y-1/2 sm:right-[150px] 2xl:left-1/2 2xl:-translate-1/2 w-[500px] max-w-11/12 2xl:w-[1000px] text-white">
+            <h1 class="text-right text-white 2xl:text-center">"No nos dedicamos al negocio de los viajes. Nos dedicamos
+                al negocio de
                 los sueños."
             </h1>
             <div class="flex justify-end 2xl:justify-center">
-                <a href="" class="py-2.5 lg:py-4 px-10 lg:px-12 text-white bg-primary"><span class="text-xl lg:text-2xl">Contáctenos</span></a>
+                <a href="" class="py-2.5 lg:py-4 px-10 lg:px-12 text-white bg-primary"><span
+                        class="text-xl lg:text-2xl">Contáctenos</span></a>
             </div>
         </div>
     </div>
@@ -225,7 +301,12 @@ background-position: center bottom;">
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
         <h1>Experiencias Cusco: ¡Vive la historia en cada paso!</h1>
         <p>
-            Descubre la magia del corazón de los Andes. Cusco, antigua capital del Imperio Inca, es un lugar donde la historia milenaria, la cultura viva y los paisajes impresionantes se entrelazan para ofrecerte una experiencia única. En esta sección encontrarás nuestros mejores tours por la ciudad de Cusco y sus alrededores: desde el clásico City Tour hasta los enigmáticos centros arqueológicos como Sacsayhuamán, el Valle Sagrado de los Incas y el inigualable Machu Picchu. Cada experiencia ha sido diseñada para conectarte con la esencia de este lugar sagrado, guiado por expertos locales y con total respeto por su legado.
+            Descubre la magia del corazón de los Andes. Cusco, antigua capital del Imperio Inca, es un lugar donde la
+            historia milenaria, la cultura viva y los paisajes impresionantes se entrelazan para ofrecerte una
+            experiencia única. En esta sección encontrarás nuestros mejores tours por la ciudad de Cusco y sus
+            alrededores: desde el clásico City Tour hasta los enigmáticos centros arqueológicos como Sacsayhuamán, el
+            Valle Sagrado de los Incas y el inigualable Machu Picchu. Cada experiencia ha sido diseñada para conectarte
+            con la esencia de este lugar sagrado, guiado por expertos locales y con total respeto por su legado.
         </p>
     </div>
     <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
@@ -384,14 +465,15 @@ background-position: center bottom;">
             <div class="flex flex-col gap-5">
                 <h1>Aventura - Trekking más populares</h1>
                 <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre
-                    aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!</p>
+                    aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!
+                </p>
             </div>
             <div class="flex justify-center gap-5 items-center">
                 <i class="fa-solid fa-chevron-left" style=""></i>
                 <div class="flex gap-5 items-center justify-center" style="">
                     <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                        <div class="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                        <div class="h-[220px] w-full">
+                            <img class="w-full h-full object-center object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
                         </div>
                         <!-- contenido tour -->
                         <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
@@ -408,7 +490,9 @@ background-position: center bottom;">
                             <!-- contenido -->
                             <div class="flex flex-col gap-1.5">
                                 <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
-                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
+                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores
+                                    o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera
+                                    de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
 
                             </div>
                             <!-- actions -->
@@ -427,9 +511,9 @@ background-position: center bottom;">
 
                         </div>
                     </article>
-                    <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                        <div class="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                    <article class="hidden sm:flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                        <div class="h-[220px] w-full">
+                            <img class="w-full h-full object-center object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
                         </div>
                         <!-- contenido tour -->
                         <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
@@ -446,7 +530,9 @@ background-position: center bottom;">
                             <!-- contenido -->
                             <div class="flex flex-col gap-1.5">
                                 <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
-                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
+                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores
+                                    o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera
+                                    de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
 
                             </div>
                             <!-- actions -->
@@ -465,9 +551,9 @@ background-position: center bottom;">
 
                         </div>
                     </article>
-                    <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                        <div class="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                    <article class="hidden md:flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                        <div class="h-[220px] w-full">
+                            <img class="w-full h-full object-center object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
                         </div>
                         <!-- contenido tour -->
                         <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
@@ -484,7 +570,9 @@ background-position: center bottom;">
                             <!-- contenido -->
                             <div class="flex flex-col gap-1.5">
                                 <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
-                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
+                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores
+                                    o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera
+                                    de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
 
                             </div>
                             <!-- actions -->
@@ -503,9 +591,9 @@ background-position: center bottom;">
 
                         </div>
                     </article>
-                    <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                        <div class="">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                    <article class="hidden xl:flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                        <div class="h-[220px] w-full">
+                            <img class="w-full h-full object-center object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
                         </div>
                         <!-- contenido tour -->
                         <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
@@ -522,7 +610,9 @@ background-position: center bottom;">
                             <!-- contenido -->
                             <div class="flex flex-col gap-1.5">
                                 <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
-                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
+                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores
+                                    o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera
+                                    de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
 
                             </div>
                             <!-- actions -->
@@ -541,7 +631,7 @@ background-position: center bottom;">
 
                         </div>
                     </article>
-                    
+
                 </div>
                 <i class="fa-solid fa-chevron-right" style=""></i>
             </div>
@@ -554,8 +644,10 @@ background-position: center bottom;">
             <div class="flex flex-col gap-5">
                 <h1>Lo que dicen nuestros clientes</h1>
                 <p class="text-center">
-                    Estamos orgullosos de cuidar cada detalle de nuestros servicios para nuestros clientes, la satisfacción
-                    plena de nuestros viajeros es nuestra mejor recompensa y son ellos nuestros mejores defensores y quienes
+                    Estamos orgullosos de cuidar cada detalle de nuestros servicios para nuestros clientes, la
+                    satisfacción
+                    plena de nuestros viajeros es nuestra mejor recompensa y son ellos nuestros mejores defensores y
+                    quienes
                     con frecuencia, nos recomiendan a familiares o amigos cuando planifican un viaje a nuestra región.
                 </p>
             </div>

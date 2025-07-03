@@ -245,3 +245,33 @@ span {
   outline: none;
 }
 /* fin css para cf7 */
+
+/* estilos swiper */
+.swiper {
+  width: 100%;
+  height: 100vh; /* Ocupa toda la pantalla */
+}
+
+/* Overlay para mejorar la legibilidad */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* Estilos de la paginación y navegación */
+.swiper-pagination-bullet {
+  background: white;
+}
+.swiper-button-next, .swiper-button-prev {
+  background: var(--color-light);
+  padding: 5px 0;
+  color: white !important;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+/* fin estilos swiper */

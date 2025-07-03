@@ -18,6 +18,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <?php wp_head(); ?>
 </head>
 
@@ -33,19 +36,19 @@
                 <div class="flex gap-2.5 items-center">
                     <div class="sm:hidden">
                         <div class="flex gap-2.5 items-center">
-                        <?php
-                        if (function_exists('pll_the_languages')) {
-                            pll_the_languages(array(
-                                'show_flags' => 1,      // Muestra banderas
-                                'show_names' => 0,      // Muestra nombres de idiomas
-                                'hide_current' => 0,    // Muestra el idioma actual
-                                'dropdown' => 0,         // Muestra como lista, no como dropdown
-                                'raw' => 0  // Mostrar HTML listo para usar
-                        
-                            ));
-                        }
-                        ?>
-                    </div>
+                            <?php
+                            if (function_exists('pll_the_languages')) {
+                                pll_the_languages(array(
+                                    'show_flags' => 1,      // Muestra banderas
+                                    'show_names' => 0,      // Muestra nombres de idiomas
+                                    'hide_current' => 0,    // Muestra el idioma actual
+                                    'dropdown' => 0,         // Muestra como lista, no como dropdown
+                                    'raw' => 0  // Mostrar HTML listo para usar
+                            
+                                ));
+                            }
+                            ?>
+                        </div>
                     </div>
                     <button id="openMenu">
                         <i class="fa-solid fa-bars fa-inverse text-2xl"></i>
@@ -63,7 +66,7 @@
 
                 </div>
 
-  
+
                 <div class="gap-5 hidden sm:flex">
                     <div class="flex gap-2.5 text-white">
                         <a href=""><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
