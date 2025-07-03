@@ -3,6 +3,8 @@
 Template Name: Reclamaciones
 */
 get_header();
+$form = get_field('formulario');
+
 $infoHeroTour = array(
     'imagen_url' => get_template_directory_uri() . "/assets/images/personas.avif",
     'title' => 'Hoja de Reclamaciones',
@@ -19,8 +21,9 @@ $infoHeroTour = array(
             carácter de infracción o sobre una queja, cuando está relacionada a un malestar o descontento por el
             servicio.
         </p>
-        <?php echo do_shortcode('[contact-form-7 id="e433a53" title="formReclamaciones"]'); ?>
-
+        <?php if ($form) {
+            echo do_shortcode($form);
+        } ?>
     </div>
 </section>
 

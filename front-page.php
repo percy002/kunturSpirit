@@ -30,7 +30,7 @@ get_header();
             </div>
             <!-- cusco -->
             <div class="swiper-slide">
-                <div class="h-full"
+                <div class="h-full bg-no-repeat bg-cover"
                     style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/plazacusco.avif'); background-position: center bottom;">
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
@@ -45,7 +45,7 @@ get_header();
             </div>
             <!-- peru -->
             <div class="swiper-slide">
-                <div class="h-full"
+                <div class="h-full bg-no-repeat bg-cover"
                     style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/expeperu.avif'); background-position: center bottom;">
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
@@ -60,7 +60,7 @@ get_header();
             </div>
             <!-- especiales -->
             <div class="swiper-slide">
-                <div class="h-full"
+                <div class="h-full bg-no-repeat bg-cover"
                     style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/especiales.avif'); background-position: center bottom;">
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
@@ -75,7 +75,7 @@ get_header();
             </div>
             <!-- trekking -->
             <div class="swiper-slide">
-                <div class="h-full"
+                <div class="h-full bg-no-repeat bg-cover"
                     style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/trekking.avif'); background-position: center bottom;">
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
