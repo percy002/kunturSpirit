@@ -1,3 +1,22 @@
+<style>
+  .carousel-colab {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .carousel-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll-colab 30s linear infinite;
+  }
+  .carousel-colab:hover .carousel-track {
+    animation-play-state: paused;
+  }
+  @keyframes scroll-colab {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
 <section>
     <div class="container flex flex-col gap-10">
         <div class="flex flex-col gap-5">

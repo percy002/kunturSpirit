@@ -28,7 +28,7 @@
     <div id="page" class="min-h-screen flex flex-col">
         <?php do_action('tailpress_header'); ?>
 
-        <header class="py-6 fixed top-0 left-0 right-0 z-50 bg-transparente">
+        <header class="py-6 fixed top-0 left-0 right-0 z-50 bg-transparente md:pr-[100px] md:pl-[100px] ">
             <div class="container flex flex-row-reverse sm:flex-row justify-between items-center">
                 <div class="flex gap-2.5 items-center">
                     <div class="sm:hidden">

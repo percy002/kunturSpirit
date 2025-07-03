@@ -1,4 +1,5 @@
 <?php
+
 /**
  * front-page
  *
@@ -15,11 +16,8 @@ background-position: center bottom;">
         <div
             class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
             <div class="text-white flex-col gap-2.5 items-center">
-                <h1 class="text-white">Discover the magic of Machu Picchu - your adventure awaits!</h1>
-                <p class="font-medium text-center">Kuntur Spirit will craft your perfect Machu Picchu adventure,
-                    connecting
-                    you
-                    to the wonders of the Andes and Inca history.</p>
+                <h1 class="text-white rop-shadow-lg">Descubre la magia de Machu Picchu – ¡tu aventura te espera!</h1>
+                <p class="font-medium text-center">Kuntur Spirit creará tu aventura perfecta en Machu Picchu, conectándote con las maravillas de los Andes y la historia Inca.</p>
             </div>
             <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
@@ -28,7 +26,7 @@ background-position: center bottom;">
 
 </section>
 <section>
-    <div class="container flex flex-col gap-5">
+    <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
         <h1>Kuntur Spirit</h1>
         <p class="text-center">Kuntur Spirit, que significa «El Espíritu del Cóndor», es una agencia de viajes local que
             ofrece una variedad
@@ -43,8 +41,8 @@ background-position: center bottom;">
 </section>
 <!-- SECCION DE TOURS PERU -->
 <section>
-    <div class="container flex flex-col gap-5">
-        <h1>Viaje por Perú: ¡Experiencias inolvidables!</h1>
+    <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
+        <h1>Experiencias Perú: ¡Explora el Perú de norte a sur!</h1>
         <p>
             Descubrir Perú es embarcarse en una aventura llena de contrastes, historia milenaria y paisajes que quitan
             el aliento. Desde la majestuosidad de Machu Picchu hasta la inmensidad del desierto de Paracas, cada rincón
@@ -53,7 +51,7 @@ background-position: center bottom;">
             un Perú que va mucho más allá de los destinos turísticos tradicionales.
         </p>
     </div>
-    <div class="pt-10 flex flex-col gap-10">
+    <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
         <div class="container flex flex-col lg:flex-row gap-7 justify-center">
             <!-- card de tours -->
             <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
@@ -224,17 +222,13 @@ background-position: center bottom;">
 </section>
 <!-- SECCION DE TOURS PERU -->
 <section>
-    <div class="container flex flex-col gap-5">
-        <h1>Viaje por Perú: ¡Experiencias inolvidables!</h1>
+    <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
+        <h1>Experiencias Cusco: ¡Vive la historia en cada paso!</h1>
         <p>
-            Descubrir Perú es embarcarse en una aventura llena de contrastes, historia milenaria y paisajes que quitan
-            el aliento. Desde la majestuosidad de Machu Picchu hasta la inmensidad del desierto de Paracas, cada rincón
-            del país ofrece una experiencia única e inolvidable. En este viaje, te llevaremos por los sabores de su
-            gastronomía, los misterios de sus antiguas civilizaciones y la calidez de su gente. Prepárate para explorar
-            un Perú que va mucho más allá de los destinos turísticos tradicionales.
+            Descubre la magia del corazón de los Andes. Cusco, antigua capital del Imperio Inca, es un lugar donde la historia milenaria, la cultura viva y los paisajes impresionantes se entrelazan para ofrecerte una experiencia única. En esta sección encontrarás nuestros mejores tours por la ciudad de Cusco y sus alrededores: desde el clásico City Tour hasta los enigmáticos centros arqueológicos como Sacsayhuamán, el Valle Sagrado de los Incas y el inigualable Machu Picchu. Cada experiencia ha sido diseñada para conectarte con la esencia de este lugar sagrado, guiado por expertos locales y con total respeto por su legado.
         </p>
     </div>
-    <div class="pt-10 flex flex-col gap-10">
+    <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
         <div class="container flex flex-col lg:flex-row gap-7 justify-center">
             <!-- card de tours -->
             <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
@@ -354,7 +348,7 @@ background-position: center bottom;">
 
                     </div>
                     <!-- actions -->
-                    <div class="w-full py-2.5 px-5 flex justify-between items-center">
+                    <div class="w-full py-2.5 px-5 flex justify-center items-center">
                         <!-- precio -->
                         <div class="flex flex-col justify-center" style="flex: 1 0 0">
                             <!-- oferta -->
@@ -384,79 +378,219 @@ background-position: center bottom;">
                     EXPERIENCIAS</span></a>
         </div>
     </div>
-<?php get_template_part( 'template-parts/mensaje' ) ?>
-<section>
-    <div class="container flex flex-col gap-10">
-        <div class="flex flex-col gap-5">
-            <h1>Aventura - Trekking más populares</h1>
-            <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre
-                aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!</p>
-        </div>
-        <div class="flex justify-center gap-5 items-center">
-            <i class="fa-solid fa-chevron-left" style=""></i>
-            <div class="flex gap-5 items-center" style="">
-                <div class="" style="flex: 1 1 0;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
-                </div>
-                <div class="hidden md:block" style="flex: 1 1 0;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
-                </div>
-                <div class="hidden lg:block" style="flex: 1 1 0;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
-                </div>
-                <div class="hidden lg:block" style="flex: 1 1 0;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/tour.png" alt="">
-                </div>
-
+    <?php get_template_part('template-parts/mensaje') ?>
+    <section>
+        <div class="container flex flex-col gap-10">
+            <div class="flex flex-col gap-5">
+                <h1>Aventura - Trekking más populares</h1>
+                <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre
+                    aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!</p>
             </div>
-            <i class="fa-solid fa-chevron-right" style=""></i>
-        </div>
+            <div class="flex justify-center gap-5 items-center">
+                <i class="fa-solid fa-chevron-left" style=""></i>
+                <div class="flex gap-5 items-center justify-center" style="">
+                    <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                        <div class="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                        </div>
+                        <!-- contenido tour -->
+                        <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                            <!-- etiquetas -->
+                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                                <div class="flex items-center gap-1.5 text-sm">
+                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                    <span class="text-light">1 Dia</span>
+                                </div>
+                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                    <span class="text-sm text-white">GRUPAL / PRIVADO</span>
+                                </div>
+                            </div>
+                            <!-- contenido -->
+                            <div class="flex flex-col gap-1.5">
+                                <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
+                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
 
+                            </div>
+                            <!-- actions -->
+                            <div class="w-full py-2.5 px-5 items-center">
+                                <!-- precio -->
+                                <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
+                                    <span>Desde:</span>
+                                    <span class="font-bold text-primary text-base">US$ 1200</span>
+                                </div>
+                                <!-- botones -->
+                                <div class="flex gap-1.5 text-white justify-center">
+                                    <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                        class="py-2.5 px-5 bg-secondary "><span>Ver Itinerario</span></a>
+                                </div>
+                            </div>
 
-    </div>
-</section>
-<section>
-    <div class="container flex flex-col gap-10">
-        <div class="flex flex-col gap-5">
-            <h1>Lo que dicen nuestros clientes</h1>
-            <p class="text-center">
-                Estamos orgullosos de cuidar cada detalle de nuestros servicios para nuestros clientes, la satisfacción
-                plena de nuestros viajeros es nuestra mejor recompensa y son ellos nuestros mejores defensores y quienes
-                con frecuencia, nos recomiendan a familiares o amigos cuando planifican un viaje a nuestra región.
-            </p>
-        </div>
-        <div class="flex justify-center gap-5 items-center">
-            <i class="fa-solid fa-chevron-left"></i>
-            <div class="flex gap-5 items-center">
-                <div class="" style="flex: 1 1 0;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
-                </div>
-                <div class="hidden md:block" style="flex: 1 1 0;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
-                </div>
-                <div class="hidden lg:block" style="flex: 1 1 0;">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
-                </div>
+                        </div>
+                    </article>
+                    <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                        <div class="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                        </div>
+                        <!-- contenido tour -->
+                        <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                            <!-- etiquetas -->
+                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                                <div class="flex items-center gap-1.5 text-sm">
+                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                    <span class="text-light">1 Dia</span>
+                                </div>
+                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                    <span class="text-sm text-white">GRUPAL / PRIVADO</span>
+                                </div>
+                            </div>
+                            <!-- contenido -->
+                            <div class="flex flex-col gap-1.5">
+                                <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
+                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
 
+                            </div>
+                            <!-- actions -->
+                            <div class="w-full py-2.5 px-5 items-center">
+                                <!-- precio -->
+                                <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
+                                    <span>Desde:</span>
+                                    <span class="font-bold text-primary text-base">US$ 1200</span>
+                                </div>
+                                <!-- botones -->
+                                <div class="flex gap-1.5 text-white justify-center">
+                                    <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                        class="py-2.5 px-5 bg-secondary "><span>Ver Itinerario</span></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+                    <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                        <div class="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                        </div>
+                        <!-- contenido tour -->
+                        <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                            <!-- etiquetas -->
+                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                                <div class="flex items-center gap-1.5 text-sm">
+                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                    <span class="text-light">1 Dia</span>
+                                </div>
+                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                    <span class="text-sm text-white">GRUPAL / PRIVADO</span>
+                                </div>
+                            </div>
+                            <!-- contenido -->
+                            <div class="flex flex-col gap-1.5">
+                                <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
+                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
+
+                            </div>
+                            <!-- actions -->
+                            <div class="w-full py-2.5 px-5 items-center">
+                                <!-- precio -->
+                                <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
+                                    <span>Desde:</span>
+                                    <span class="font-bold text-primary text-base">US$ 1200</span>
+                                </div>
+                                <!-- botones -->
+                                <div class="flex gap-1.5 text-white justify-center">
+                                    <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                        class="py-2.5 px-5 bg-secondary "><span>Ver Itinerario</span></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+                    <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
+                        <div class="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                        </div>
+                        <!-- contenido tour -->
+                        <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                            <!-- etiquetas -->
+                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                                <div class="flex items-center gap-1.5 text-sm">
+                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                    <span class="text-light">1 Dia</span>
+                                </div>
+                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                    <span class="text-sm text-white">GRUPAL / PRIVADO</span>
+                                </div>
+                            </div>
+                            <!-- contenido -->
+                            <div class="flex flex-col gap-1.5">
+                                <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
+                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
+
+                            </div>
+                            <!-- actions -->
+                            <div class="w-full py-2.5 px-5 items-center">
+                                <!-- precio -->
+                                <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
+                                    <span>Desde:</span>
+                                    <span class="font-bold text-primary text-base">US$ 1200</span>
+                                </div>
+                                <!-- botones -->
+                                <div class="flex gap-1.5 text-white justify-center">
+                                    <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
+                                        class="py-2.5 px-5 bg-secondary "><span>Ver Itinerario</span></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </article>
+                    
+                </div>
+                <i class="fa-solid fa-chevron-right" style=""></i>
             </div>
-            <i class="fa-solid fa-chevron-right"></i>
+
+
         </div>
+    </section>
+    <section>
+        <div class="container flex flex-col gap-10">
+            <div class="flex flex-col gap-5">
+                <h1>Lo que dicen nuestros clientes</h1>
+                <p class="text-center">
+                    Estamos orgullosos de cuidar cada detalle de nuestros servicios para nuestros clientes, la satisfacción
+                    plena de nuestros viajeros es nuestra mejor recompensa y son ellos nuestros mejores defensores y quienes
+                    con frecuencia, nos recomiendan a familiares o amigos cuando planifican un viaje a nuestra región.
+                </p>
+            </div>
+            <div class="flex justify-center gap-5 items-center">
+                <i class="fa-solid fa-chevron-left"></i>
+                <div class="flex gap-5 items-center">
+                    <div class="" style="flex: 1 1 0;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
+                    </div>
+                    <div class="hidden md:block" style="flex: 1 1 0;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
+                    </div>
+                    <div class="hidden lg:block" style="flex: 1 1 0;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
+                    </div>
 
-    </div>
-</section>
-<?php get_template_part('template-parts/porquenosotros') ?>
-<section>
-    <div class="container flex flex-col gap-10">
-        <div class="flex flex-col gap-5">
-            <h1>Información útil para el viajero</h1>
-            <p class="text-center">
-                Encuentre información esencial para su viaje: consejos, recomendaciones y datos prácticos para una
-                experiencia de viaje sin contratiempos.
-            </p>
+                </div>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
         </div>
+    </section>
+    <?php get_template_part('template-parts/porquenosotros') ?>
+    <section>
+        <div class="container flex flex-col gap-10">
+            <div class="flex flex-col gap-5">
+                <h1>Información útil para el viajero</h1>
+                <p class="text-center">
+                    Encuentre información esencial para su viaje: consejos, recomendaciones y datos prácticos para una
+                    experiencia de viaje sin contratiempos.
+                </p>
+            </div>
 
 
-    </div>
-</section>
-<?php
-get_footer();
+        </div>
+    </section>
+    <?php
+    get_footer();
