@@ -311,24 +311,17 @@ span {
 
 .swiper-button-next,
 .swiper-button-prev {
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    background: var(--color-light);
-    padding: 5px 0;
-    color: white !important;
-  }
+  background: var(--color-light);
+  padding: 5px 0;
+  color: white !important;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 24px !important;
-    font-weight: bold !important;
-  }
+  font-size: 24px !important;
+  font-weight: bold !important;
 }
+
 
 
 /* fin estilos swiper */
