@@ -91,9 +91,11 @@
 .lang-item {
   list-style: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-repeat: repeat;
   background-size: cover;
@@ -164,13 +166,15 @@ span {
   font-size: 16px;
 
 }
+
 /* estilos wordpres */
-  .current-menu-item{
-    border-left: 5px solid var(--color-primary);
-    padding-left: 10px;
-    color: var(--color-primary);
-    font-weight: 700;
-  }
+.current-menu-item {
+  border-left: 5px solid var(--color-primary);
+  padding-left: 10px;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
 /* fin estilos wodpress */
 /* css para cf7 */
 /* Estilos base para Contact Form 7 en tu tema WordPress */
@@ -236,6 +240,7 @@ span {
   border-radius: 6px;
   font-size: 0.95rem;
 }
+
 .wpcf7-form input[type="number"],
 .wpcf7-form input[type="date"] {
   width: 100%;
@@ -252,12 +257,14 @@ span {
   border-color: #D88027;
   outline: none;
 }
+
 /* fin css para cf7 */
 
 /* estilos swiper */
 .swiper {
   width: 100%;
-  height: 100vh; /* Ocupa toda la pantalla */
+  height: 100vh;
+  /* Ocupa toda la pantalla */
 }
 
 /* Overlay para mejorar la legibilidad */
@@ -269,17 +276,53 @@ span {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
+
 /* Estilos de la paginación y navegación */
 .swiper-pagination-bullet {
   background: white;
 }
-.swiper-button-next, .swiper-button-prev {
+
+.swiper-button-next,
+.swiper-button-prev {
   background: var(--color-light);
   padding: 5px 0;
   color: white !important;
 }
-.swiper-button-next::after, .swiper-button-prev::after {
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
   font-size: 24px !important;
   font-weight: bold !important;
 }
+
 /* fin estilos swiper */
+
+/* carrusel de colaboradores */
+.carousel-colab {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll-colab 30s linear infinite;
+}
+
+.carousel-colab:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-colab {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* fin de carrusel de colaboradores */
