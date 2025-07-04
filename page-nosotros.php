@@ -21,7 +21,7 @@ $infoHeroTour = array(
 <?php ?>
 <?php get_template_part('template-parts/hero', null, $infoHeroTour); ?>
 <section>
-    <div class="container flex flex-col gap-1.5 items-center">
+    <div class="container flex flex-col gap-1.5 items-center md:pr-[100px] md:pl-[100px]">
         <span class="text-center text-2xl">Acerca de</span>
         <h1 class="m-0">Nosotros</h1>
         <div class="text-center flex flex-col gap-2.5">
@@ -30,7 +30,7 @@ $infoHeroTour = array(
     </div>
 </section>
 <section>
-    <div class="container flex justify-end h-[600px]" style="background: url('<?php echo get_template_directory_uri(); ?>/assets/images/saludo.avif') lightgray 50% / cover no-repeat;">
+    <div class="container flex justify-end h-[600px] md:pr-[100px] md:pl-[100px]" style="background: url('<?php echo get_template_directory_uri(); ?>/assets/images/saludo.avif') lightgray 50% / cover no-repeat;">
         <div class="flex flex-col justify-center gap-2.5 px-10 w-[340px]" style="background: rgba(255, 255, 255, 0.80);">
             <div class="">
                 <h2 class="text-center text-secondary text-2xl">Misión</h2>
@@ -46,7 +46,7 @@ $infoHeroTour = array(
 <?php get_template_part( 'template-parts/porquenosotros' ) ?>
 
 <section>
-    <div class="container flex flex-col gap-1.5">
+    <div class="container flex flex-col gap-1.5 md:pr-[100px] md:pl-[100px]">
         <h1>Todos Nuestros Colaboradores</h1>
         <p class="text-center">Conoce a todos nuestros colaboradores que hacen de tu viaje, la mejor experiencia de tu vida.</p>
         <div class="flex justify-center flex-wrap gap-5">
