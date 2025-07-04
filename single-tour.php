@@ -265,6 +265,11 @@ get_header();
         </section>
     </aside>
 </div>
+
+<!-- PREGUNTAS FRECUENTES -->
+<?php get_template_part('template-parts/preguntasFrecuentes') ?>
+
+<!-- FOOTER DE TOURS -->
 <div class="fixed bottom-0 w-full lg:hidden"
     style="background: linear-gradient(180deg, #865042 -70.62%, #41180D 70.62%);">
     <div class="p-2.5 flex justify-between items-center ">
