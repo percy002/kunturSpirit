@@ -1,5 +1,5 @@
 <section>
-    <div class="container flex flex-col gap-10">
+    <div class="container flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
         <div class="flex flex-col gap-5">
             <h1>¿Por que viajar con Kuntur Spirit?</h1>
             <p class="text-center">
