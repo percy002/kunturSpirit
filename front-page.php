@@ -15,7 +15,7 @@ get_header();
                 <div class="h-full bg-no-repeat bg-cover"
                     style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/mapi.avif'); background-position: center bottom;">
                     <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] pb-[20vh] justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
                             <h1 class="text-white rop-shadow-lg">Descubre la magia de Machu Picchu – ¡tu aventura te
                                 espera!</h1>
@@ -33,7 +33,7 @@ get_header();
                 <div class="h-full bg-no-repeat bg-cover"
                     style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/plazacusco.avif'); background-position: center bottom;">
                     <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] pb-[20vh] justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
                             <h1 class="text-white rop-shadow-lg">Experiencias Cusco - Vive la historia en cada paso!</h1>
                             <p class="font-medium text-center">Descubre los secretos de Cusco, la antigua capital inca. Tours auténticos que te conectan con su cultura, arquitectura y misticismo.</p>
@@ -48,7 +48,7 @@ get_header();
                 <div class="h-full bg-no-repeat bg-cover"
                     style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/expeperu.avif'); background-position: center bottom;">
                     <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] pb-[20vh] justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
                             <h1 class="text-white rop-shadow-lg">Experiencias Perú - Explora el Perú de norte a sur!</h1>
                             <p class="font-medium text-center">Del desierto costero a la selva amazónica, conoce la diversidad cultural y natural de todo un país en rutas diseñadas para sorprenderte.</p>
@@ -63,7 +63,7 @@ get_header();
                 <div class="h-full bg-no-repeat bg-cover"
                     style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/especiales.avif'); background-position: center bottom;">
                     <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] pb-[20vh] justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
                             <h1 class="text-white rop-shadow-lg">Experiencias Especiales - Viajes con alma!</h1>
                             <p class="font-medium text-center">Rituales ancestrales, turismo vivencial, retiros espirituales y más. Diseñamos experiencias únicas que transforman.</p>
@@ -78,7 +78,7 @@ get_header();
                 <div class="h-full bg-no-repeat bg-cover"
                     style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/trekking.avif'); background-position: center bottom;">
                     <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] pb-[20vh] justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
                             <h1 class="text-white rop-shadow-lg">Experiencias Aventura - Atrévete a sentir la aventura!</h1>
                             <p class="font-medium text-center">Camina por rutas épicas, respira aire puro y libera adrenalina en paisajes espectaculares. ¡El Perú salvaje te espera!</p>
