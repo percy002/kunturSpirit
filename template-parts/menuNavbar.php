@@ -71,24 +71,32 @@
                                                 <span class="text-2xl">
                                                     <?php echo esc_html($paquete->name); ?>
                                                 </span>
-                                                <span class="text-2xl"><i class="fa-solid fa-chevron-right"></i></span>
+                                                <span class="text-2xl hidden md:block"><i
+                                                        class="fa-solid fa-chevron-right"></i></span>
+                                                <span class="text-2xl md:hidden"><i class="fa-solid fa-chevron-down"></i></span>
+
                                             </button>
                                             <div class="block lg:hidden">
-                                                <div class="tours-list hidden mt-2 pl-6"
+                                                <div class="tours-list hidden mt-2 pl-6 flex-col gap-2.5"
                                                     id="tours-<?php echo esc_attr($paquete->term_id); ?>">
                                                     <?php if ($tours):
                                                         foreach ($tours as $tour):
                                                             ?>
                                                             <a href="<?php echo get_permalink($tour->ID); ?>"
-                                                                class="block text-base text-zinc-200 hover:text-secondary py-1">
+                                                                class="block text-base text-light hover:text-secondary py-1">
                                                                 <?php echo esc_html($tour->post_title); ?>
                                                             </a>
                                                             <?php
                                                         endforeach;
                                                     else:
-                                                        echo '<span class="text-xs text-zinc-400">No hay tours en este paquete.</span>';
+                                                        echo '<span class="text-base text-light">No hay tours en este paquete.</span>';
                                                     endif;
                                                     ?>
+                                                    <hr class="border-t-2 border-light w-1/2 py-1">
+                                                    <!-- MOSTRAR TODO -->
+                                                    <a href="" class="cursor-pointer" id="verTodosTours">
+                                                        <span class="text-xl">Ver todos</span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </li>

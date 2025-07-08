@@ -47,7 +47,21 @@ document.addEventListener('DOMContentLoaded', function () {
             const id = this.getAttribute('data-paquete');
             const toursList = document.getElementById('tours-' + id);
             if (toursList) {
-                toursList.classList.toggle('hidden');
+                // Alternar entre flex y hidden
+                if (toursList.classList.contains('hidden')) {
+                    toursList.classList.remove('hidden');
+                    toursList.classList.add('flex');
+                } else {
+                    toursList.classList.add('hidden');
+                    toursList.classList.remove('flex');
+                }
+
+                if (window.innerWidth < 1024) {
+                    const icon = this.querySelector('.fa-chevron-down');
+                    if (icon) {
+                        icon.classList.toggle('rotate-180');
+                    }
+                }
             }
         });
     });
