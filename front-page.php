@@ -35,8 +35,10 @@ get_header();
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] pb-[20vh] justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white rop-shadow-lg">Experiencias Cusco - Vive la historia en cada paso!</h1>
-                            <p class="font-medium text-center">Descubre los secretos de Cusco, la antigua capital inca. Tours auténticos que te conectan con su cultura, arquitectura y misticismo.</p>
+                            <h1 class="text-white rop-shadow-lg">Experiencias Cusco - Vive la historia en cada paso!
+                            </h1>
+                            <p class="font-medium text-center">Descubre los secretos de Cusco, la antigua capital inca.
+                                Tours auténticos que te conectan con su cultura, arquitectura y misticismo.</p>
                         </div>
                         <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
@@ -50,8 +52,10 @@ get_header();
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] pb-[20vh] justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white rop-shadow-lg">Experiencias Perú - Explora el Perú de norte a sur!</h1>
-                            <p class="font-medium text-center">Del desierto costero a la selva amazónica, conoce la diversidad cultural y natural de todo un país en rutas diseñadas para sorprenderte.</p>
+                            <h1 class="text-white rop-shadow-lg">Experiencias Perú - Explora el Perú de norte a sur!
+                            </h1>
+                            <p class="font-medium text-center">Del desierto costero a la selva amazónica, conoce la
+                                diversidad cultural y natural de todo un país en rutas diseñadas para sorprenderte.</p>
                         </div>
                         <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
@@ -66,7 +70,8 @@ get_header();
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] pb-[20vh] justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
                             <h1 class="text-white rop-shadow-lg">Experiencias Especiales - Viajes con alma!</h1>
-                            <p class="font-medium text-center">Rituales ancestrales, turismo vivencial, retiros espirituales y más. Diseñamos experiencias únicas que transforman.</p>
+                            <p class="font-medium text-center">Rituales ancestrales, turismo vivencial, retiros
+                                espirituales y más. Diseñamos experiencias únicas que transforman.</p>
                         </div>
                         <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
@@ -80,8 +85,10 @@ get_header();
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] pb-[20vh] justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white rop-shadow-lg">Experiencias Aventura - Atrévete a sentir la aventura!</h1>
-                            <p class="font-medium text-center">Camina por rutas épicas, respira aire puro y libera adrenalina en paisajes espectaculares. ¡El Perú salvaje te espera!</p>
+                            <h1 class="text-white rop-shadow-lg">Experiencias Aventura - Atrévete a sentir la aventura!
+                            </h1>
+                            <p class="font-medium text-center">Camina por rutas épicas, respira aire puro y libera
+                                adrenalina en paisajes espectaculares. ¡El Perú salvaje te espera!</p>
                         </div>
                         <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
@@ -93,7 +100,8 @@ get_header();
         <!-- <div class="swiper-pagination"></div> -->
         <!-- Botones de navegación -->
         <div class="swiper-button-next !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100 "></div>
-        <div class="swiper-button-prev !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  "></div>
+        <div class="swiper-button-prev !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  ">
+        </div>
     </div>
 </section>
 
@@ -473,7 +481,8 @@ get_header();
                 <div class="flex gap-5 items-center justify-center" style="">
                     <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
                         <div class="h-[220px] w-full">
-                            <img class="w-full h-full object-center object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                            <img class="w-full h-full object-center object-cover"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
                         </div>
                         <!-- contenido tour -->
                         <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
@@ -513,7 +522,8 @@ get_header();
                     </article>
                     <article class="hidden sm:flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
                         <div class="h-[220px] w-full">
-                            <img class="w-full h-full object-center object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                            <img class="w-full h-full object-center object-cover"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
                         </div>
                         <!-- contenido tour -->
                         <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
@@ -553,7 +563,8 @@ get_header();
                     </article>
                     <article class="hidden md:flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
                         <div class="h-[220px] w-full">
-                            <img class="w-full h-full object-center object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                            <img class="w-full h-full object-center object-cover"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
                         </div>
                         <!-- contenido tour -->
                         <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
@@ -593,7 +604,8 @@ get_header();
                     </article>
                     <article class="hidden xl:flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
                         <div class="h-[220px] w-full">
-                            <img class="w-full h-full object-center object-cover" src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
+                            <img class="w-full h-full object-center object-cover"
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
                         </div>
                         <!-- contenido tour -->
                         <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
@@ -651,25 +663,12 @@ get_header();
                     con frecuencia, nos recomiendan a familiares o amigos cuando planifican un viaje a nuestra región.
                 </p>
             </div>
-            <div class="flex justify-center gap-5 items-center">
-                <i class="fa-solid fa-chevron-left"></i>
-                <div class="flex gap-5 items-center">
-                    <div class="" style="flex: 1 1 0;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
-                    </div>
-                    <div class="hidden md:block" style="flex: 1 1 0;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
-                    </div>
-                    <div class="hidden lg:block" style="flex: 1 1 0;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/comentario.png" alt="">
-                    </div>
+            <?php echo do_shortcode('[wptripadvisor_usetemplate tid="1"]') ?>
 
-                </div>
-                <i class="fa-solid fa-chevron-right"></i>
-            </div>
 
         </div>
     </section>
+    
     <?php get_template_part('template-parts/porquenosotros') ?>
     <section>
         <div class="container flex flex-col gap-10">
@@ -680,8 +679,6 @@ get_header();
                     experiencia de viaje sin contratiempos.
                 </p>
             </div>
-
-
         </div>
     </section>
     <?php
