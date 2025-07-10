@@ -166,7 +166,7 @@ p {
   font-weight: var(--font-weight-light);
   font-size: var(--text-base);
   font-size: 13px;
-  text-align: center;
+  text-align: start;
 }
 
 @media(min-width: 768px) {

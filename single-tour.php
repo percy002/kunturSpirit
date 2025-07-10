@@ -37,11 +37,28 @@ $infoHeroTour = array(
 get_header();
 ?>
 <?php get_template_part('template-parts/hero', null, $infoHeroTour); ?>
-
-<div class="lg:flex lg:gap-8 container bg-white lg:bg-transparent md:pr-[100px] md:pl-[100px]">
+<div class="container lg:hidden">
+    <p class="text-center text-base my-2.5"><?= $resumen_descripcion ?></p>
+</div>
+<div class="lg:flex lg:gap-8 container bg-white lg:bg-transparent lg:pr-[100px] lg:pl-[100px]">
     <!-- CONTENIDO -->
+
     <div class="lg:flex-2 bg-white lg:px-5">
-        <section id="resumen-tour">
+        <!-- RESUMEN -->
+        <!-- RESUMEN -->
+        <details class="lg:hidden bg-white px-2.5 md:px-12 py-3">
+            <summary
+                class="cursor-pointer text-xl text-secondary select-none flex gap-2.5 justify-between items-center border-b-2 border-gray-300">
+                <div class="font-bold flex gap-2.5 items-center"><span class="text-lg"><i
+                            class="fa-solid fa-clipboard"></i></span>Resumen</div>
+                <i class="fa-solid fa-chevron-down icon-chevron transition-transform duration-600"></i>
+            </summary>
+            <div class="">
+                <h1 class="text-start">Descripción General</h1>
+                <?php echo $descripcion_general ?>
+            </div>
+        </details>
+        <section id="resumen-tour" class="hidden lg:block">
             <div class="flex flex-col gap-2.5">
                 <h1 class="text-start">Descripción General</h1>
                 <?php echo $descripcion_general ?>
@@ -49,7 +66,81 @@ get_header();
         </section>
 
         <!-- ITINERARIO -->
-        <section id="itinerario-tour">
+        <details class="lg:hidden bg-white px-2.5 md:px-12 py-3">
+            <summary
+                class="cursor-pointer text-xl text-secondary select-none flex gap-2.5 justify-between items-center border-b-2 border-gray-300">
+                <div class="font-bold flex gap-2.5 items-center"><span class="text-lg"><i
+                            class="fa-solid fa-map-location-dot"></i></span>Itinerario</div>
+                <i class="fa-solid fa-chevron-down icon-chevron transition-transform duration-600"></i>
+            </summary>
+            <div class="">
+                <h1 class="text-start">Itinerario Detallado</h1>
+                <!-- CONTENIDO DE ITINERARIO -->
+                <div class="flex flex-col">
+                    <!-- dia 1 -->
+                    <?php foreach ($dias as $numero => $dia): ?>
+                        <div class="flex gap-5 mb-4">
+                            <div class="flex flex-col">
+                                <div
+                                    class="flex flex-col rounded-4xl bg-primary text-white w-14 h-14 items-center justify-center p-3">
+                                    <span class="font-medium">Día</span>
+                                    <span class="text-2xl font-bold"><?= str_pad($numero, 2, '0', STR_PAD_LEFT); ?></span>
+                                </div>
+                                <div class="relative h-full">
+                                    <div class="absolute left-1/2 top-0 h-full border-l-4 border-dashed border-primary">
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="p-0 flex-1">
+                                <div class="h-14 flex flex-col justify-center">
+                                    <h1 class="text-2xl font-bold text-start m-0"><?= esc_html($dia['titulo']) ?></h1>
+                                </div>
+                                <div>
+                                    <?= wp_kses_post($dia['descripcion']) ?>
+                                </div>
+                                <div class="">
+
+                                    <?php if (!empty($dia['imagenes'])): ?>
+                                        <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-2 justify-center">
+                                            <?php
+                                            // Mostrar solo las 3 primeras imágenes
+                                            for ($j = 1; $j <= 3; $j++) {
+                                                $img = $dia['imagenes']['imagen_' . $j] ?? null;
+
+                                                if ($img) {
+                                                    // Si es ID
+                                                    if (is_numeric($img)) {
+                                                        $img_url = wp_get_attachment_image_url($img, 'full');
+                                                        $img_alt = get_post_meta($img, '_wp_attachment_image_alt', true) ?: 'Imagen del día';
+                                                    }
+                                                    // Si es array
+                                                    elseif (is_array($img)) {
+                                                        $img_url = $img['url'] ?? '';
+                                                        $img_alt = $img['alt'] ?? 'Imagen del día';
+                                                    }
+                                                    // Si es string (URL directa)
+                                                    else {
+                                                        $img_url = $img;
+                                                        $img_alt = 'Imagen del día';
+                                                    }
+
+                                                    if ($img_url) {
+                                                        echo "<img src='" . esc_url($img_url) . "' alt='" . esc_attr($img_alt) . "' class='w-2/3 lg:w-1/4 h-auto object-cover rounded' />";
+                                                    }
+                                                }
+                                            }
+                                            ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </section>
+
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </details>
+        <section id="itinerario-tour" class="hidden lg:block">
             <div class="flex flex-col gap-5">
                 <h1 class="text-start">Itinerario Detallado</h1>
 
@@ -120,7 +211,47 @@ get_header();
         </section>
 
         <!-- QUE INCLUYE -->
-        <section id="incluye-tour">
+        <details class="lg:hidden bg-white px-2.5 md:px-12 py-3">
+            <summary
+                class="cursor-pointer text-xl text-secondary select-none flex gap-2.5 justify-between items-center border-b-2 border-gray-300">
+                <div class="font-bold flex gap-2.5 items-center"><span class="text-lg"><i
+                            class="fa-solid fa-clipboard"></i></span>¿Qué Incluye el paquete?
+                </div>
+                <i class="fa-solid fa-chevron-down icon-chevron transition-transform duration-600"></i>
+            </summary>
+            <div class="">
+                <div class="flex flex-col gap-2.5">
+                    <h1 class="text-start">¿Qué Incluye?</h1>
+                    <p>Este paquete ha sido cuidadosamente diseñado para brindarte una experiencia completa, cómoda y
+                        sin
+                        preocupaciones. </p>
+                    <div class="flex flex-col gap-2.5">
+                        <!-- ¿QUE INCLUYE? -->
+                        <h2 class="text-primary">Incluye</h2>
+                        <div class="flex flex-col ">
+                            <ul class="list-disc pl-5">
+                                <?php foreach ($incluye as $item): ?>
+                                    <li><?= esc_html($item) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        <!-- NO INCLUYE -->
+                        <h2 class="text-primary">No Incluye</h2>
+                        <p>Este paquete no contempla algunos gastos personales ni servicios adicionales que pueden ser
+                            útiles para
+                            tu viaje:</p>
+                        <div class="flex flex-col ">
+                            <ul class="list-disc pl-5">
+                                <?php foreach ($incluye as $item): ?>
+                                    <li><?= esc_html($item) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </details>
+        <section id="incluye-tour" class="hidden lg:block">
             <div class="flex flex-col gap-2.5">
                 <h1 class="text-start">¿Qué Incluye?</h1>
                 <p>Este paquete ha sido cuidadosamente diseñado para brindarte una experiencia completa, cómoda y sin
@@ -152,7 +283,74 @@ get_header();
         </section>
 
         <!-- MAS INFORMACION -->
-        <section id="mas-informacion" class="bg-primary text-white">
+        <details class="lg:hidden bg-white px-2.5 md:px-12 py-3">
+            <summary
+                class="cursor-pointer text-xl text-secondary select-none flex gap-2.5 justify-between items-center border-b-2 border-gray-300">
+                <div class="font-bold flex gap-2.5 items-center"><span class="text-lg"><i
+                            class="fa-solid fa-circle-question"></i></span>Antes de viajar</div>
+                <i class="fa-solid fa-chevron-down icon-chevron transition-transform duration-600"></i>
+            </summary>
+            <section id="mas-informacion" class="bg-primary text-white">
+                <div class="container flex flex-col gap-2.5">
+                    <h1 class="text-start text-white">Más Información</h1>
+                    <div class="">
+                        <h2>Consideraciones importantes:</h2>
+                        <ul class="list-disc pl-5">
+                            <li>Los horarios de vuelos y traslados están sujetos a disponibilidad y confirmación previa.
+                            </li>
+                            <li>El orden del itinerario puede variar por condiciones climáticas o factores logísticos
+                                sin
+                                alterar el
+                                contenido del tour.</li>
+                            <li>Para la visita a Machu Picchu, el ingreso es en horario programado, se recomienda llegar
+                                con
+                                anticipación.</li>
+                            <li>Las excursiones requieren un nivel físico moderado (especialmente Montaña de 7 Colores y
+                                Laguna
+                                Humantay).</li>
+                            <li>En temporada alta (junio-agosto), es recomendable reservar con al menos 30 días de
+                                anticipación.
+                            </li>
+                            <li>Todos los servicios están sujetos a condiciones y políticas de la agencia y operadores
+                                locales.</li>
+                        </ul>
+                        <h2>Recomendaciones para tu viaje:</h2>
+                        <ul class="list-disc pl-5">
+                            <li>Llevar pasaporte o documento de identidad vigente (requisito obligatorio para ingresos a
+                                sitios
+                                arqueológicos).</li>
+                            <li>Usar calzado cómodo para caminatas y ropa en capas (el clima puede variar durante el
+                                día).
+                            </li>
+                            <li>Protegerse del sol: sombrero, lentes de sol y bloqueador solar.</li>
+                            <li>En altura (Cusco, Puno), se recomienda aclimatarse el primer día y mantenerse bien
+                                hidratado.</li>
+                            <li>Para rutas de montaña: llevar una pequeña mochila con agua, snacks, poncho de lluvia y
+                                abrigo
+                                ligero.</li>
+                            <li>Consultar con su médico sobre el mal de altura si tiene condiciones preexistentes.</li>
+                        </ul>
+                        <h2>Formas de pago:</h2>
+                        <ul class="list-disc pl-5">
+                            <li>Aceptamos transferencias bancarias nacionales e internacionales, pagos con tarjeta de
+                                crédito o
+                                débito, y
+                                PayPal.</li>
+                            <li>Se puede realizar el pago en cuotas previas a la fecha del viaje (consultar plan de
+                                pagos
+                                con
+                                nuestros
+                                agentes).</li>
+                            <li> Para confirmar la reserva se requiere un adelanto mínimo del 50% del total del paquete.
+                            </li>
+                            <li> El saldo restante debe ser cancelado hasta 7 días antes del inicio del viaje.</li>
+                            <li>Todos los pagos son gestionados con seguridad y respaldo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </details>
+        <section id="mas-informacion" class="bg-primary text-white hidden lg:block">
             <div class="container flex flex-col gap-2.5">
                 <h1 class="text-start text-white">Más Información</h1>
                 <div class="">
@@ -208,7 +406,21 @@ get_header();
             </div>
         </section>
         <!-- PRECIO DEL TOUR -->
-        <section id="precio-tour">
+        <details class="lg:hidden bg-white px-2.5 md:px-12 py-3">
+            <summary
+                class="cursor-pointer text-xl text-secondary select-none flex gap-2.5 justify-between items-center border-b-2 border-gray-300">
+                <div class="font-bold flex gap-2.5 items-center"><span class="text-lg"><i
+                            class="fa-solid fa-hand-holding-dollar">Precio</i></div>
+                <i class="fa-solid fa-chevron-down icon-chevron transition-transform duration-600"></i>
+            </summary>
+            <section id="precio-tour">
+                <div class="">
+                    <h1 class="text-primary text-start">Precio del Tour</h1>
+                    <?php echo $info_precio_tour; ?>
+                </div>
+            </section>
+        </details>
+        <section id="precio-tour" class="hidden lg:block">
             <div class="">
                 <h1 class="text-primary text-start">Precio del Tour</h1>
                 <?php echo $info_precio_tour; ?>
