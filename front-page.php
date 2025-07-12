@@ -5,7 +5,9 @@
  *
  * @package TailPress
  */
-
+$toursPeru = get_field('experiencias_peru');
+$toursCusco = get_field('experiencias_cusco');
+$comentarios = get_field('comentarios') ?: '';
 get_header();
 ?>
 <section class="py-0">
@@ -17,9 +19,11 @@ get_header();
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Descubre la magia de Machu Picchu – ¡tu aventura te
+                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Descubre la magia
+                                de Machu Picchu – ¡tu aventura te
                                 espera!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Kuntur Spirit creará tu aventura perfecta en Machu
+                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
+                                Kuntur Spirit creará tu aventura perfecta en Machu
                                 Picchu,
                                 conectándote con las maravillas de los Andes y la historia Inca.</p>
                         </div>
@@ -35,8 +39,11 @@ get_header();
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias Cusco - Vive la historia en cada paso!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Descubre los secretos de Cusco, la antigua capital inca. Tours auténticos que te conectan con su cultura, arquitectura y misticismo.</p>
+                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias
+                                Cusco - Vive la historia en cada paso!</h1>
+                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
+                                Descubre los secretos de Cusco, la antigua capital inca. Tours auténticos que te
+                                conectan con su cultura, arquitectura y misticismo.</p>
                         </div>
                         <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
@@ -50,8 +57,11 @@ get_header();
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias Perú - Explora el Perú de norte a sur!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Del desierto costero a la selva amazónica, conoce la diversidad cultural y natural de todo un país en rutas diseñadas para sorprenderte.</p>
+                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias Perú
+                                - Explora el Perú de norte a sur!</h1>
+                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Del
+                                desierto costero a la selva amazónica, conoce la diversidad cultural y natural de todo
+                                un país en rutas diseñadas para sorprenderte.</p>
                         </div>
                         <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
@@ -65,8 +75,11 @@ get_header();
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias Especiales - Viajes con alma!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Rituales ancestrales, turismo vivencial, retiros espirituales y más. Diseñamos experiencias únicas que transforman.</p>
+                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias
+                                Especiales - Viajes con alma!</h1>
+                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
+                                Rituales ancestrales, turismo vivencial, retiros espirituales y más. Diseñamos
+                                experiencias únicas que transforman.</p>
                         </div>
                         <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
@@ -80,8 +93,11 @@ get_header();
                     <div
                         class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
                         <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias Aventura - Atrévete a sentir la aventura!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Camina por rutas épicas, respira aire puro y libera adrenalina en paisajes espectaculares. ¡El Perú salvaje te espera!</p>
+                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias
+                                Aventura - Atrévete a sentir la aventura!</h1>
+                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
+                                Camina por rutas épicas, respira aire puro y libera adrenalina en paisajes
+                                espectaculares. ¡El Perú salvaje te espera!</p>
                         </div>
                         <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
@@ -127,147 +143,55 @@ get_header();
     <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
         <div class="container flex flex-col lg:flex-row gap-7 justify-center">
             <!-- card de tours -->
-            <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                <div class="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/camino.jpg" alt="">
-                </div>
-                <!-- contenido tour -->
-                <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                    <!-- etiquetas -->
-                    <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                        <div class="flex items-center gap-1.5 text-sm">
-                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                            <span class="text-light">13 días / 12 noches</span>
-                        </div>
-                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                            <span class="text-sm text-white">GRUPAL / PRIVADO</span>
-                        </div>
+            <?php foreach ($toursPeru as $tour):
+                // Variables para mostrar en la card
+                $tour_id = $tour->ID;
+                $titulo = get_the_title($tour_id);
+                $link = get_permalink($tour_id);
+                $img = has_post_thumbnail($tour_id) ? get_the_post_thumbnail_url($tour_id, 'large') : get_template_directory_uri() . '/assets/images/camino.jpg';
+                $duracion = get_field('duracion', $tour_id) ?: 'Duración no disponible';
+                $tipo_tour = get_field('tipo_tour', $tour_id) ?: 'GRUPAL / PRIVADO';
+                $descripcion = get_field('descripcion_corta', $tour_id);
+                $precio_regular = get_field('precio_regular', $tour_id) ?: '';
+                $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
+                ?>
+                <article class="flex flex-col items-center bg-white" style="flex: 1 1 0;">
+                    <div>
+                        <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($titulo); ?>">
                     </div>
-                    <!-- contenido -->
-                    <div class="flex flex-col gap-1.5">
-                        <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
-                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
-                            Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
-                            cultura y paisajes impresionantes.</p>
-
-                    </div>
-                    <!-- actions -->
-                    <div class="w-full py-2.5 px-5 flex justify-between items-center">
-                        <!-- precio -->
-                        <div class="flex flex-col justify-center" style="flex: 1 0 0">
-                            <!-- oferta -->
-                            <div class="flex gap-1.5 text-xs">
-                                <span>Antes: </span>
-                                <span class="font-bold">US$ 1250</span>
+                    <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                        <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                            <div class="flex items-center gap-1.5 text-sm">
+                                <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                <span class="text-light"><?php echo esc_html($duracion); ?></span>
                             </div>
-                            <span>Desde:</span>
-                            <span class="font-bold text-primary text-base">US$ 1200</span>
-                        </div>
-                        <!-- botones -->
-                        <div class="flex gap-1.5 text-white ">
-                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
-                            <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
-                        </div>
-                    </div>
-
-                </div>
-            </article>
-            <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                <div class="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/camino.jpg" alt="">
-                </div>
-                <!-- contenido tour -->
-                <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                    <!-- etiquetas -->
-                    <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                        <div class="flex items-center gap-1.5 text-sm">
-                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                            <span class="text-light">13 días / 12 noches</span>
-                        </div>
-                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                            <span class="text-sm text-white">GRUPAL / PRIVADO</span>
-                        </div>
-                    </div>
-                    <!-- contenido -->
-                    <div class="flex flex-col gap-1.5">
-                        <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
-                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
-                            Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
-                            cultura y paisajes impresionantes.</p>
-
-                    </div>
-                    <!-- actions -->
-                    <div class="w-full py-2.5 px-5 flex justify-between items-center">
-                        <!-- precio -->
-                        <div class="flex flex-col justify-center" style="flex: 1 0 0">
-                            <!-- oferta -->
-                            <div class="flex gap-1.5 text-xs">
-                                <span>Antes: </span>
-                                <span class="font-bold">US$ 1250</span>
+                            <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                <span class="text-sm text-white"><?php echo esc_html($tipo_tour); ?></span>
                             </div>
-                            <span>Desde:</span>
-                            <span class="font-bold text-primary text-base">US$ 1200</span>
                         </div>
-                        <!-- botones -->
-                        <div class="flex gap-1.5 text-white ">
-                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
-                            <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
+                        <div class="flex flex-col gap-1.5">
+                            <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
+                            <p><?php echo esc_html($descripcion); ?></p>
                         </div>
-                    </div>
-
-                </div>
-            </article>
-            <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                <div class="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/camino.jpg" alt="">
-                </div>
-                <!-- contenido tour -->
-                <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                    <!-- etiquetas -->
-                    <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                        <div class="flex items-center gap-1.5 text-sm">
-                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                            <span class="text-light">13 días / 12 noches</span>
-                        </div>
-                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                            <span class="text-sm text-white">GRUPAL / PRIVADO</span>
-                        </div>
-                    </div>
-                    <!-- contenido -->
-                    <div class="flex flex-col gap-1.5">
-                        <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
-                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
-                            Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
-                            cultura y paisajes impresionantes.</p>
-
-                    </div>
-                    <!-- actions -->
-                    <div class="w-full py-2.5 px-5 flex justify-between items-center">
-                        <!-- precio -->
-                        <div class="flex flex-col justify-center" style="flex: 1 0 0">
-                            <!-- oferta -->
-                            <div class="flex gap-1.5 text-xs">
-                                <span>Antes: </span>
-                                <span class="font-bold">US$ 1250</span>
+                        <div class="w-full py-2.5 px-5 flex justify-between items-center">
+                            <div class="flex flex-col justify-center" style="flex: 1 0 0">
+                                <div class="flex gap-1.5 text-xs items-center">
+                                    <span>Antes: </span>
+                                    <span class="font-bold text-xs line-through text-light ">US$ <?php echo esc_html($precio_regular); ?></span>
+                                </div>
+                                <span>Desde:</span>
+                                <span
+                                    class="font-bold text-primary text-base">US$ <?php echo esc_html($precio_oferta); ?></span>
                             </div>
-                            <span>Desde:</span>
-                            <span class="font-bold text-primary text-base">US$ 1200</span>
-                        </div>
-                        <!-- botones -->
-                        <div class="flex gap-1.5 text-white ">
-                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
-                            <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
+                            <div class="flex gap-1.5 text-white">
+                                <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-2.5 bg-secondary"><span>Ver
+                                        Itinerario</span></a>
+                                <a href="#" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-            </article>
-
-
-
+                </article>
+            <?php endforeach; ?>
         </div>
         <div class="w-full flex justify-center">
             <a href="" class="py-4 px-16 bg-primary text-white font-medium !no-underline"><span>VER MÁS
@@ -297,7 +221,7 @@ get_header();
         </div>
     </div>
 </section>
-<!-- SECCION DE TOURS PERU -->
+<!-- SECCION DE TOURS CUSCO -->
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
         <h1>Experiencias Cusco: ¡Vive la historia en cada paso!</h1>
@@ -313,147 +237,56 @@ get_header();
     <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
         <div class="container flex flex-col lg:flex-row gap-7 justify-center">
             <!-- card de tours -->
-            <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                <div class="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/camino.jpg" alt="">
-                </div>
-                <!-- contenido tour -->
-                <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                    <!-- etiquetas -->
-                    <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                        <div class="flex items-center gap-1.5 text-sm">
-                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                            <span class="text-light">13 días / 12 noches</span>
-                        </div>
-                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                            <span class="text-sm text-white">GRUPAL / PRIVADO</span>
-                        </div>
+            <?php foreach ($toursCusco as $tour):
+                // Variables para mostrar en la card
+                $tour_id = $tour->ID;
+                $titulo = get_the_title($tour_id);
+                $link = get_permalink($tour_id);
+                $img = has_post_thumbnail($tour_id) ? get_the_post_thumbnail_url($tour_id, 'large') : get_template_directory_uri() . '/assets/images/camino.jpg';
+                $duracion = get_field('duracion', $tour_id) ?: 'Duración no disponible';
+                $tipo_tour = get_field('tipo_tour', $tour_id) ?: 'GRUPAL / PRIVADO';
+                $descripcion = get_field('descripcion_corta', $tour_id);
+                $precio_regular = get_field('precio_regular', $tour_id) ?: '';
+                $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
+                ?>
+                <article class="flex flex-col items-center bg-white" style="flex: 1 1 0;">
+                    <div>
+                        <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($titulo); ?>">
                     </div>
-                    <!-- contenido -->
-                    <div class="flex flex-col gap-1.5">
-                        <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
-                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
-                            Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
-                            cultura y paisajes impresionantes.</p>
-
-                    </div>
-                    <!-- actions -->
-                    <div class="w-full py-2.5 px-5 flex justify-between items-center">
-                        <!-- precio -->
-                        <div class="flex flex-col justify-center" style="flex: 1 0 0">
-                            <!-- oferta -->
-                            <div class="flex gap-1.5 text-xs">
-                                <span>Antes: </span>
-                                <span class="font-bold">US$ 1250</span>
+                    <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                        <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                            <div class="flex items-center gap-1.5 text-sm">
+                                <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                <span class="text-light"><?php echo esc_html($duracion); ?></span>
                             </div>
-                            <span>Desde:</span>
-                            <span class="font-bold text-primary text-base">US$ 1200</span>
-                        </div>
-                        <!-- botones -->
-                        <div class="flex gap-1.5 text-white ">
-                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
-                            <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
-                        </div>
-                    </div>
-
-                </div>
-            </article>
-            <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                <div class="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/camino.jpg" alt="">
-                </div>
-                <!-- contenido tour -->
-                <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                    <!-- etiquetas -->
-                    <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                        <div class="flex items-center gap-1.5 text-sm">
-                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                            <span class="text-light">13 días / 12 noches</span>
-                        </div>
-                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                            <span class="text-sm text-white">GRUPAL / PRIVADO</span>
-                        </div>
-                    </div>
-                    <!-- contenido -->
-                    <div class="flex flex-col gap-1.5">
-                        <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
-                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
-                            Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
-                            cultura y paisajes impresionantes.</p>
-
-                    </div>
-                    <!-- actions -->
-                    <div class="w-full py-2.5 px-5 flex justify-between items-center">
-                        <!-- precio -->
-                        <div class="flex flex-col justify-center" style="flex: 1 0 0">
-                            <!-- oferta -->
-                            <div class="flex gap-1.5 text-xs">
-                                <span>Antes: </span>
-                                <span class="font-bold">US$ 1250</span>
+                            <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                <span class="text-sm text-white"><?php echo esc_html($tipo_tour); ?></span>
                             </div>
-                            <span>Desde:</span>
-                            <span class="font-bold text-primary text-base">US$ 1200</span>
                         </div>
-                        <!-- botones -->
-                        <div class="flex gap-1.5 text-white ">
-                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
-                            <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
+                        <div class="flex flex-col gap-1.5">
+                            <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
+                            <p><?php echo esc_html($descripcion); ?></p>
                         </div>
-                    </div>
-
-                </div>
-            </article>
-            <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                <div class="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/camino.jpg" alt="">
-                </div>
-                <!-- contenido tour -->
-                <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                    <!-- etiquetas -->
-                    <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                        <div class="flex items-center gap-1.5 text-sm">
-                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                            <span class="text-light">13 días / 12 noches</span>
-                        </div>
-                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                            <span class="text-sm text-white">GRUPAL / PRIVADO</span>
-                        </div>
-                    </div>
-                    <!-- contenido -->
-                    <div class="flex flex-col gap-1.5">
-                        <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
-                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
-                            Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
-                            cultura y paisajes impresionantes.</p>
-
-                    </div>
-                    <!-- actions -->
-                    <div class="w-full py-2.5 px-5 flex justify-center items-center">
-                        <!-- precio -->
-                        <div class="flex flex-col justify-center" style="flex: 1 0 0">
-                            <!-- oferta -->
-                            <div class="flex gap-1.5 text-xs">
-                                <span>Antes: </span>
-                                <span class="font-bold">US$ 1250</span>
+                        <div class="w-full py-2.5 px-5 flex justify-between items-center">
+                            <div class="flex flex-col justify-center" style="flex: 1 0 0">
+                                <div class="flex gap-1.5 text-xs items-center">
+                                    <span>Antes: </span>
+                                    <span class="font-bold text-xs line-through text-light ">US$ <?php echo esc_html($precio_regular); ?></span>
+                                </div>
+                                <span>Desde:</span>
+                                <span
+                                    class="font-bold text-primary text-base">US$ <?php echo esc_html($precio_oferta); ?></span>
                             </div>
-                            <span>Desde:</span>
-                            <span class="font-bold text-primary text-base">US$ 1200</span>
-                        </div>
-                        <!-- botones -->
-                        <div class="flex gap-1.5 text-white ">
-                            <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                class="py-2.5 px-2.5 bg-secondary"><span>Ver Itinerario</span></a>
-                            <a href="" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
+                            <div class="flex gap-1.5 text-white">
+                                <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-2.5 bg-secondary"><span>Ver
+                                        Itinerario</span></a>
+                                <a href="#" class="py-2.5 px-2.5 bg-primary"><span>Reserva</span></a>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-            </article>
-
-
-
+                </article>
+            <?php endforeach; ?>
+            
         </div>
         <div class="w-full flex justify-center">
             <a href="" class="py-4 px-16 bg-primary text-white font-medium !no-underline"><span>VER MÁS
@@ -656,12 +489,12 @@ get_header();
                     con frecuencia, nos recomiendan a familiares o amigos cuando planifican un viaje a nuestra región.
                 </p>
             </div>
-            <?php echo do_shortcode('[wptripadvisor_usetemplate tid="1"]') ?>
+            <?php echo do_shortcode($comentarios) ?>
 
 
         </div>
     </section>
-    
+
     <?php get_template_part('template-parts/porquenosotros') ?>
     <section>
         <div class="container flex flex-col gap-10">
