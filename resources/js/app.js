@@ -139,4 +139,44 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: ".swiper-button-prev",
         }
     });
+
+    new Swiper('.trekkingSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+        }
+    });
+
+    new Swiper('.imagenSwiper', {
+        slidesPerView: 3, // Siempre 3 imágenes
+        spaceBetween: 20,
+        loop: true,
+        resistanceRatio: 0, // Evita elasticidad con imágenes grandes
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: { slidesPerView: 1 }, // Mobile
+            1024: { slidesPerView: 3 } // Desktop
+        }
+    });
+
+    // Initialize PhotoSwipe Lightbox
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '.imagenSwiper',
+        children: '.swiper-slide .gallery-link',
+        pswpModule: PhotoSwipe
+    });
+    lightbox.init();
+
+
 });

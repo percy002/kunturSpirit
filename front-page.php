@@ -177,11 +177,12 @@ get_header();
                             <div class="flex flex-col justify-center" style="flex: 1 0 0">
                                 <div class="flex gap-1.5 text-xs items-center">
                                     <span>Antes: </span>
-                                    <span class="font-bold text-xs line-through text-light ">US$ <?php echo esc_html($precio_regular); ?></span>
+                                    <span class="font-bold text-xs line-through text-light ">US$
+                                        <?php echo esc_html($precio_regular); ?></span>
                                 </div>
                                 <span>Desde:</span>
-                                <span
-                                    class="font-bold text-primary text-base">US$ <?php echo esc_html($precio_oferta); ?></span>
+                                <span class="font-bold text-primary text-base">US$
+                                    <?php echo esc_html($precio_oferta); ?></span>
                             </div>
                             <div class="flex gap-1.5 text-white">
                                 <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-2.5 bg-secondary"><span>Ver
@@ -271,11 +272,12 @@ get_header();
                             <div class="flex flex-col justify-center" style="flex: 1 0 0">
                                 <div class="flex gap-1.5 text-xs items-center">
                                     <span>Antes: </span>
-                                    <span class="font-bold text-xs line-through text-light ">US$ <?php echo esc_html($precio_regular); ?></span>
+                                    <span class="font-bold text-xs line-through text-light ">US$
+                                        <?php echo esc_html($precio_regular); ?></span>
                                 </div>
                                 <span>Desde:</span>
-                                <span
-                                    class="font-bold text-primary text-base">US$ <?php echo esc_html($precio_oferta); ?></span>
+                                <span class="font-bold text-primary text-base">US$
+                                    <?php echo esc_html($precio_oferta); ?></span>
                             </div>
                             <div class="flex gap-1.5 text-white">
                                 <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-2.5 bg-secondary"><span>Ver
@@ -286,7 +288,7 @@ get_header();
                     </div>
                 </article>
             <?php endforeach; ?>
-            
+
         </div>
         <div class="w-full flex justify-center">
             <a href="" class="py-4 px-16 bg-primary text-white font-medium !no-underline"><span>VER MÁS
@@ -294,189 +296,67 @@ get_header();
         </div>
     </div>
     <?php get_template_part('template-parts/mensaje') ?>
+    <!-- TOURS DE UN DIA -->
     <section>
-        <div class="container flex flex-col gap-10 md:pr-[150px] md:pl-[150px]">
+                
+        <!-- Carrusel de trekking con Swiper -->
+        <div class="">
             <div class="flex flex-col gap-5">
                 <h1>Aventura - Trekking más populares</h1>
-                <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre
-                    aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!
-                </p>
+                <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!</p>
             </div>
-            <div class="flex justify-center gap-5 items-center">
-                <i class="fa-solid fa-chevron-left" style=""></i>
-                <div class="flex gap-5 items-center justify-center" style="">
-                    <article class="flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                        <div class="h-[220px] w-full">
-                            <img class="w-full h-full object-center object-cover"
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
-                        </div>
-                        <!-- contenido tour -->
-                        <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                            <!-- etiquetas -->
-                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                                <div class="flex items-center gap-1.5 text-sm">
-                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                                    <span class="text-light">1 Dia</span>
+            <div class="swiper !h-fit trekkingSwiper mt-8">
+                <div class="swiper-wrapper">
+                    <?php foreach ($toursPeru as $tour): 
+                        $tour_id = $tour->ID;
+                        $titulo = get_the_title($tour_id);
+                        $link = get_permalink($tour_id);
+                        $img = has_post_thumbnail($tour_id) ? get_the_post_thumbnail_url($tour_id, 'large') : get_template_directory_uri() . '/assets/images/vinicunca.webp';
+                        $duracion = get_field('duracion', $tour_id) ?: '1 Día';
+                        $tipo_tour = get_field('tipo_tour', $tour_id) ?: 'GRUPAL / PRIVADO';
+                        $descripcion = get_field('descripcion_corta', $tour_id);
+                        $precio_oferta = get_field('precio_oferta', $tour_id) ?: '1200';
+                    ?>
+                    <div class="swiper-slide h-fit">
+                        <article class="flex flex-col items-center bg-white" style="flex: 1 1 0;">
+                            <div class="h-[220px] w-full">
+                                <img class="w-full h-full object-center object-cover" src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($titulo); ?>">
+                            </div>
+                            <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
+                                <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                                    <div class="flex items-center gap-1.5 text-sm">
+                                        <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                        <span class="text-light"><?php echo esc_html($duracion); ?></span>
+                                    </div>
+                                    <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                        <span class="text-sm text-white"><?php echo esc_html($tipo_tour); ?></span>
+                                    </div>
                                 </div>
-                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                                    <span class="text-sm text-white">GRUPAL / PRIVADO</span>
+                                <div class="flex flex-col gap-1.5">
+                                    <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
+                                    <p class="text-center"><?php echo esc_html($descripcion); ?></p>
+                                </div>
+                                <div class="w-full py-2.5 px-5 items-center">
+                                    <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
+                                        <span>Desde:</span>
+                                        <span class="font-bold text-primary text-base">US$ <?php echo esc_html($precio_oferta); ?></span>
+                                    </div>
+                                    <div class="flex gap-1.5 text-white justify-center">
+                                        <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-5 bg-secondary"><span>Ver Itinerario</span></a>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- contenido -->
-                            <div class="flex flex-col gap-1.5">
-                                <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
-                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores
-                                    o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera
-                                    de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
-
-                            </div>
-                            <!-- actions -->
-                            <div class="w-full py-2.5 px-5 items-center">
-                                <!-- precio -->
-                                <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
-                                    <span>Desde:</span>
-                                    <span class="font-bold text-primary text-base">US$ 1200</span>
-                                </div>
-                                <!-- botones -->
-                                <div class="flex gap-1.5 text-white justify-center">
-                                    <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                        class="py-2.5 px-5 bg-secondary "><span>Ver Itinerario</span></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </article>
-                    <article class="hidden sm:flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                        <div class="h-[220px] w-full">
-                            <img class="w-full h-full object-center object-cover"
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
-                        </div>
-                        <!-- contenido tour -->
-                        <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                            <!-- etiquetas -->
-                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                                <div class="flex items-center gap-1.5 text-sm">
-                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                                    <span class="text-light">1 Dia</span>
-                                </div>
-                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                                    <span class="text-sm text-white">GRUPAL / PRIVADO</span>
-                                </div>
-                            </div>
-                            <!-- contenido -->
-                            <div class="flex flex-col gap-1.5">
-                                <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
-                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores
-                                    o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera
-                                    de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
-
-                            </div>
-                            <!-- actions -->
-                            <div class="w-full py-2.5 px-5 items-center">
-                                <!-- precio -->
-                                <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
-                                    <span>Desde:</span>
-                                    <span class="font-bold text-primary text-base">US$ 1200</span>
-                                </div>
-                                <!-- botones -->
-                                <div class="flex gap-1.5 text-white justify-center">
-                                    <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                        class="py-2.5 px-5 bg-secondary "><span>Ver Itinerario</span></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </article>
-                    <article class="hidden md:flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                        <div class="h-[220px] w-full">
-                            <img class="w-full h-full object-center object-cover"
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
-                        </div>
-                        <!-- contenido tour -->
-                        <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                            <!-- etiquetas -->
-                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                                <div class="flex items-center gap-1.5 text-sm">
-                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                                    <span class="text-light">1 Dia</span>
-                                </div>
-                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                                    <span class="text-sm text-white">GRUPAL / PRIVADO</span>
-                                </div>
-                            </div>
-                            <!-- contenido -->
-                            <div class="flex flex-col gap-1.5">
-                                <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
-                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores
-                                    o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera
-                                    de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
-
-                            </div>
-                            <!-- actions -->
-                            <div class="w-full py-2.5 px-5 items-center">
-                                <!-- precio -->
-                                <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
-                                    <span>Desde:</span>
-                                    <span class="font-bold text-primary text-base">US$ 1200</span>
-                                </div>
-                                <!-- botones -->
-                                <div class="flex gap-1.5 text-white justify-center">
-                                    <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                        class="py-2.5 px-5 bg-secondary "><span>Ver Itinerario</span></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </article>
-                    <article class="hidden xl:flex flex-col items-center bg-white " stryle="flex: 1 1 0;">
-                        <div class="h-[220px] w-full">
-                            <img class="w-full h-full object-center object-cover"
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/vinicunca.webp" alt="">
-                        </div>
-                        <!-- contenido tour -->
-                        <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                            <!-- etiquetas -->
-                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                                <div class="flex items-center gap-1.5 text-sm">
-                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                                    <span class="text-light">1 Dia</span>
-                                </div>
-                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                                    <span class="text-sm text-white">GRUPAL / PRIVADO</span>
-                                </div>
-                            </div>
-                            <!-- contenido -->
-                            <div class="flex flex-col gap-1.5">
-                                <h1 class="text-2xl font-bold text-primary my-0">Montaña Arcoiris</h1>
-                                <p class="text-center">La Montaña Arcoíris, conocida también como Montaña Siete Colores
-                                    o Vinicunca. Esta es la opción perfecta si estás buscando un día emocionante fuera
-                                    de la ciudad porque te desafiará y te dará las recompensas más fantásticas.</p>
-
-                            </div>
-                            <!-- actions -->
-                            <div class="w-full py-2.5 px-5 items-center">
-                                <!-- precio -->
-                                <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
-                                    <span>Desde:</span>
-                                    <span class="font-bold text-primary text-base">US$ 1200</span>
-                                </div>
-                                <!-- botones -->
-                                <div class="flex gap-1.5 text-white justify-center">
-                                    <a href="<?php echo get_permalink(get_page_by_path('explora-peru-un-viaje-a-traves-de-la-historia-la-naturaleza-y-la-cultura', OBJECT, 'tour')); ?>"
-                                        class="py-2.5 px-5 bg-secondary "><span>Ver Itinerario</span></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </article>
-
+                        </article>
+                    </div>
+                    <?php endforeach; ?>
                 </div>
-                <i class="fa-solid fa-chevron-right" style=""></i>
+                <!-- Botones de navegación -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-
-
         </div>
     </section>
+
     <section>
         <div class="container flex flex-col gap-10">
             <div class="flex flex-col gap-5">

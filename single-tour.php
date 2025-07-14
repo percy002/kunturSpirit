@@ -6,9 +6,13 @@
  */
 
 $resumen_descripcion = get_field('resumen_descripcion') ? get_field('resumen_descripcion') : 'No disponible';
-$precio = get_field('precio') ? get_field('precio') : 'No disponible';
+$precio_oferta = get_field('precio_oferta') ? get_field('precio_oferta') : 'No disponible';
+$precio_regular = get_field('precio_regular') ? get_field('precio_regular') : 'No disponible';
 $duracion = get_field('duracion') ? get_field('duracion') : 'No disponible';
-
+$imagen_portada = get_field('imagen_portada') ? get_field('imagen_portada') : [
+    'url' => get_template_directory_uri() . '/assets/images/mapi.webp',
+    'alt' => 'Imagen de portada del tour'
+];
 $descripcion_general = get_field('descripcion_general') ? get_field('descripcion_general') : 'No disponible';
 
 $dias = [];
@@ -27,10 +31,10 @@ $no_incluye = get_field('no_incluye') ? get_field('no_incluye') : 'No disponible
 $info_precio_tour = get_field('info_precio_tour') ? get_field('info_precio_tour') : 'No disponible';
 
 $infoHeroTour = array(
-    'imagen_url' => get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_template_directory_uri() . "/assets/images/mapi.webp",
+    'imagen_url' => $imagen_portada['url'],
     'title' => get_the_title() ? get_the_title() : 'No disponible',
     'descripcion' => $resumen_descripcion,
-    'precio' => $precio,
+    'precio' => $precio_oferta,
     'duracion' => $duracion,
     'heroType' => 'tour',
 );
@@ -98,38 +102,46 @@ get_header();
                                 <div>
                                     <?= wp_kses_post($dia['descripcion']) ?>
                                 </div>
+                                <!-- imágenes de itinerario -->
                                 <div class="">
-
                                     <?php if (!empty($dia['imagenes'])): ?>
-                                        <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-2 justify-center">
-                                            <?php
-                                            // Mostrar solo las 3 primeras imágenes
-                                            for ($j = 1; $j <= 3; $j++) {
-                                                $img = $dia['imagenes']['imagen_' . $j] ?? null;
+                                        <!-- Swiper Container -->
+                                        <div class="swiper imagenSwiper">
+                                            <div class="swiper-wrapper">
+                                                <?php for ($j = 1; $j <= 3; $j++): ?>
+                                                    <?php if ($img = $dia['imagenes']['imagen_' . $j] ?? null): ?>
+                                                        <?php
+                                                        // Obtener URL y dimensiones (originales)
+                                                        if (is_numeric($img)) {
+                                                            $img_url = wp_get_attachment_image_url($img, 'large'); // Usa 'large' en lugar de 'full' para evitar imágenes gigantes
+                                                            $img_alt = get_post_meta($img, '_wp_attachment_image_alt', true) ?: 'Imagen del día';
+                                                        } else {
+                                                            $img_url = is_array($img) ? ($img['url'] ?? '') : $img;
+                                                            $img_alt = is_array($img) ? ($img['alt'] ?? 'Imagen del día') : 'Imagen del día';
+                                                        }
 
-                                                if ($img) {
-                                                    // Si es ID
-                                                    if (is_numeric($img)) {
-                                                        $img_url = wp_get_attachment_image_url($img, 'full');
-                                                        $img_alt = get_post_meta($img, '_wp_attachment_image_alt', true) ?: 'Imagen del día';
-                                                    }
-                                                    // Si es array
-                                                    elseif (is_array($img)) {
-                                                        $img_url = $img['url'] ?? '';
-                                                        $img_alt = $img['alt'] ?? 'Imagen del día';
-                                                    }
-                                                    // Si es string (URL directa)
-                                                    else {
-                                                        $img_url = $img;
-                                                        $img_alt = 'Imagen del día';
-                                                    }
-
-                                                    if ($img_url) {
-                                                        echo "<img src='" . esc_url($img_url) . "' alt='" . esc_attr($img_alt) . "' class='w-2/3 lg:w-1/4 h-auto object-cover rounded' />";
-                                                    }
-                                                }
-                                            }
-                                            ?>
+                                                        if ($img_url): ?>
+                                                            <!-- Slide con tamaño forzado -->
+                                                            <div class="swiper-slide !w-[calc(33.33%-20px)]">
+                                                                <!-- Ancho fijo para 3 columnas -->
+                                                                <a href="<?= esc_url($img_url) ?>" data-pswp-width="800">
+                                                                    data-pswp-height="600" <!-- Alto fijo para el lightbox -->
+                                                                    class="gallery-link block h-full group">
+                                                                    <div
+                                                                        class="h-64 w-full overflow-hidden rounded-lg bg-gray-100 shadow-md md:h-72 lg:h-80">
+                                                                        <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>"
+                                                                            class="swiper-image w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                                                                            loading="lazy" /> <!-- Lazy loading para mejor performance -->
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                <?php endfor; ?>
+                                            </div>
+                                            <!-- Navigation Buttons -->
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
                                         </div>
                                     <?php endif; ?>
                                 </div>
@@ -170,35 +182,47 @@ get_header();
                                 <div class="">
 
                                     <?php if (!empty($dia['imagenes'])): ?>
-                                        <div class="flex flex-col lg:flex-row lg:flex-wrap gap-2 mt-2 justify-center">
-                                            <?php
-                                            // Mostrar solo las 3 primeras imágenes
-                                            for ($j = 1; $j <= 3; $j++) {
-                                                $img = $dia['imagenes']['imagen_' . $j] ?? null;
+                                        <!-- Swiper Container -->
+                                        <div class="swiper imagenSwiper">
+                                            <div class="swiper-wrapper">
+                                                <?php for ($j = 1; $j <= 3; $j++): ?>
+                                                    <?php if ($img = $dia['imagenes']['imagen_' . $j] ?? null): ?>
+                                                        <?php
+                                                        // Get image details (your existing code)
+                                                        if (is_numeric($img)) {
+                                                            $img_url = wp_get_attachment_image_url($img, 'full');
+                                                            $img_alt = get_post_meta($img, '_wp_attachment_image_alt', true) ?: 'Imagen del día';
+                                                            $img_meta = wp_get_attachment_metadata($img);
+                                                            $width = $img_meta['width'] ?? 1200;
+                                                            $height = $img_meta['height'] ?? 800;
+                                                        } elseif (is_array($img)) {
+                                                            $img_url = $img['url'] ?? '';
+                                                            $img_alt = $img['alt'] ?? 'Imagen del día';
+                                                            $width = $img['width'] ?? 1200;
+                                                            $height = $img['height'] ?? 800;
+                                                        } else {
+                                                            $img_url = $img;
+                                                            $img_alt = 'Imagen del día';
+                                                            $width = 1200;
+                                                            $height = 800;
+                                                        }
 
-                                                if ($img) {
-                                                    // Si es ID
-                                                    if (is_numeric($img)) {
-                                                        $img_url = wp_get_attachment_image_url($img, 'full');
-                                                        $img_alt = get_post_meta($img, '_wp_attachment_image_alt', true) ?: 'Imagen del día';
-                                                    }
-                                                    // Si es array
-                                                    elseif (is_array($img)) {
-                                                        $img_url = $img['url'] ?? '';
-                                                        $img_alt = $img['alt'] ?? 'Imagen del día';
-                                                    }
-                                                    // Si es string (URL directa)
-                                                    else {
-                                                        $img_url = $img;
-                                                        $img_alt = 'Imagen del día';
-                                                    }
-
-                                                    if ($img_url) {
-                                                        echo "<img src='" . esc_url($img_url) . "' alt='" . esc_attr($img_alt) . "' class='w-2/3 lg:w-1/4 h-auto object-cover rounded' />";
-                                                    }
-                                                }
-                                            }
-                                            ?>
+                                                        if ($img_url): ?>
+                                                            <!-- Swiper Slide -->
+                                                            <div class="swiper-slide">
+                                                                <a href="<?= esc_url($img_url) ?>" data-pswp-width="<?= $width ?>"
+                                                                    data-pswp-height="<?= $height ?>" class="gallery-link">
+                                                                    <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>"
+                                                                        class="swiper-image">
+                                                                </a>
+                                                            </div>
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
+                                                <?php endfor; ?>
+                                            </div>
+                                            <!-- Navigation Buttons -->
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
                                         </div>
                                     <?php endif; ?>
                                 </div>
@@ -434,9 +458,9 @@ get_header();
                 <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center w-fit text-base"><?= $duracion ?></span>
                 <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center w-fit text-base">GRUPAL / PRIVADO</span>
                 <span class="text-[10px] flex items-center">Antes: <span class="text-xs line-through ml-1">US$
-                        1250</span></span>
+                        <?= $precio_regular ?></span></span>
                 <span class="text-xl flex items-center gap-2.5">Desde: <span class="text-3xl font-bold">US$
-                        <?= $precio ?></span></span>
+                        <?= $precio_oferta ?></span></span>
 
                 <span>¿Necesitas Ayuda?</span>
                 <button class="py-1.5 px-5 bg-white w-fit"><span class="text-2xl text-primary font-semibold">Consulte
@@ -487,9 +511,9 @@ get_header();
     <div class="p-2.5 flex justify-between items-center ">
         <div class="text-white flex flex-col gap-2.5 p-5">
             <span class="text-[10px] flex items-center">Antes: <span class="text-xs line-through ml-1">US$
-                    1250</span></span>
+                    <?= $precio_regular ?></span></span>
             <span class="text-sm flex items-center gap-2.5">Desde: <span class="text-sm font-bold">US$
-                    <?= $precio ?></span></span>
+                    <?= $precio_oferta ?></span></span>
 
         </div>
         <button class="bg-white text-primary px-2 py-1 text-base font-bold rounded-sm">Consulte Ahora</button>
