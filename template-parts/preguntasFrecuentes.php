@@ -1,5 +1,5 @@
 <section>
-    <div class="container">
+    <div class="container lg:pr-[100px] lg:pl-[100px]">
         <h1 class="">Preguntas frecuentes</h1>
         <div class="flex flex-col gap-2.5">
             <details class="border rounded-lg bg-white px-2.5 md:px-12 py-3">

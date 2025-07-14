@@ -15,9 +15,9 @@ $infoHeroTour = array(
 <!-- Tu contenido para la página Nosotros aquí -->
 <?php get_template_part('template-parts/hero', null, $infoHeroTour); ?>
 <section>
-    <div class="container flex flex-col gap-1.5">
+    <div class="container flex flex-col gap-1.5 md:pr-[100px] md:pl-[100px]">
         <h1>Diseña tu viaje </h1>
-        <p class="text-center">
+        <p class="text-justify">
             Nos encantaría ayudarte a planificar el viaje perfecto. Completa el formulario a continuación con tus datos
             y preferencias. Cuanta más información nos proporciones, mejor podremos diseñar una experiencia a la medida
             de tus sueños y expectativas. ¡Comencemos a crear tu aventura ideal!

@@ -101,7 +101,7 @@ get_header();
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
         <h1>Kuntur Spirit</h1>
-        <p class="text-center">Kuntur Spirit, que significa «El Espíritu del Cóndor», es una agencia de viajes local que
+        <p class="text-justify">Kuntur Spirit, que significa «El Espíritu del Cóndor», es una agencia de viajes local que
             ofrece una variedad
             de servicios turísticos en todo Perú. Nuestro equipo ha diseñado tres rutas únicas de Turismo Espiritual
             para brindarte una experiencia memorable que nutra tu bienestar interior y exterior. Somos una familia unida
@@ -116,7 +116,7 @@ get_header();
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
         <h1>Experiencias Perú: ¡Explora el Perú de norte a sur!</h1>
-        <p>
+        <p class="text-justify">
             Descubrir Perú es embarcarse en una aventura llena de contrastes, historia milenaria y paisajes que quitan
             el aliento. Desde la majestuosidad de Machu Picchu hasta la inmensidad del desierto de Paracas, cada rincón
             del país ofrece una experiencia única e inolvidable. En este viaje, te llevaremos por los sabores de su
@@ -146,7 +146,7 @@ get_header();
                     <!-- contenido -->
                     <div class="flex flex-col gap-1.5">
                         <h1 class="text-2xl font-bold text-primary my-0">Perú Fantástico: Una experiencia completa</h1>
-                        <p>Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
+                        <p class="text-justify" >Este tour de 13 días lo llevará a través de los destinos más famosos de Perú, incluidos
                             Paracas, Cusco, Machu Picchu, la Montaña de Colores y el Lago Titicaca, combinando aventura,
                             cultura y paisajes impresionantes.</p>
 
@@ -301,7 +301,7 @@ get_header();
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
         <h1>Experiencias Cusco: ¡Vive la historia en cada paso!</h1>
-        <p>
+        <p class="text-justify">
             Descubre la magia del corazón de los Andes. Cusco, antigua capital del Imperio Inca, es un lugar donde la
             historia milenaria, la cultura viva y los paisajes impresionantes se entrelazan para ofrecerte una
             experiencia única. En esta sección encontrarás nuestros mejores tours por la ciudad de Cusco y sus
@@ -645,7 +645,7 @@ get_header();
         </div>
     </section>
     <section>
-        <div class="container flex flex-col gap-10">
+        <div class="container flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
             <div class="flex flex-col gap-5">
                 <h1>Lo que dicen nuestros clientes</h1>
                 <p class="text-center">

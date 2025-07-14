@@ -16,7 +16,7 @@ $heroType = $args['heroType'] ?? '';
                 <h1 class="text-start text-[<?php $heroType == "tour" ? '40px' : '64px' ?>] text-white"><?= $title ?>
                 </h1>
                 <?php if ($heroType != 'layout'): ?>
-                    <p class=""><?= $descripcion ?></p>
+                    <p class="text-justify"><?= $descripcion ?></p>
                     <hr class="border-t-2 border-light w-full">
                     <?php if ($heroType == "tour"): ?>
                         <div class="flex gap-5">

@@ -107,7 +107,7 @@
                         alt="libro de reclamaciones">
                 </a>
                 <span>Libro de reclamaciones</span>
-                <h1 class="text-white m-0 text-2xl md:text-start font-normal">Síguenos en:</h1>
+                <h1 class="text-white m-0 text-2xl md:text-start font-normal">Pago Seguro en:</h1>
                 <div class="">
                     <img class="w-36 bg-white"
                         src='<?php echo get_template_directory_uri(); ?>/assets/images/cardskuntur.png'

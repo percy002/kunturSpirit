@@ -222,9 +222,7 @@ get_header();
             <div class="">
                 <div class="flex flex-col gap-2.5">
                     <h1 class="text-start">¿Qué Incluye?</h1>
-                    <p>Este paquete ha sido cuidadosamente diseñado para brindarte una experiencia completa, cómoda y
-                        sin
-                        preocupaciones. </p>
+                    <p>Este paquete ha sido cuidadosamente diseñado para brindarte una experiencia completa, cómoda y sin preocupaciones. </p>
                     <div class="flex flex-col gap-2.5">
                         <!-- ¿QUE INCLUYE? -->
                         <h2 class="text-primary">Incluye</h2>
