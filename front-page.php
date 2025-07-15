@@ -7,6 +7,7 @@
  */
 $toursPeru = get_field('experiencias_peru');
 $toursCusco = get_field('experiencias_cusco');
+$trekking = get_field('trekking');
 $comentarios = get_field('comentarios') ?: '';
 get_header();
 ?>
@@ -298,16 +299,18 @@ get_header();
     <?php get_template_part('template-parts/mensaje') ?>
     <!-- TOURS DE UN DIA -->
     <section>
-                
+
         <!-- Carrusel de trekking con Swiper -->
-        <div class="">
+        <div class="container">
             <div class="flex flex-col gap-5">
                 <h1>Aventura - Trekking más populares</h1>
-                <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!</p>
+                <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre
+                    aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!
+                </p>
             </div>
             <div class="swiper !h-fit trekkingSwiper mt-8">
-                <div class="swiper-wrapper">
-                    <?php foreach ($toursPeru as $tour): 
+                <div class="swiper-wrapper flex sm:justify-center gap-8 items-stretch ">
+                    <?php foreach ($trekking as $tour):
                         $tour_id = $tour->ID;
                         $titulo = get_the_title($tour_id);
                         $link = get_permalink($tour_id);
@@ -316,11 +319,11 @@ get_header();
                         $tipo_tour = get_field('tipo_tour', $tour_id) ?: 'GRUPAL / PRIVADO';
                         $descripcion = get_field('descripcion_corta', $tour_id);
                         $precio_oferta = get_field('precio_oferta', $tour_id) ?: '1200';
-                    ?>
-                    <div class="swiper-slide h-fit">
-                        <article class="flex flex-col items-center bg-white" style="flex: 1 1 0;">
+                        ?>
+                        <article class="flex flex-col items-center bg-white swiper-slide h-full w-full max-w-[280px] !mr-0">
                             <div class="h-[220px] w-full">
-                                <img class="w-full h-full object-center object-cover" src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($titulo); ?>">
+                                <img class="w-full h-full object-center object-cover" src="<?php echo esc_url($img); ?>"
+                                    alt="<?php echo esc_attr($titulo); ?>">
                             </div>
                             <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
                                 <div class="flex justify-between py-0 px-2.5 flex-start w-full">
@@ -339,15 +342,16 @@ get_header();
                                 <div class="w-full py-2.5 px-5 items-center">
                                     <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
                                         <span>Desde:</span>
-                                        <span class="font-bold text-primary text-base">US$ <?php echo esc_html($precio_oferta); ?></span>
+                                        <span class="font-bold text-primary text-base">US$
+                                            <?php echo esc_html($precio_oferta); ?></span>
                                     </div>
                                     <div class="flex gap-1.5 text-white justify-center">
-                                        <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-5 bg-secondary"><span>Ver Itinerario</span></a>
+                                        <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-5 bg-secondary"><span>Ver
+                                                Itinerario</span></a>
                                     </div>
                                 </div>
                             </div>
                         </article>
-                    </div>
                     <?php endforeach; ?>
                 </div>
                 <!-- Botones de navegación -->
