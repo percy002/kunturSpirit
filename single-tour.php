@@ -96,7 +96,7 @@ get_header();
                                 </div>
                             </div>
                             <section class="p-0 flex-1">
-                                <div class="h-14 flex flex-col justify-center">
+                                <div class="flex justify-center">
                                     <h1 class="text-2xl font-bold text-start m-0"><?= esc_html($dia['titulo']) ?></h1>
                                 </div>
                                 <div>
@@ -106,7 +106,7 @@ get_header();
                                 <div class="">
                                     <?php if (!empty($dia['imagenes'])): ?>
                                         <!-- Swiper Container -->
-                                        <div class="swiper imagenSwiper">
+                                        <div class="swiper imagenSwiper max-w-[60dvw]">
                                             <div class="swiper-wrapper">
                                                 <?php for ($j = 1; $j <= 3; $j++): ?>
                                                     <?php if ($img = $dia['imagenes']['imagen_' . $j] ?? null): ?>
@@ -122,15 +122,15 @@ get_header();
 
                                                         if ($img_url): ?>
                                                             <!-- Slide con tamaño forzado -->
-                                                            <div class="swiper-slide !w-[calc(33.33%-20px)]">
+                                                            <div class="swiper-slide !h-[220px] !w-[250px] aspect-auto self-stretch">
                                                                 <!-- Ancho fijo para 3 columnas -->
-                                                                <a href="<?= esc_url($img_url) ?>" data-pswp-width="800">
-                                                                    data-pswp-height="600" <!-- Alto fijo para el lightbox -->
+                                                                <a href="<?= esc_url($img_url) ?>" data-pswp-width="1080"
+                                                                    data-pswp-height="720"
                                                                     class="gallery-link block h-full group">
                                                                     <div
-                                                                        class="h-64 w-full overflow-hidden rounded-lg bg-gray-100 shadow-md md:h-72 lg:h-80">
+                                                                        class="">
                                                                         <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>"
-                                                                            class="swiper-image w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                                                                            class="swiper-image w-full h-full object-cover object-center"
                                                                             loading="lazy" /> <!-- Lazy loading para mejor performance -->
                                                                     </div>
                                                                 </a>
@@ -183,37 +183,33 @@ get_header();
 
                                     <?php if (!empty($dia['imagenes'])): ?>
                                         <!-- Swiper Container -->
-                                        <div class="swiper imagenSwiper">
+                                        <div class="swiper imagenSwiper ">
                                             <div class="swiper-wrapper">
                                                 <?php for ($j = 1; $j <= 3; $j++): ?>
                                                     <?php if ($img = $dia['imagenes']['imagen_' . $j] ?? null): ?>
                                                         <?php
-                                                        // Get image details (your existing code)
+                                                        // Obtener URL y dimensiones (originales)
                                                         if (is_numeric($img)) {
-                                                            $img_url = wp_get_attachment_image_url($img, 'full');
+                                                            $img_url = wp_get_attachment_image_url($img, 'large'); // Usa 'large' en lugar de 'full' para evitar imágenes gigantes
                                                             $img_alt = get_post_meta($img, '_wp_attachment_image_alt', true) ?: 'Imagen del día';
-                                                            $img_meta = wp_get_attachment_metadata($img);
-                                                            $width = $img_meta['width'] ?? 1200;
-                                                            $height = $img_meta['height'] ?? 800;
-                                                        } elseif (is_array($img)) {
-                                                            $img_url = $img['url'] ?? '';
-                                                            $img_alt = $img['alt'] ?? 'Imagen del día';
-                                                            $width = $img['width'] ?? 1200;
-                                                            $height = $img['height'] ?? 800;
                                                         } else {
-                                                            $img_url = $img;
-                                                            $img_alt = 'Imagen del día';
-                                                            $width = 1200;
-                                                            $height = 800;
+                                                            $img_url = is_array($img) ? ($img['url'] ?? '') : $img;
+                                                            $img_alt = is_array($img) ? ($img['alt'] ?? 'Imagen del día') : 'Imagen del día';
                                                         }
 
                                                         if ($img_url): ?>
-                                                            <!-- Swiper Slide -->
-                                                            <div class="swiper-slide">
-                                                                <a href="<?= esc_url($img_url) ?>" data-pswp-width="<?= $width ?>"
-                                                                    data-pswp-height="<?= $height ?>" class="gallery-link">
-                                                                    <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>"
-                                                                        class="swiper-image">
+                                                            <!-- Slide con tamaño forzado -->
+                                                            <div class="swiper-slide !h-[220px] !w-[250px] aspect-auto self-stretch">
+                                                                <!-- Ancho fijo para 3 columnas -->
+                                                                <a href="<?= esc_url($img_url) ?>" data-pswp-width="1080"
+                                                                    data-pswp-height="720"
+                                                                    class="gallery-link block h-full group">
+                                                                    <div
+                                                                        class="h-64 w-full overflow-hidden rounded-lg bg-gray-100 shadow-md md:h-72 lg:h-80">
+                                                                        <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>"
+                                                                            class="swiper-image w-full h-full object-cover object-center"
+                                                                            loading="lazy" /> <!-- Lazy loading para mejor performance -->
+                                                                    </div>
                                                                 </a>
                                                             </div>
                                                         <?php endif; ?>
@@ -434,7 +430,7 @@ get_header();
             <summary
                 class="cursor-pointer text-xl text-secondary select-none flex gap-2.5 justify-between items-center border-b-2 border-gray-300">
                 <div class="font-bold flex gap-2.5 items-center"><span class="text-lg"><i
-                            class="fa-solid fa-hand-holding-dollar">Precio</i></div>
+                            class="fa-solid fa-hand-holding-dollar"></i></span>Precio</div>
                 <i class="fa-solid fa-chevron-down icon-chevron transition-transform duration-600"></i>
             </summary>
             <section id="precio-tour">

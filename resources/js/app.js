@@ -150,19 +150,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    new Swiper('.imagenSwiper', {
-        slidesPerView: 3, // Siempre 3 imágenes
-        spaceBetween: 20,
-        loop: true,
-        resistanceRatio: 0, // Evita elasticidad con imágenes grandes
+    const imagenSwiper = new Swiper('.imagenSwiper', {
+        slidesPerView: 'auto', // cambia a 2 o 3 si quieres varias visibles
+        spaceBetween: 16, // separación entre imágenes
+        loop: false, // o true si deseas que repita en bucle
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        breakpoints: {
-            640: { slidesPerView: 1 }, // Mobile
-            1024: { slidesPerView: 3 } // Desktop
-        }
     });
 
     // Initialize PhotoSwipe Lightbox
