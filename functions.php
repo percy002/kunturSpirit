@@ -1,9 +1,10 @@
 <?php
 
+require get_template_directory() . '/inc/helpers.php';
+
 if (is_file(__DIR__.'/vendor/autoload_packages.php')) {
     require_once __DIR__.'/vendor/autoload_packages.php';
 }
-
 function tailpress(): TailPress\Framework\Theme
 {
     return TailPress\Framework\Theme::instance()

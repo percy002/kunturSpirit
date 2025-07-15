@@ -90,7 +90,7 @@
                     'container_id' => 'primary-menu-footer',
                     'container_class' => '',
                     'menu_class' => 'flex flex-col text-white text-sm gap-1.5',
-                    'theme_location' => 'primary',
+                    'theme_location' => 'footer_menu', // <--- Este es el slug registrado
                     'li_class' => '',
                     'fallback_cb' => false,
                 ]);

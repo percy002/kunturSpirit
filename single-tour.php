@@ -125,10 +125,8 @@ get_header();
                                                             <div class="swiper-slide !h-[220px] !w-[250px] aspect-auto self-stretch">
                                                                 <!-- Ancho fijo para 3 columnas -->
                                                                 <a href="<?= esc_url($img_url) ?>" data-pswp-width="1080"
-                                                                    data-pswp-height="720"
-                                                                    class="gallery-link block h-full group">
-                                                                    <div
-                                                                        class="">
+                                                                    data-pswp-height="720" class="gallery-link block h-full group">
+                                                                    <div class="">
                                                                         <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>"
                                                                             class="swiper-image w-full h-full object-cover object-center"
                                                                             loading="lazy" /> <!-- Lazy loading para mejor performance -->
@@ -202,8 +200,7 @@ get_header();
                                                             <div class="swiper-slide !h-[220px] !w-[250px] aspect-auto self-stretch">
                                                                 <!-- Ancho fijo para 3 columnas -->
                                                                 <a href="<?= esc_url($img_url) ?>" data-pswp-width="1080"
-                                                                    data-pswp-height="720"
-                                                                    class="gallery-link block h-full group">
+                                                                    data-pswp-height="720" class="gallery-link block h-full group">
                                                                     <div
                                                                         class="h-64 w-full overflow-hidden rounded-lg bg-gray-100 shadow-md md:h-72 lg:h-80">
                                                                         <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>"
@@ -502,7 +499,8 @@ get_header();
 <?php get_template_part('template-parts/preguntasFrecuentes') ?>
 
 <!-- FOOTER DE TOURS -->
-<div id="floating-banner" class="fixed bottom-0 w-full lg:hidden transform translate-y-full transition-transform duration-300"
+<div id="floating-banner"
+    class="fixed bottom-0 w-full lg:hidden transform translate-y-full transition-transform duration-300"
     style="background: linear-gradient(180deg, #865042 -70.62%, #41180D 70.62%);">
     <div class="p-2.5 flex justify-between items-center">
         <div class="text-white flex flex-col gap-2.5 p-5">
@@ -514,11 +512,29 @@ get_header();
         <button class="bg-white text-primary px-2 py-1 text-base font-bold rounded-sm">Consulte Ahora</button>
         <div class="bg-[#075E54] rounded-4xl p-2">
             <a href="#" class="flex bg-[#075E54]">
-                <img class="h-10 w-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.webp" alt="">
+                <img class="h-10 w-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.webp"
+                    alt="">
             </a>
         </div>
     </div>
 </div>
+<script>
+    window.addEventListener('scroll', function () {
+        const floatingBanner = document.getElementById('floating-banner');
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
+        if (currentScrollPosition > 50 && currentScrollPosition > 0) {
+            // Scroll hacia abajo y pasó el threshold - mostrar banner
+            floatingBanner.classList.remove('translate-y-full');
+            floatingBanner.classList.add('translate-y-0');
+        } else if (currentScrollPosition < 50) {
+            // Scroll arriba del threshold - ocultar banner
+            floatingBanner.classList.remove('translate-y-0');
+            floatingBanner.classList.add('translate-y-full');
+        }
+
+        lastScrollPosition = currentScrollPosition;
+    });
+</script>
 <?php
 get_footer();

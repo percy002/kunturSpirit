@@ -1,3 +1,7 @@
+<?php 
+
+?>
+
 <div id="sideMenu"
     class="fixed top-0 left-0 h-dvh max-w-dvw w-[600px] shadow-lg transform -translate-x-full transition-transform duration-300 z-50 ">
     <div class="relative">
@@ -133,7 +137,7 @@
                         <div class="flex flex-col gap-2.5 px-2.5">
                             
                             <div class="">
-                                <a href="" class="bg-primary py-2 px-5 text-white"><span
+                                <a href="<?= get_translated_url_by_slug('contacto') ?>" class="bg-primary py-2 px-5 text-white"><span
                                         class="text-2xl">Contáctenos</span></a>
                             </div>
                         </div>

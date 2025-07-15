@@ -380,3 +380,11 @@ img.wptripadvisor_t1_star_img_file{
   content: "✓ ";
   color: green;
 }
+
+/* estilos para footer */
+#primary-menu-footer .current-menu-item {
+  font-weight: normal;
+  color: inherit;
+  padding: 0;
+  border: none;
+}
