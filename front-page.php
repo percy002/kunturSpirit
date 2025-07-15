@@ -11,7 +11,7 @@ $comentarios = get_field('comentarios') ?: '';
 get_header();
 ?>
 <section class="py-0">
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper !h-screen">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="h-full bg-no-repeat bg-cover"
