@@ -366,3 +366,17 @@ img.wptripadvisor_t1_star_img_file{
 /* estilos para comentarios */
 
 /* estilo para swiper de imagenes */
+
+/* estilos essna */
+.esnaa-content p{
+  font-weight: 300;
+}
+.esnaa-content ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.esnaa-content ul li::before {
+  content: "✓ ";
+  color: green;
+}
