@@ -168,5 +168,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     lightbox.init();
 
+    // footer logo
+    const floatingBanner = document.getElementById('floating-banner');
+    let lastScrollPosition = 0;
+    const scrollThreshold = 50;
 
+    window.addEventListener('scroll', function () {
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScrollPosition > scrollThreshold && currentScrollPosition > lastScrollPosition) {
+            // Scroll hacia abajo y pasó el threshold - mostrar banner
+            floatingBanner.classList.remove('translate-y-full');
+            floatingBanner.classList.add('translate-y-0');
+        } else if (currentScrollPosition < scrollThreshold) {
+            // Scroll arriba del threshold - ocultar banner
+            floatingBanner.classList.remove('translate-y-0');
+            floatingBanner.classList.add('translate-y-full');
+        }
+
+        lastScrollPosition = currentScrollPosition;
+    });
 });

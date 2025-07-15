@@ -502,21 +502,19 @@ get_header();
 <?php get_template_part('template-parts/preguntasFrecuentes') ?>
 
 <!-- FOOTER DE TOURS -->
-<div class="fixed bottom-0 w-full lg:hidden"
+<div id="floating-banner" class="fixed bottom-0 w-full lg:hidden transform translate-y-full transition-transform duration-300"
     style="background: linear-gradient(180deg, #865042 -70.62%, #41180D 70.62%);">
-    <div class="p-2.5 flex justify-between items-center ">
+    <div class="p-2.5 flex justify-between items-center">
         <div class="text-white flex flex-col gap-2.5 p-5">
             <span class="text-[10px] flex items-center">Antes: <span class="text-xs line-through ml-1">US$
                     <?= $precio_regular ?></span></span>
             <span class="text-sm flex items-center gap-2.5">Desde: <span class="text-sm font-bold">US$
                     <?= $precio_oferta ?></span></span>
-
         </div>
         <button class="bg-white text-primary px-2 py-1 text-base font-bold rounded-sm">Consulte Ahora</button>
         <div class="bg-[#075E54] rounded-4xl p-2">
-            <a href="flex bg-[#075E54] ">
-                <img class="h-10 w-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.webp"
-                    alt="">
+            <a href="#" class="flex bg-[#075E54]">
+                <img class="h-10 w-10" src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.webp" alt="">
             </a>
         </div>
     </div>
