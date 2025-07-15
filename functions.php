@@ -1,10 +1,9 @@
 <?php
 
-require get_template_directory() . '/inc/helpers.php';
-
 if (is_file(__DIR__.'/vendor/autoload_packages.php')) {
     require_once __DIR__.'/vendor/autoload_packages.php';
 }
+require get_template_directory() . '/inc/helpers.php';
 function tailpress(): TailPress\Framework\Theme
 {
     return TailPress\Framework\Theme::instance()
@@ -36,3 +35,9 @@ function tailpress(): TailPress\Framework\Theme
 }
 
 tailpress();
+function registrar_mis_menus() {
+  register_nav_menus([
+    'footer_menu' => 'Menú de Pie de Página (Footer)',
+  ]);
+}
+add_action('after_setup_theme', 'registrar_mis_menus');
