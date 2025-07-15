@@ -131,10 +131,7 @@
                         <hr class="border-t border-zinc-300">
                         <!-- INICIO DE SESION -->
                         <div class="flex flex-col gap-2.5 px-2.5">
-                            <div class="flex gap-2.5 items-center text-light">
-                                <i class="fa-solid fa-user text-xl text-light"></i>
-                                <span class="text-2xl">Inicio de sesión</span>
-                            </div>
+                            
                             <div class="">
                                 <a href="" class="bg-primary py-2 px-5 text-white"><span
                                         class="text-2xl">Contáctenos</span></a>

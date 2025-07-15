@@ -140,14 +140,7 @@
                         }
                         ?>
                     </div>
-                    <div class="text-light">
-                        |
-                    </div>
-                    <div class="">
-                        <a href="">
-                            <i class="fa-solid fa-user text-xl text-white"></i>
-                        </a>
-                    </div>
+                    
 
                 </div>
 
