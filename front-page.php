@@ -142,7 +142,7 @@ get_header();
         </p>
     </div>
     <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
-        <div class="container flex flex-col lg:flex-row gap-7 justify-center">
+        <div class="container flex flex-col lg:flex-row gap-7 items-center lg:items-start lg:justify-center ">
             <!-- card de tours -->
             <?php foreach ($toursPeru as $tour):
                 // Variables para mostrar en la card
@@ -156,9 +156,9 @@ get_header();
                 $precio_regular = get_field('precio_regular', $tour_id) ?: '';
                 $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
                 ?>
-                <article class="flex flex-col items-center bg-white" style="flex: 1 1 0;">
-                    <div>
-                        <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($titulo); ?>">
+                <article class="flex flex-col items-center bg-white max-w-[400px] flex-1" style="flex: 1 1 0;">
+                    <div class="max-h-56 w-full">
+                        <img  class="w-full h-full object-cover object-center"src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($titulo); ?>">
                     </div>
                     <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
                         <div class="flex justify-between py-0 px-2.5 flex-start w-full">
