@@ -450,10 +450,15 @@ get_header();
             <div class="p-3 bg-secondary text-white flex flex-col gap-2.5">
                 <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center w-fit text-base"><?= $duracion ?></span>
                 <span class="bg-[#D88027CC] px-2.5 rounded-xl flex items-center w-fit text-base">GRUPAL / PRIVADO</span>
-                <span class="text-[10px] flex items-center">Antes: <span class="text-xs line-through ml-1">US$
-                        <?= $precio_regular ?></span></span>
-                <span class="text-xl flex items-center gap-2.5">Desde: <span class="text-3xl font-bold">US$
-                        <?= $precio_oferta ?></span></span>
+                <?php if ($precio_oferta): ?>
+                    <span class="text-[10px] flex items-center">Antes: <span class="text-xs line-through ml-1">US$
+                            <?= $precio_regular ?></span></span>
+                    <span class="text-xl flex items-center gap-2.5">Desde: <span class="text-3xl font-bold">US$
+                            <?= $precio_oferta ?></span></span>
+                <?php else: ?>
+                    <span class="text-xl flex items-center gap-2.5">Desde: <span class="text-3xl font-bold">US$
+                            <?= $precio_regular ?></span></span>
+                <?php endif; ?>
 
                 <span>¿Necesitas Ayuda?</span>
                 <button class="py-1.5 px-5 bg-white w-fit"><span class="text-2xl text-primary font-semibold">Consulte

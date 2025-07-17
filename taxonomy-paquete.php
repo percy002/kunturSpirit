@@ -32,7 +32,7 @@ get_header();
 <section>
     <div class="">
         <div class="pt-10 flex flex-col gap-10">
-            <div class="container flex gap-7 justify-center flex-wrap">
+            <div class="container grid grid-cols-3 gap-7 justify-center">
 
                 <?php
                 $args = [
@@ -53,13 +53,13 @@ get_header();
                         $tours->the_post();
                         $duracion = get_field('duracion'); // ej. "13 días / 12 noches"
                         $modalidad = get_field('modalidad'); // ej. "GRUPAL / PRIVADO"
-                        $precio_anterior = get_field('precio_anterior'); // ej. 1250
-                        $precio_actual = get_field('precio_actual'); // ej. 1200
+                        $precio_regular = get_field('precio_regular'); // ej. 1250
+                        $precio_oferta = get_field('precio_oferta'); // ej. 1200
                         $link_itinerario = get_permalink();
                         $imagen = get_the_post_thumbnail_url(null, 'large') ?: get_template_directory_uri() . '/assets/images/camino.jpg';
                         ?>
 
-                        <article class="flex flex-col items-center bg-white max-w-[400px] flex-1">
+                        <article class="col-span-1 flex flex-col items-center bg-white max-w-[400px] flex-1">
                             <div class="w-full">
                                 <img class="w-full h-full object-cover object-center" src="<?= esc_url($imagen) ?>" alt="">
                             </div>
@@ -86,11 +86,11 @@ get_header();
                                     <div class="flex flex-col justify-center" style="flex: 1 0 0">
                                         <div class="flex gap-1.5 text-xs">
                                             <span><?= pll__('Antes:') ?></span>
-                                            <span class="font-bold">US$ <?= esc_html($precio_anterior) ?></span>
+                                            <span class="font-bold">US$ <?= esc_html($precio_regular) ?></span>
                                         </div>
                                         <span><?= pll__('Desde:') ?></span>
                                         <span class="font-bold text-primary text-base">US$
-                                            <?= esc_html($precio_actual) ?></span>
+                                            <?= esc_html($precio_oferta) ?></span>
                                     </div>
                                     <div class="flex gap-1.5 text-white">
                                         <a href="<?= esc_url($link_itinerario) ?>" class="py-2.5 px-2.5 bg-secondary">
