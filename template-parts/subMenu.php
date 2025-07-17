@@ -1,6 +1,6 @@
 <div class="submenu hidden lg:block absolute -z-50 top-0 right-0 transition-transform duration-300 "
     style="background: url('<?php echo get_template_directory_uri(); ?>/assets/images/bg/textura.webp') lightgray 50% / cover no-repeat;">
-    <div class=" w-[450px] p-12 h-dvh">
+    <div class=" w-[450px] p-12 h-dvh overflow-y-auto">
         <div class="flex flex-col gap-2.5">
             <!-- IMAGEN -->
             <div class="flex justify-center">

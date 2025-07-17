@@ -157,7 +157,7 @@ get_header();
                 $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
                 ?>
                 <article class="flex flex-col items-center bg-white max-w-[400px] flex-1" style="flex: 1 1 0;">
-                    <div class="max-h-56 w-full">
+                    <div class="w-full">
                         <img  class="w-full h-full object-cover object-center"src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($titulo); ?>">
                     </div>
                     <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
