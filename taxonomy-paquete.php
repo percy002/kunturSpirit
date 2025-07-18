@@ -53,32 +53,37 @@ get_header();
                         $tours->the_post();
                         $duracion = get_field('duracion'); // ej. "13 días / 12 noches"
                         $modalidad = get_field('modalidad'); // ej. "GRUPAL / PRIVADO"
+                        $descripcion = get_field('resumen_descripcion');
                         $precio_regular = get_field('precio_regular'); // ej. 1250
                         $precio_oferta = get_field('precio_oferta'); // ej. 1200
                         $link_itinerario = get_permalink();
                         $imagen = get_the_post_thumbnail_url(null, 'large') ?: get_template_directory_uri() . '/assets/images/camino.jpg';
                         ?>
 
-                        <article class="col-span-1 flex flex-col items-center bg-white max-w-[400px] flex-1">
+                        <article class="h-full col-span-1 flex flex-col items-center bg-white max-w-[400px] flex-1">
                             <div class="w-full">
                                 <img class="w-full h-full object-cover object-center" src="<?= esc_url($imagen) ?>" alt="">
                             </div>
-                            <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                                <!-- etiquetas -->
-                                <div class="flex justify-between py-0 px-2.5 w-full">
-                                    <div class="flex items-center gap-1.5 text-sm">
-                                        <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                                        <span class="text-light"><?= esc_html($duracion) ?></span>
-                                    </div>
-                                    <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                                        <span class="text-sm text-white"><?= esc_html($modalidad) ?></span>
-                                    </div>
-                                </div>
+                            <div class="flex flex-col gap-1.5 justify-between items-center p-2.5 h-full self-stretch">
+                                <div class="w-full">
 
-                                <!-- contenido -->
-                                <div class="flex flex-col gap-1.5">
-                                    <h1 class="text-2xl font-bold text-primary my-0"><?php the_title(); ?></h1>
-                                    <p><?php the_excerpt(); ?></p>
+                                    <!-- etiquetas -->
+                                    <div class="flex justify-between py-0 px-2.5 w-full">
+                                        <div class="flex items-center gap-1.5 text-sm">
+                                            <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                            <span class="text-light"><?= esc_html($duracion) ?></span>
+                                        </div>
+                                        <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                            <span
+                                                class="text-sm text-white"><?= esc_html($modalidad) ?: "GRUPAL / PRIVADO" ?></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- contenido -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <h1 class="text-2xl font-bold text-primary my-0"><?php the_title(); ?></h1>
+                                        <p class="text-center"><?= $descripcion ?></p>
+                                    </div>
                                 </div>
 
                                 <!-- actions -->

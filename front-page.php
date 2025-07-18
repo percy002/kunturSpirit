@@ -142,7 +142,7 @@ get_header();
         </p>
     </div>
     <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
-        <div class="container flex flex-col lg:flex-row gap-7 items-center lg:items-start lg:justify-center ">
+        <div class="container flex flex-col lg:flex-row gap-7 items-center lg:items-stretch lg:justify-center ">
             <!-- card de tours -->
             <?php foreach ($toursPeru as $tour):
                 // Variables para mostrar en la card
@@ -151,29 +151,33 @@ get_header();
                 $link = get_permalink($tour_id);
                 $img = has_post_thumbnail($tour_id) ? get_the_post_thumbnail_url($tour_id, 'large') : get_template_directory_uri() . '/assets/images/camino.jpg';
                 $duracion = get_field('duracion', $tour_id) ?: 'Duración no disponible';
-                $tipo_tour = get_field('tipo_tour', $tour_id) ?: 'GRUPAL / PRIVADO';
-                $descripcion = get_field('descripcion_corta', $tour_id);
+                $modalidad = get_field('modalidad', $tour_id) ?: 'GRUPAL / PRIVADO';
+                $descripcion = get_field('resumen_descripcion', $tour_id) ?: '';
                 $precio_regular = get_field('precio_regular', $tour_id) ?: '';
                 $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
+
                 ?>
                 <article class="flex flex-col items-center bg-white max-w-[400px] flex-1" style="flex: 1 1 0;">
                     <div class="w-full">
                         <img class="w-full h-full object-cover object-center" src="<?php echo esc_url($img); ?>"
                             alt="<?php echo esc_attr($titulo); ?>">
                     </div>
-                    <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                        <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                            <div class="flex items-center gap-1.5 text-sm">
-                                <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                                <span class="text-light"><?php echo esc_html($duracion); ?></span>
+                    <div class="h-full flex flex-col justify-between gap-1.5 items-center p-2.5 self-stretch">
+                        <div class="w-full">
+
+                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                                <div class="flex items-center gap-1.5 text-sm">
+                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                    <span class="text-light"><?php echo esc_html($duracion); ?></span>
+                                </div>
+                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                    <span class="text-sm text-white"><?php echo esc_html($modalidad); ?></span>
+                                </div>
                             </div>
-                            <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                                <span class="text-sm text-white"><?php echo esc_html($tipo_tour); ?></span>
+                            <div class="flex flex-col gap-1.5">
+                                <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
+                                <p class="text-center"><?= esc_html($descripcion); ?></p>
                             </div>
-                        </div>
-                        <div class="flex flex-col gap-1.5">
-                            <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
-                            <p><?php echo esc_html($descripcion); ?></p>
                         </div>
                         <div class="w-full py-2.5 px-5 flex justify-between items-center">
                             <div class="flex flex-col justify-center" style="flex: 1 0 0">
@@ -244,7 +248,7 @@ get_header();
         </p>
     </div>
     <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
-        <div class="container flex flex-col lg:flex-row gap-7 justify-center">
+        <div class="container flex flex-col lg:flex-row gap-7 items-center lg:items-stretch lg:justify-center ">
             <!-- card de tours -->
             <?php foreach ($toursCusco as $tour):
                 // Variables para mostrar en la card
@@ -253,39 +257,50 @@ get_header();
                 $link = get_permalink($tour_id);
                 $img = has_post_thumbnail($tour_id) ? get_the_post_thumbnail_url($tour_id, 'large') : get_template_directory_uri() . '/assets/images/camino.jpg';
                 $duracion = get_field('duracion', $tour_id) ?: 'Duración no disponible';
-                $tipo_tour = get_field('tipo_tour', $tour_id) ?: 'GRUPAL / PRIVADO';
-                $descripcion = get_field('descripcion_corta', $tour_id);
+                $modalidad = get_field('modalidad', $tour_id) ?: 'GRUPAL / PRIVADO';
+                $descripcion = get_field('resumen_descripcion', $tour_id) ?: '';
                 $precio_regular = get_field('precio_regular', $tour_id) ?: '';
                 $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
+
                 ?>
-                <article class="flex flex-col items-center bg-white" style="flex: 1 1 0;">
-                    <div>
-                        <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($titulo); ?>">
+                <article class="flex flex-col items-center bg-white max-w-[400px] flex-1" style="flex: 1 1 0;">
+                    <div class="w-full">
+                        <img class="w-full h-full object-cover object-center" src="<?php echo esc_url($img); ?>"
+                            alt="<?php echo esc_attr($titulo); ?>">
                     </div>
-                    <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
-                        <div class="flex justify-between py-0 px-2.5 flex-start w-full">
-                            <div class="flex items-center gap-1.5 text-sm">
-                                <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
-                                <span class="text-light"><?php echo esc_html($duracion); ?></span>
+                    <div class="h-full flex flex-col justify-between gap-1.5 items-center p-2.5 self-stretch">
+                        <div class="w-full">
+
+                            <div class="flex justify-between py-0 px-2.5 flex-start w-full">
+                                <div class="flex items-center gap-1.5 text-sm">
+                                    <span class="text-tertiary"><i class="fa-solid fa-clock"></i></span>
+                                    <span class="text-light"><?php echo esc_html($duracion); ?></span>
+                                </div>
+                                <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
+                                    <span class="text-sm text-white"><?php echo esc_html($modalidad); ?></span>
+                                </div>
                             </div>
-                            <div class="bg-tertiary flex items-center px-2.5 py-1 rounded-xl">
-                                <span class="text-sm text-white"><?php echo esc_html($tipo_tour); ?></span>
+                            <div class="flex flex-col gap-1.5">
+                                <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
+                                <p class="text-center"><?= esc_html($descripcion); ?></p>
                             </div>
-                        </div>
-                        <div class="flex flex-col gap-1.5">
-                            <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
-                            <p><?php echo esc_html($descripcion); ?></p>
                         </div>
                         <div class="w-full py-2.5 px-5 flex justify-between items-center">
                             <div class="flex flex-col justify-center" style="flex: 1 0 0">
-                                <div class="flex gap-1.5 text-xs items-center">
-                                    <span>Antes: </span>
-                                    <span class="font-bold text-xs line-through text-light ">US$
+                                <?php if ($precio_oferta): ?>
+                                    <div class="flex gap-1.5 text-xs items-center">
+                                        <span>Antes: </span>
+                                        <span class="font-bold text-xs line-through text-light ">US$
+                                            <?php echo esc_html($precio_regular); ?></span>
+                                    </div>
+                                    <span>Desde:</span>
+                                    <span class="font-bold text-primary text-base">US$
+                                        <?php echo esc_html($precio_oferta); ?></span>
+                                <?php else: ?>
+                                    <span>Desde:</span>
+                                    <span class="font-bold text-primary text-base">US$
                                         <?php echo esc_html($precio_regular); ?></span>
-                                </div>
-                                <span>Desde:</span>
-                                <span class="font-bold text-primary text-base">US$
-                                    <?php echo esc_html($precio_oferta); ?></span>
+                                <?php endif; ?>
                             </div>
                             <div class="flex gap-1.5 text-white">
                                 <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-2.5 bg-secondary"><span>Ver
@@ -296,7 +311,6 @@ get_header();
                     </div>
                 </article>
             <?php endforeach; ?>
-
         </div>
         <div class="w-full flex justify-center">
             <a href="" class="py-4 px-16 bg-primary text-white font-medium !no-underline"><span>VER MÁS
