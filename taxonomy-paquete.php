@@ -32,7 +32,7 @@ get_header();
 <section>
     <div class="">
         <div class="pt-10 flex flex-col gap-10">
-            <div class="container grid grid-cols-3 gap-7 justify-center">
+            <div class="container grid grid-cols-3 gap-7 justify-items-center">
 
                 <?php
                 $args = [
@@ -84,13 +84,21 @@ get_header();
                                 <!-- actions -->
                                 <div class="w-full py-2.5 px-5 flex justify-between items-center">
                                     <div class="flex flex-col justify-center" style="flex: 1 0 0">
-                                        <div class="flex gap-1.5 text-xs">
-                                            <span><?= pll__('Antes:') ?></span>
-                                            <span class="font-bold">US$ <?= esc_html($precio_regular) ?></span>
-                                        </div>
-                                        <span><?= pll__('Desde:') ?></span>
-                                        <span class="font-bold text-primary text-base">US$
-                                            <?= esc_html($precio_oferta) ?></span>
+                                        <?php if ($precio_oferta): ?>
+                                            <div class="flex gap-1.5 text-xs">
+                                                <span><?= pll__('Antes:') ?></span>
+                                                <span class="font-bold">US$ <?= esc_html($precio_regular) ?></span>
+                                            </div>
+                                            <span><?= pll__('Desde:') ?></span>
+                                            <span class="font-bold text-primary text-base">US$
+                                                <?= esc_html($precio_oferta) ?>
+                                            </span>
+                                        <?php else: ?>
+                                            <span><?= pll__('Desde:') ?></span>
+                                            <span class="font-bold text-primary text-base">US$
+                                                <?= esc_html($precio_regular) ?>
+                                            </span>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="flex gap-1.5 text-white">
                                         <a href="<?= esc_url($link_itinerario) ?>" class="py-2.5 px-2.5 bg-secondary">

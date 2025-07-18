@@ -158,7 +158,8 @@ get_header();
                 ?>
                 <article class="flex flex-col items-center bg-white max-w-[400px] flex-1" style="flex: 1 1 0;">
                     <div class="w-full">
-                        <img  class="w-full h-full object-cover object-center"src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($titulo); ?>">
+                        <img class="w-full h-full object-cover object-center" src="<?php echo esc_url($img); ?>"
+                            alt="<?php echo esc_attr($titulo); ?>">
                     </div>
                     <div class="flex flex-col gap-1.5 items-center p-2.5 self-stretch">
                         <div class="flex justify-between py-0 px-2.5 flex-start w-full">
@@ -176,14 +177,20 @@ get_header();
                         </div>
                         <div class="w-full py-2.5 px-5 flex justify-between items-center">
                             <div class="flex flex-col justify-center" style="flex: 1 0 0">
-                                <div class="flex gap-1.5 text-xs items-center">
-                                    <span>Antes: </span>
-                                    <span class="font-bold text-xs line-through text-light ">US$
+                                <?php if ($precio_oferta): ?>
+                                    <div class="flex gap-1.5 text-xs items-center">
+                                        <span>Antes: </span>
+                                        <span class="font-bold text-xs line-through text-light ">US$
+                                            <?php echo esc_html($precio_regular); ?></span>
+                                    </div>
+                                    <span>Desde:</span>
+                                    <span class="font-bold text-primary text-base">US$
+                                        <?php echo esc_html($precio_oferta); ?></span>
+                                <?php else: ?>
+                                    <span>Desde:</span>
+                                    <span class="font-bold text-primary text-base">US$
                                         <?php echo esc_html($precio_regular); ?></span>
-                                </div>
-                                <span>Desde:</span>
-                                <span class="font-bold text-primary text-base">US$
-                                    <?php echo esc_html($precio_oferta); ?></span>
+                                <?php endif; ?>
                             </div>
                             <div class="flex gap-1.5 text-white">
                                 <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-2.5 bg-secondary"><span>Ver
