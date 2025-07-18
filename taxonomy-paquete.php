@@ -81,7 +81,7 @@ get_header();
 
                                     <!-- contenido -->
                                     <div class="flex flex-col gap-1.5">
-                                        <h1 class="text-2xl font-bold text-primary my-0"><?php the_title(); ?></h1>
+                                        <h1 class="text-2xl font-medium text-primary my-0"><?php the_title(); ?></h1>
                                         <p class="text-center"><?= $descripcion ?></p>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@ get_header();
                                         <?php if ($precio_oferta): ?>
                                             <div class="flex gap-1.5 text-xs">
                                                 <span><?= pll__('Antes:') ?></span>
-                                                <span class="font-bold">US$ <?= esc_html($precio_regular) ?></span>
+                                                <span class="font-bold text-xs line-through text-light">US$ <?= esc_html($precio_regular) ?></span>
                                             </div>
                                             <span><?= pll__('Desde:') ?></span>
                                             <span class="font-bold text-primary text-base">US$
