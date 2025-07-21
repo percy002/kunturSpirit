@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 ?>
 
@@ -114,30 +114,54 @@
                         </div>
                         <hr class="border-t border-zinc-300">
                         <!-- menu de navegación -->
-                        <div class="">
+                        <div class="<?php echo is_page() ? 'wp-page-style' : ''; ?>">
 
                             <?php if (current_user_can('administrator') && !has_nav_menu('primary')): ?>
                                 <a href="<?php echo esc_url(admin_url('nav-menus.php')); ?>"
-                                    class="text-sm text-zinc-600"><?php esc_html_e('Edit Menus', 'tailpress'); ?></a>
-                            <?php else: ?>
-                                <?php
-                                wp_nav_menu([
-                                    'container_id' => 'primary-menu',
-                                    'container_class' => '',
-                                    'menu_class' => 'flex flex-col gap-2.5 px-2.5 text-xl text-light',
-                                    'theme_location' => 'primary',
-                                    'li_class' => 'flex justify-between items-center',
-                                    'fallback_cb' => false,
-                                ]);
-                                ?>
+                                    class="text-sm text-zinc-600"><?php esc_html_e('Editar menús', 'tailpress'); ?></a>
                             <?php endif; ?>
+
+                            <?php
+                            $menu_locations = get_nav_menu_locations();
+
+                            if (isset($menu_locations['primary'])) {
+                                $menu = wp_get_nav_menu_object($menu_locations['primary']);
+
+                                // Verificamos que el menú exista antes de acceder a term_id
+                                if ($menu && $menu instanceof WP_Term) {
+                                    $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+                                    if (!empty($menu_items)) {
+                                        wp_nav_menu([
+                                            'container_id' => 'primary-menu',
+                                            'container_class' => '',
+                                            'menu_class' => 'flex flex-col gap-2.5 px-2.5 text-xl text-light',
+                                            'theme_location' => 'primary',
+                                            'fallback_cb' => false,
+                                        ]);
+                                    } else {
+                                        get_template_part('template-parts/defaultMenu');
+                                    }
+                                } else {
+                                    // Menú no encontrado, aunque la ubicación esté registrada
+                                    get_template_part('template-parts/defaultMenu');
+                                }
+                            } else {
+                                // No hay menú asignado a 'primary'
+                                get_template_part('template-parts/defaultMenu');
+                            }
+                            ?>
+
+
                         </div>
+
                         <hr class="border-t border-zinc-300">
                         <!-- INICIO DE SESION -->
                         <div class="flex flex-col gap-2.5 px-2.5">
-                            
+
                             <div class="">
-                                <a href="<?= get_translated_url_by_slug('contacto') ?>" class="bg-primary py-2 px-5 text-white"><span
+                                <a href="<?= get_translated_url_by_slug('contacto') ?>"
+                                    class="bg-primary py-2 px-5 text-white"><span
                                         class="text-2xl">Contáctenos</span></a>
                             </div>
                         </div>

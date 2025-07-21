@@ -84,18 +84,42 @@
 
             <!-- GENERAL -->
             <section class="flex flex-col p-0 justify-start py-5 gap-2.5 min-w-[200px]">
-                <h1 class="text-white m-0 text-2xl md:text-start font-normal">General</h1>
+                <h1 class="text-white m-0 text-2xl md:text-start font-normal">
+                    <?php esc_html_e('General', 'tailpress'); ?>
+                </h1>
+
                 <?php
-                wp_nav_menu([
-                    'container_id' => 'primary-menu-footer',
-                    'container_class' => '',
-                    'menu_class' => 'flex flex-col text-white text-sm gap-1.5',
-                    'theme_location' => 'footer_menu', // <--- Este es el slug registrado
-                    'li_class' => '',
-                    'fallback_cb' => false,
-                ]);
+                $menu_locations = get_nav_menu_locations();
+
+                if (isset($menu_locations['footer'])) {
+                    $menu = wp_get_nav_menu_object($menu_locations['footer']);
+
+                    if ($menu && $menu instanceof WP_Term) {
+                        $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+                        if (!empty($menu_items)) {
+                            wp_nav_menu([
+                                'container_id' => 'primary-menu-footer',
+                                'container_class' => '',
+                                'menu_class' => 'flex flex-col text-white text-sm gap-1.5',
+                                'theme_location' => 'footer_menu', // ¡Ojo con esto!
+                                'fallback_cb' => false,
+                            ]);
+                        } else {
+                            get_template_part('template-parts/defaultMenuFooter');
+                        }
+                    } else {
+                        // El objeto de menú no existe (menú eliminado o no asignado)
+                        get_template_part('template-parts/defaultMenuFooter');
+                    }
+                } else {
+                    // No hay ubicación 'footer' registrada o asignada
+                    get_template_part('template-parts/defaultMenuFooter');
+                }
                 ?>
             </section>
+
+
 
             <!-- DIVIDIR -->
             <div class="border-b-1 md:border-r-1 w-full md:w-0 md:h-36 border-white md:mt-10 md:hidden xl:block"></div>

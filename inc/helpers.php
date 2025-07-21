@@ -17,4 +17,16 @@ function get_translated_url_by_slug($slug)
 
     return '';
 }
+
+
+function get_translated_page_url($slug)
+{
+    $page = get_page_by_path($slug);
+    if ($page) {
+        $translated_id = function_exists('pll_get_post') ? pll_get_post($page->ID) : $page->ID;
+        return get_permalink($translated_id);
+    }
+    return '#';
+}
+
 ?>
