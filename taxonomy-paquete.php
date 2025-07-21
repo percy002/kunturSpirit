@@ -32,7 +32,7 @@ get_header();
 <section>
     <div class="">
         <div class="pt-10 flex flex-col gap-10">
-            <div class="container grid grid-cols-3 gap-7 justify-items-center">
+            <div class="container grid grid-cols-1 lg:grid-cols-3 gap-7 justify-items-center">
 
                 <?php
                 $args = [
@@ -60,7 +60,7 @@ get_header();
                         $imagen = get_the_post_thumbnail_url(null, 'large') ?: get_template_directory_uri() . '/assets/images/camino.jpg';
                         ?>
 
-                        <article class="h-full col-span-1 flex flex-col items-center bg-white max-w-[400px] flex-1">
+                        <article class="h-full col-span-1 flex flex-col items-center bg-white flex-1 lg:max-w-[30dvw]">
                             <div class="w-full">
                                 <img class="w-full h-full object-cover object-center" src="<?= esc_url($imagen) ?>" alt="">
                             </div>

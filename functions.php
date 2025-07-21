@@ -38,15 +38,13 @@ function tailpress(): TailPress\Framework\Theme
 }
 
 tailpress();
-function registrar_mis_menus()
-{
+add_action('after_setup_theme', function() {
     register_nav_menus([
-        'footer_menu' => 'Menú de Pie de Página (Footer)',
+        'primary' => __('Menú Principal', 'text-domain'),
+        'footer' => __('Menú de Footer', 'text-domain')
     ]);
-}
-add_action('after_setup_theme', 'registrar_mis_menus');
+}, 5);
 
-// DICCIONARIO DE IDIOMAS
 function registrar_cadenas_polylang()
 {
     pll_register_string('titulo_bienvenida', 'Bienvenidos a nuestra página', 'Diccionario');
