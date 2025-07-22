@@ -14,8 +14,10 @@
             </div>
             <div class="flex flex-col gap-2.5">
                 <div class="w-[160px] lg:w-[240px]">
-                    <img src='<?php echo get_template_directory_uri(); ?>/assets/images/logos/logo_color.png'
-                        alt="logo kuntur spirit">
+                    <a href="<?= esc_url(pll_home_url()); ?>">
+                        <img src='<?php echo get_template_directory_uri(); ?>/assets/images/logos/logo_color.png'
+                            alt="logo kuntur spirit">
+                    </a>
                 </div>
                 <div id="primary-navigation">
                     <nav class="flex flex-col gap-2.5">
@@ -98,7 +100,7 @@
                                                     ?>
                                                     <hr class="border-t-2 border-light w-1/2 py-1">
                                                     <!-- MOSTRAR TODO -->
-                                                    <a href="" class="cursor-pointer" id="verTodosTours">
+                                                    <a href="<?= $link ?>" class="cursor-pointer" id="verTodosTours">
                                                         <span class="text-xl">Ver todos</span>
                                                     </a>
                                                 </div>
