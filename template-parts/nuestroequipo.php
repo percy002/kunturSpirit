@@ -20,8 +20,8 @@
                     $cargo = get_field('cargo'); // Cambia el nombre del campo si es diferente
                     $imagen = get_field('imagen') && get_field('imagen')['url'] ? get_field('imagen')['url'] : get_template_directory_uri() . '/assets/images/retrato.webp';
                     ?>
-                    <div class="flex flex-col items-center pt-5 text-center max-w-[180px]">
-                        <img class="rounded-[100px] w-[140px] h-[140px] md:w-[180px] md:h-[180px] object-cover"
+                    <div class="flex flex-col items-center pt-5 text-center max-w-[180px] group">
+                        <img class="rounded-[100px] w-[140px] h-[140px] md:w-[180px] md:h-[180px] object-cover grayscale group-hover:scale-110  group-hover:grayscale-0 transition-all duration-300"
                             src="<?= $imagen ?>"
                             alt="Nuestro colaborador">
                         <span class="text-primary text-2xl mt-2 capitalize"><?= esc_html(get_the_title()); ?></span>

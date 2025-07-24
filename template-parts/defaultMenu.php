@@ -3,7 +3,7 @@
         <a href="<?php echo esc_url(home_url()); ?>"><?php esc_html_e('Inicio'); ?></a>
     </li>
     <li class="flex justify-between items-center">
-        <a href="<?php echo esc_url(get_translated_page_url('nosotros')); ?>">
+        <a href="<?php echo esc_url(get_translated_page_url('sobre-nosotros')); ?>">
             <?php esc_html_e('Sobre Nosotros'); ?>
         </a>
     </li>
