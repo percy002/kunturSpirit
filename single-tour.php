@@ -95,7 +95,7 @@ get_header();
                                     </div>
                                 </div>
                             </div>
-                            <section class="p-0 flex-1">
+                            <section class="p-0 flex-1 w-3/4 mx-auto">
                                 <div class="flex justify-center">
                                     <h1 class="text-2xl font-bold text-start m-0"><?= esc_html($dia['titulo']) ?></h1>
                                 </div>
@@ -104,44 +104,11 @@ get_header();
                                 </div>
                                 <!-- imágenes de itinerario -->
                                 <div class="">
-                                    <?php if (!empty($dia['imagenes'])): ?>
-                                        <!-- Swiper Container -->
-                                        <div class="swiper imagenSwiper max-w-[60dvw]">
-                                            <div class="swiper-wrapper">
-                                                <?php for ($j = 1; $j <= 3; $j++): ?>
-                                                    <?php if ($img = $dia['imagenes']['imagen_' . $j] ?? null): ?>
-                                                        <?php
-                                                        // Obtener URL y dimensiones (originales)
-                                                        if (is_numeric($img)) {
-                                                            $img_url = wp_get_attachment_image_url($img, 'large'); // Usa 'large' en lugar de 'full' para evitar imágenes gigantes
-                                                            $img_alt = get_post_meta($img, '_wp_attachment_image_alt', true) ?: 'Imagen del día';
-                                                        } else {
-                                                            $img_url = is_array($img) ? ($img['url'] ?? '') : $img;
-                                                            $img_alt = is_array($img) ? ($img['alt'] ?? 'Imagen del día') : 'Imagen del día';
-                                                        }
-
-                                                        if ($img_url): ?>
-                                                            <!-- Slide con tamaño forzado -->
-                                                            <div class="swiper-slide !h-[220px] !w-[250px] aspect-auto self-stretch">
-                                                                <!-- Ancho fijo para 3 columnas -->
-                                                                <a href="<?= esc_url($img_url) ?>" data-pswp-width="1080"
-                                                                    data-pswp-height="720" class="gallery-link block h-full group">
-                                                                    <div class="">
-                                                                        <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>"
-                                                                            class="swiper-image w-full h-full object-cover object-center"
-                                                                            loading="lazy" /> <!-- Lazy loading para mejor performance -->
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        <?php endif; ?>
-                                                    <?php endif; ?>
-                                                <?php endfor; ?>
-                                            </div>
-                                            <!-- Navigation Buttons -->
-                                            <div class="swiper-button-next"></div>
-                                            <div class="swiper-button-prev"></div>
+                                    <?php if (!empty($dia['imagenes']) && is_array($dia['imagenes']) && count($dia['imagenes']) > 0): ?>
+                                        <div class="w-full">
+                                            <?php get_template_part('template-parts/carruselimagenes', false, ['images' => $dia['imagenes']]) ?>
                                         </div>
-                                    <?php endif; ?>
+                                    <?php endif ?>
                                 </div>
                             </section>
 
@@ -178,46 +145,11 @@ get_header();
                                     <?= wp_kses_post($dia['descripcion']) ?>
                                 </div>
                                 <div class="">
-
-                                    <?php if (!empty($dia['imagenes'])): ?>
-                                        <!-- Swiper Container -->
-                                        <div class="swiper imagenSwiper ">
-                                            <div class="swiper-wrapper">
-                                                <?php for ($j = 1; $j <= 3; $j++): ?>
-                                                    <?php if ($img = $dia['imagenes']['imagen_' . $j] ?? null): ?>
-                                                        <?php
-                                                        // Obtener URL y dimensiones (originales)
-                                                        if (is_numeric($img)) {
-                                                            $img_url = wp_get_attachment_image_url($img, 'large'); // Usa 'large' en lugar de 'full' para evitar imágenes gigantes
-                                                            $img_alt = get_post_meta($img, '_wp_attachment_image_alt', true) ?: 'Imagen del día';
-                                                        } else {
-                                                            $img_url = is_array($img) ? ($img['url'] ?? '') : $img;
-                                                            $img_alt = is_array($img) ? ($img['alt'] ?? 'Imagen del día') : 'Imagen del día';
-                                                        }
-
-                                                        if ($img_url): ?>
-                                                            <!-- Slide con tamaño forzado -->
-                                                            <div class="swiper-slide !h-[220px] !w-[250px] aspect-auto self-stretch">
-                                                                <!-- Ancho fijo para 3 columnas -->
-                                                                <a href="<?= esc_url($img_url) ?>" data-pswp-width="1080"
-                                                                    data-pswp-height="720" class="gallery-link block h-full group">
-                                                                    <div
-                                                                        class="h-64 w-full overflow-hidden rounded-lg bg-gray-100 shadow-md md:h-72 lg:h-80">
-                                                                        <img src="<?= esc_url($img_url) ?>" alt="<?= esc_attr($img_alt) ?>"
-                                                                            class="swiper-image w-full h-full object-cover object-center"
-                                                                            loading="lazy" /> <!-- Lazy loading para mejor performance -->
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        <?php endif; ?>
-                                                    <?php endif; ?>
-                                                <?php endfor; ?>
-                                            </div>
-                                            <!-- Navigation Buttons -->
-                                            <div class="swiper-button-next"></div>
-                                            <div class="swiper-button-prev"></div>
+                                    <?php if (!empty($dia['imagenes']) && is_array($dia['imagenes']) && count($dia['imagenes']) > 0): ?>
+                                        <div class="w-full">
+                                            <?php get_template_part('template-parts/carruselimagenes', false, ['images' => $dia['imagenes']]) ?>
                                         </div>
-                                    <?php endif; ?>
+                                    <?php endif ?>
                                 </div>
                             </section>
 
@@ -259,7 +191,7 @@ get_header();
                             tu viaje:</p>
                         <div class="flex flex-col ">
                             <ul class="list-disc pl-5">
-                                <?php foreach ($incluye as $item): ?>
+                                <?php foreach ($no_incluye as $item): ?>
                                     <li><?= esc_html($item) ?></li>
                                 <?php endforeach; ?>
                             </ul>
@@ -290,7 +222,7 @@ get_header();
                         tu viaje:</p>
                     <div class="flex flex-col ">
                         <ul class="list-disc pl-5">
-                            <?php foreach ($incluye as $item): ?>
+                            <?php foreach ($no_incluye as $item): ?>
                                 <li><?= esc_html($item) ?></li>
                             <?php endforeach; ?>
                         </ul>
@@ -505,7 +437,7 @@ get_header();
 
 <!-- FOOTER DE TOURS -->
 <div id="floating-banner"
-    class="fixed bottom-0 w-full lg:hidden transform translate-y-full transition-transform duration-300"
+    class="fixed z-50 bottom-0 w-full lg:hidden transform translate-y-full transition-transform duration-300"
     style="background: linear-gradient(180deg, #865042 -70.62%, #41180D 70.62%);">
     <div class="p-2.5 flex justify-between items-center">
         <div class="text-white flex flex-col gap-2.5 p-5">

@@ -150,25 +150,36 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    const imagenSwiper = new Swiper('.imagenSwiper', {
-        slidesPerView: 'auto', // cambia a 2 o 3 si quieres varias visibles
-        spaceBetween: 16, // separación entre imágenes
-        loop: false, // o true si deseas que repita en bucle
+    var imagenswiper = new Swiper(".imagenSwiper", {
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 30,
+        freeMode: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        }
     });
 
     // Initialize PhotoSwipe Lightbox
     const lightbox = new PhotoSwipeLightbox({
         gallery: '.imagenSwiper',
-        children: '.swiper-slide .gallery-link',
+        children: '.gallery-link',
         pswpModule: PhotoSwipe
     });
     lightbox.init();
 
     // footer logo
-    
-    
+
+
 });

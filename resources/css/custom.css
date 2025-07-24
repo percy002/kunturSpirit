@@ -318,7 +318,7 @@ span {
 .swiper-button-prev {
   background: var(--color-light);
   padding: 5px 0;
-  color: white !important;
+  color: white;
 }
 
 .swiper-button-next::after,
