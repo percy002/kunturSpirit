@@ -6,8 +6,8 @@
  */
 
 $resumen_descripcion = get_field('resumen_descripcion') ? get_field('resumen_descripcion') : 'No disponible';
-$precio_oferta = get_field('precio_oferta') ? get_field('precio_oferta') : 'No disponible';
-$precio_regular = get_field('precio_regular') ? get_field('precio_regular') : 'No disponible';
+$precio_oferta = get_field('precio_oferta') ? get_field('precio_oferta') : '';
+$precio_regular = get_field('precio_regular') ? get_field('precio_regular') : '';
 $duracion = get_field('duracion') ? get_field('duracion') : 'No disponible';
 $imagen_portada = get_field('imagen_portada') ? get_field('imagen_portada') : [
     'url' => get_template_directory_uri() . '/assets/images/mapi.webp',
@@ -34,7 +34,7 @@ $infoHeroTour = array(
     'imagen_url' => $imagen_portada['url'],
     'title' => get_the_title() ? get_the_title() : 'No disponible',
     'descripcion' => $resumen_descripcion,
-    'precio' => $precio_oferta,
+    'precio' => $precio_oferta ?: $precio_regular,
     'duracion' => $duracion,
     'heroType' => 'tour',
 );

@@ -82,7 +82,11 @@
     margin-bottom: 0 !important;
   }
 }
-
+@media(min-width:768px){
+  .container{
+    padding: 0 100px;
+  }
+}
 .custom-logo {
   height: 100%;
   width: auto;
