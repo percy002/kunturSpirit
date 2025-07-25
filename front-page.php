@@ -109,8 +109,11 @@ get_header();
         <!-- Paginación -->
         <!-- <div class="swiper-pagination"></div> -->
         <!-- Botones de navegación -->
-        <div class="swiper-button-next !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100 "></div>
-        <div class="swiper-button-prev !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  ">
+        <div
+            class="swiper-button-next !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100 ">
+        </div>
+        <div
+            class="swiper-button-prev !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  ">
         </div>
     </div>
 </section>
@@ -376,8 +379,10 @@ get_header();
                     <?php endforeach; ?>
                 </div>
                 <!-- Botones de navegación -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev rounded-2xl !text-primary !left-1 !p-5 !bg-light/10 hover:!bg-light/50">
+                </div>
+                <div class="swiper-button-next rounded-2xl !text-primary !right-1 !p-5 !bg-light/10 hover:!bg-light/50">
+                </div>
             </div>
         </div>
     </section>

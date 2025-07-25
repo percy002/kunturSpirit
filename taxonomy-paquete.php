@@ -7,7 +7,7 @@
 
 $term = get_queried_object();
 $imagen_encabezado = get_field('imagen_encabezado', 'term_' . get_queried_object_id());
-$imagen_encabezado_url = $imagen['url'] ?? get_template_directory_uri() . "/assets/images/mapi.webp";
+$imagen_encabezado_url = $imagen_encabezado['url'] ?? get_template_directory_uri() . "/assets/images/mapi.webp";
 $infoHeroTour = array(
     'imagen_url' => $imagen_encabezado_url,
     'title' => $term->name ? $term->name : 'No disponible',
