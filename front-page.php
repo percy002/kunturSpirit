@@ -339,7 +339,7 @@ get_header();
                         $duracion = get_field('duracion', $tour_id) ?: '1 Día';
                         $tipo_tour = get_field('tipo_tour', $tour_id) ?: 'GRUPAL / PRIVADO';
                         $descripcion = get_field('descripcion_corta', $tour_id);
-                        $precio_oferta = get_field('precio_oferta', $tour_id) ?: '1200';
+                        $precio = get_field('precio_oferta', $tour_id) ?: get_field('precio_regular', $tour_id);
                         ?>
                         <article class="flex flex-col items-center bg-white swiper-slide h-full w-full max-w-[280px] !mr-0">
                             <div class="h-[220px] w-full">
@@ -364,7 +364,7 @@ get_header();
                                     <div class="flex gap-1.5 justify-between justify-center" style="flex: 1 1 0">
                                         <span>Desde:</span>
                                         <span class="font-bold text-primary text-base">US$
-                                            <?php echo esc_html($precio_oferta); ?></span>
+                                            <?php echo esc_html($precio); ?></span>
                                     </div>
                                     <div class="flex gap-1.5 text-white justify-center">
                                         <a href="<?php echo esc_url($link); ?>" class="py-2.5 px-5 bg-secondary"><span>Ver
