@@ -25,9 +25,13 @@
                         <div class="">
                             <ul class="flex flex-col gap-2.5 px-2.5 text-3xl text-light">
                                 <?php
+                                $term_to_exclude = get_term_by('slug', 'trekking', 'paquete');
+                                $excluded_id = $term_to_exclude ? $term_to_exclude->term_id : 0;
+
                                 $paquetes = get_terms([
                                     'taxonomy' => 'paquete',
                                     'hide_empty' => false,
+                                    'exclude' => [$excluded_id],
                                 ]);
                                 if (!empty($paquetes) && !is_wp_error($paquetes)):
                                     foreach ($paquetes as $paquete):
