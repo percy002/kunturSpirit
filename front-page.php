@@ -12,110 +12,45 @@ $comentarios = get_field('comentarios') ?: '';
 get_header();
 ?>
 <section class="py-0">
+
     <div class="swiper mySwiper !h-screen">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="h-full bg-no-repeat bg-cover"
-                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/mapi.avif'); background-position: center bottom;">
-                    <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
-                        <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Descubre la magia
-                                de Machu Picchu – ¡tu aventura te
-                                espera!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
-                                Kuntur Spirit creará tu aventura perfecta en Machu
-                                Picchu,
-                                conectándote con las maravillas de los Andes y la historia Inca.</p>
-                        </div>
-                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
 
-                    </div>
-                </div>
-            </div>
-            <!-- cusco -->
-            <div class="swiper-slide">
-                <div class="h-full bg-no-repeat bg-cover"
-                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/plazacusco.avif'); background-position: center bottom;">
-                    <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
-                        <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias
-                                Cusco - Vive la historia en cada paso!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
-                                Descubre los secretos de Cusco, la antigua capital inca. Tours auténticos que te
-                                conectan con su cultura, arquitectura y misticismo.</p>
-                        </div>
-                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
+            <?php            
+            $term_to_exclude = get_term_by('slug', 'trekking', 'paquete');
+            $excluded_id = $term_to_exclude ? $term_to_exclude->term_id : 0;
 
-                    </div>
-                </div>
-            </div>
-            <!-- peru -->
-            <div class="swiper-slide">
-                <div class="h-full bg-no-repeat bg-cover"
-                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/expeperu.avif'); background-position: center bottom;">
-                    <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
-                        <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias Perú
-                                - Explora el Perú de norte a sur!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Del
-                                desierto costero a la selva amazónica, conoce la diversidad cultural y natural de todo
-                                un país en rutas diseñadas para sorprenderte.</p>
-                        </div>
-                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
+            $paquetes = get_terms([
+                'taxonomy' => 'paquete',
+                'hide_empty' => false,
+                'exclude' => [$excluded_id],
+            ]);
+            if (!empty($paquetes) && !is_wp_error($paquetes)):
 
-                    </div>
-                </div>
-            </div>
-            <!-- especiales -->
-            <div class="swiper-slide">
-                <div class="h-full bg-no-repeat bg-cover"
-                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/especiales.avif'); background-position: center bottom;">
-                    <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
-                        <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias
-                                Especiales - Viajes con alma!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
-                                Rituales ancestrales, turismo vivencial, retiros espirituales y más. Diseñamos
-                                experiencias únicas que transforman.</p>
+                foreach ($paquetes as $paquete):
+                    $img = get_field('imagen_encabezado', $paquete); // o el campo que uses
+                    $desc = get_field('descripcion_corta', $paquete);
+                    $link = get_term_link($paquete);
+            ?>
+                    <div class="swiper-slide">
+                        <div class="h-full bg-no-repeat bg-cover"
+                            style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo $img['url'] ?? ''; ?>'); background-position: center bottom;">
+                            <div class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                                <div class="text-white flex-col gap-2.5 items-center">
+                                    <h1 class="text-white" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)"><?php echo esc_html($paquete->name); ?></h1>
+                                    <p class="text-center text-[20px]" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)"><?php echo esc_html($paquete->description); ?></p>
+                                </div>
+                                <a href="<?php echo esc_url($link); ?>"><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
+                            </div>
                         </div>
-                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
-
                     </div>
-                </div>
-            </div>
-            <!-- trekking -->
-            <div class="swiper-slide">
-                <div class="h-full bg-no-repeat bg-cover"
-                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri(); ?>/assets/images/portadas/trekking.avif'); background-position: center bottom;">
-                    <div
-                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
-                        <div class="text-white flex-col gap-2.5 items-center">
-                            <h1 class="text-white" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">Experiencias
-                                Aventura - Atrévete a sentir la aventura!</h1>
-                            <p class=" text-center text-[20px]" style=" text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
-                                Camina por rutas épicas, respira aire puro y libera adrenalina en paisajes
-                                espectaculares. ¡El Perú salvaje te espera!</p>
-                        </div>
-                        <a href=""><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
+                <?php endforeach; ?>
+            <?php endif; ?>
 
-                    </div>
-                </div>
-            </div>
         </div>
-        <!-- Paginación -->
-        <!-- <div class="swiper-pagination"></div> -->
         <!-- Botones de navegación -->
-        <div
-            class="swiper-button-next !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100 ">
-        </div>
-        <div
-            class="swiper-button-prev !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  ">
-        </div>
-    </div>
+        <div class="swiper-button-next !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100 "></div>
+        <div class="swiper-button-prev !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  "></div>
 </section>
 
 <section>
@@ -159,7 +94,7 @@ get_header();
                 $precio_regular = get_field('precio_regular', $tour_id) ?: '';
                 $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
 
-                ?>
+            ?>
                 <article class="flex flex-col items-center bg-white max-w-[400px] flex-1" style="flex: 1 1 0;">
                     <div class="w-full">
                         <img class="w-full h-full object-cover object-center" src="<?php echo esc_url($img); ?>"
@@ -265,7 +200,7 @@ get_header();
                 $precio_regular = get_field('precio_regular', $tour_id) ?: '';
                 $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
 
-                ?>
+            ?>
                 <article class="flex flex-col items-center bg-white max-w-[400px] flex-1" style="flex: 1 1 0;">
                     <div class="w-full">
                         <img class="w-full h-full object-cover object-center" src="<?php echo esc_url($img); ?>"
@@ -343,7 +278,7 @@ get_header();
                         $tipo_tour = get_field('tipo_tour', $tour_id) ?: 'GRUPAL / PRIVADO';
                         $descripcion = get_field('descripcion_corta', $tour_id);
                         $precio = get_field('precio_oferta', $tour_id) ?: get_field('precio_regular', $tour_id);
-                        ?>
+                    ?>
                         <article class="flex flex-col items-center bg-white swiper-slide h-full w-full max-w-[280px] !mr-0">
                             <div class="h-[220px] w-full">
                                 <img class="w-full h-full object-center object-cover" src="<?php echo esc_url($img); ?>"
