@@ -41,31 +41,40 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // submenumobile
+        // submenumobile
     document.querySelectorAll('.toggle-tours').forEach(btn => {
         btn.addEventListener('click', function () {
             const id = this.getAttribute('data-paquete');
             const toursList = document.getElementById('tours-' + id);
+    
+            // Cierra todos los submenús antes de abrir el seleccionado
+            document.querySelectorAll('[id^="tours-"]').forEach(list => {
+                if (list !== toursList) {
+                    list.classList.add('hidden');
+                    list.classList.remove('flex');
+                    // Resetea el icono de flecha de los otros botones
+                    const otherBtn = document.querySelector('.toggle-tours[data-paquete="' + list.id.replace('tours-', '') + '"]');
+                    if (otherBtn) {
+                        const otherIcon = otherBtn.querySelector('.fa-chevron-down');
+                        if (otherIcon) otherIcon.classList.remove('rotate-180');
+                    }
+                }
+            });
+    
             if (toursList) {
-                // Alternar entre flex y hidden
+                const icon = this.querySelector('.fa-chevron-down');
                 if (toursList.classList.contains('hidden')) {
                     toursList.classList.remove('hidden');
                     toursList.classList.add('flex');
+                    if (icon) icon.classList.add('rotate-180');
                 } else {
                     toursList.classList.add('hidden');
                     toursList.classList.remove('flex');
-                }
-
-                if (window.innerWidth < 1024) {
-                    const icon = this.querySelector('.fa-chevron-down');
-                    if (icon) {
-                        icon.classList.toggle('rotate-180');
-                    }
+                    if (icon) icon.classList.remove('rotate-180');
                 }
             }
         });
     });
-
 
 
     // submenu derecha

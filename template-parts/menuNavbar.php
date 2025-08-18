@@ -72,7 +72,7 @@
                                             'tour' => $toursSubMenu,
                                             'img_url' => $img_url,
                                         ];
-                                        ?>
+                                ?>
                                         <li class="flex flex-col">
                                             <button
                                                 class="toggle-tours flex justify-between items-center text-light hover:text-secondary transition"
@@ -86,22 +86,25 @@
                                                 <span class="text-2xl md:hidden"><i class="fa-solid fa-chevron-down"></i></span>
 
                                             </button>
+
                                             <div class="block lg:hidden">
                                                 <div class="tours-list hidden mt-2 pl-6 flex-col gap-2.5"
                                                     id="tours-<?php echo esc_attr($paquete->term_id); ?>">
-                                                    <?php if ($tours):
-                                                        foreach ($tours as $tour):
-                                                            ?>
-                                                            <a href="<?php echo get_permalink($tour->ID); ?>"
-                                                                class="block text-base text-light hover:text-secondary py-1">
-                                                                <?php echo esc_html($tour->post_title); ?>
-                                                            </a>
-                                                            <?php
-                                                        endforeach;
-                                                    else:
-                                                        echo '<span class="text-base text-light">No hay tours en este paquete.</span>';
-                                                    endif;
-                                                    ?>
+                                                    <div class="flex flex-col gap-2.5 max-h-50 overflow-y-auto">
+                                                        <?php if ($tours):
+                                                            foreach ($tours as $tour): ?>
+                                                                <a href="<?php echo get_permalink($tour->ID); ?>"
+                                                                    class="block text-base text-light hover:text-secondary py-1">
+                                                                    <?php echo esc_html($tour->post_title); ?>
+                                                                </a>
+                                                        <?php
+                                                            endforeach;
+                                                        else:
+                                                            echo '<span class="text-base text-light">No hay tours en este paquete.</span>';
+                                                        endif;
+                                                        ?>
+                                                    </div>
+
                                                     <hr class="border-t-2 border-light w-1/2 py-1">
                                                     <!-- MOSTRAR TODO -->
                                                     <a href="<?= $link ?>" class="cursor-pointer" id="verTodosTours">
@@ -110,7 +113,7 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <?php
+                                    <?php
                                     endforeach;
                                 else:
                                     ?>
