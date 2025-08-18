@@ -86,7 +86,7 @@
                                         </details>
                                     </div>
 
-                                <?php endif;
+                            <?php endif;
                             endif;
                             ?>
 
@@ -111,10 +111,9 @@
 
                 <div class="gap-5 hidden sm:flex">
                     <div class="flex gap-2.5 text-white">
-                        <a href=""><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram text-xl "></i></a>
-                        <a href=""><i class="fa-brands fa-tiktok text-xl"></i></a>
-
+                        <a href="https://www.facebook.com/KunturSpiritTravel"><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
+                        <a href="https://www.instagram.com/kuntur_spirit/"><i class="fa-brands fa-instagram text-xl "></i></a>
+                        <a href="https://www.tiktok.com/@kunturspirit"><i class="fa-brands fa-tiktok text-xl"></i></a>
                     </div>
                     <div class="text-light">
                         |
@@ -128,12 +127,12 @@
                                 'hide_current' => 0,    // Muestra el idioma actual
                                 'dropdown' => 0,         // Muestra como lista, no como dropdown
                                 'raw' => 0  // Mostrar HTML listo para usar
-                        
+
                             ));
                         }
                         ?>
                     </div>
-                    
+
 
                 </div>
 

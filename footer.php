@@ -42,12 +42,9 @@
                 <div class="flex flex-col gap-2.5">
                     <div class="text-white m-0 text-2xl md:text-start font-normal">Síguenos en:</div>
                     <div class="flex gap-2.5 text-white">
-                        <a href=""><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram text-xl "></i></a>
-                        <a href=""><i class="fa-brands fa-tiktok text-xl"></i></a>
-                        <a href=""><i class="fa-brands fa-youtube text-xl"></i></a>
-                        <a href=""><i class="fa-solid fa-envelope text-xl"></i></a>
-
+                        <a href="https://www.facebook.com/KunturSpiritTravel"><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
+                        <a href="https://www.instagram.com/kuntur_spirit/"><i class="fa-brands fa-instagram text-xl "></i></a>
+                        <a href="https://www.tiktok.com/@kunturspirit"><i class="fa-brands fa-tiktok text-xl"></i></a>
                     </div>
                 </div>
             </section>
@@ -62,8 +59,8 @@
                     <li class="flex items-center gap-2.5">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <div class="flex flex-col">
-                            <span>(+51) 989 583 467</span>
-                            <span>(+51) 989 583 467</span>
+                            <span>(+51) 962 736 111 </span>
+                            <span>(+51) 987 104 935</span>
                         </div>
                     </li>
                     <li class="flex items-center gap-2.5">
@@ -102,7 +99,7 @@
                                 'container_id' => 'primary-menu-footer',
                                 'container_class' => '',
                                 'menu_class' => 'flex flex-col text-white text-sm gap-1.5',
-                                'theme_location' => 'footer_menu', // ¡Ojo con esto!
+                                'theme_location' => 'footer', // ¡Ojo con esto!
                                 'fallback_cb' => false,
                             ]);
                         } else {
@@ -114,6 +111,7 @@
                     }
                 } else {
                     // No hay ubicación 'footer' registrada o asignada
+                    var_dump('footer');
                     get_template_part('template-parts/defaultMenuFooter');
                 }
                 ?>
@@ -131,7 +129,7 @@
                         alt="libro de reclamaciones">
                 </a>
                 <span>Libro de reclamaciones</span>
-                <h1 class="text-white m-0 text-2xl md:text-start font-normal">Síguenos en:</h1>
+                <h1 class="text-white m-0 text-2xl md:text-start font-normal">Aceptamos:</h1>
                 <div class="">
                     <img class="w-36 bg-white"
                         src='<?php echo get_template_directory_uri(); ?>/assets/images/cardskuntur.png'
@@ -147,9 +145,8 @@
                 copyright &copy; <?php echo esc_html(date_i18n('Y')); ?> - Kuntur Spirit S.A.C
             </div>
             <div class="hidden md:block">|</div>
-            <div class="">
-
-                Realizado por <a href="" class="font-bold">CodeTeam</a>
+            <div class="py-4">
+                Realizado por <a target="__blank" href="https://codeteam.pe/" class="font-bold">CodeTeam</a>
             </div>
         </div>
     </div>
