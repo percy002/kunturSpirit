@@ -19,10 +19,18 @@
         0% {
             transform: translateX(0);
         }
-
         100% {
             transform: translateX(-50%);
         }
+    }
+
+    /* Escala de grises por defecto, color al hover */
+    .carousel-colab img {
+        filter: grayscale(1);
+        transition: filter 0.3s;
+    }
+    .carousel-colab img:hover {
+        filter: grayscale(0);
     }
 </style>
 <section>
@@ -49,7 +57,7 @@
                         <div class="flex-[1_0_0] h-[70px] flex justify-center items-center w-[180px]">
                             <img class="h-full w-auto object-contain"
                                 src="<?php echo get_template_directory_uri(); ?>/assets/images/instituciones/<?php echo $img; ?>"
-                                alt="<?php echo esc_attr($alt); ?>" class="w-32">
+                                alt="<?php echo esc_attr($alt); ?>">
                         </div>
                     <?php endforeach; ?>
                 <?php endfor; ?>
