@@ -42,9 +42,9 @@
                 <div class="flex flex-col gap-2.5">
                     <div class="text-white m-0 text-2xl md:text-start font-normal">Síguenos en:</div>
                     <div class="flex gap-2.5 text-white">
-                        <a href="https://www.facebook.com/KunturSpiritTravel"><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
-                        <a href="https://www.instagram.com/kuntur_spirit/"><i class="fa-brands fa-instagram text-xl "></i></a>
-                        <a href="https://www.tiktok.com/@kunturspirit"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                        <a target="__blank" href="https://www.facebook.com/KunturSpiritTravel"><i class="fa-brands fa-facebook text-xl fa-inverse"></i></a>
+                        <a target="__blank" href="https://www.tiktok.com/@kunturspirit"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                        <a target="__blank" href="https://www.instagram.com/kuntur_spirit/"><i class="fa-brands fa-instagram text-xl "></i></a>
                     </div>
                 </div>
             </section>

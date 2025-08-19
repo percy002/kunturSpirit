@@ -176,9 +176,9 @@
                         </div>
                         <!-- REDES SOCIALES -->
                         <div class="flex gap-2.5 text-primary pt-8 px-2.5">
-                            <a href=""><i class="fa-brands fa-facebook text-2xl"></i></a>
-                            <a href=""><i class="fa-brands fa-instagram text-2xl "></i></a>
-                            <a href=""><i class="fa-brands fa-tiktok text-2xl"></i></a>
+                            <a target="__blank" href="https://www.facebook.com/KunturSpiritTravel"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                            <a target="__blank" href="https://www.instagram.com/kuntur_spirit/"><i class="fa-brands fa-instagram text-2xl "></i></a>
+                            <a target="__blank" href="https://www.tiktok.com/@kunturspirit"><i class="fa-brands fa-tiktok text-2xl"></i></a>
                         </div>
                     </nav>
 
