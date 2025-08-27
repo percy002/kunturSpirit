@@ -16,7 +16,7 @@ get_header();
     <div class="swiper mySwiper !h-screen">
         <div class="swiper-wrapper">
 
-            <?php            
+            <?php
             $term_to_exclude = get_term_by('slug', 'trekking', 'paquete');
             $excluded_id = $term_to_exclude ? $term_to_exclude->term_id : 0;
 
@@ -67,6 +67,8 @@ get_header();
             enorgullece de ofrecer experiencias auténticas que resaltan la belleza y la espiritualidad del Perú.</p>
     </div>
 </section>
+<?php get_template_part('template-parts/porquenosotros') ?>
+
 <!-- SECCION DE TOURS PERU -->
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
@@ -327,8 +329,7 @@ get_header();
         </div>
     </section>
 
-    <?php get_template_part('template-parts/porquenosotros') ?>
-    <section>
+    <!-- <section>
         <div class="container flex flex-col gap-10">
             <div class="flex flex-col gap-5">
                 <h1>Información útil para el viajero</h1>
@@ -338,6 +339,6 @@ get_header();
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
     <?php
     get_footer();
