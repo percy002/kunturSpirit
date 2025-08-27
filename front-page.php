@@ -162,8 +162,8 @@ get_header();
                 los sueños."
             </h1>
             <div class="flex justify-end 2xl:justify-center">
-                <a href="" class="py-2.5 lg:py-4 px-10 lg:px-12 text-white bg-primary"><span
-                        class="text-xl lg:text-2xl">Contáctenos</span></a>
+                <a href="https://api.whatsapp.com/send?phone=51989583467&text=%C2%A1Hola!%20Vengo%20de%20la%20web%20de%20Kuntur%20Spirit.%20Quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20crear%20mi%20aventura%20perfecta%20con%20sus%20tours%20en%20Per%C3%BA." class="py-2.5 lg:py-4 px-10 lg:px-12 text-white bg-primary"><span
+                        class="text-xl lg:text-2xl">Quiero más información</span></a>
             </div>
         </div>
     </div>
