@@ -35,8 +35,12 @@ $heroType = $args['heroType'] ?? '';
 
             </div>
             <?php if ($heroType != 'layout'): ?>
-                <a href=""><span class="py-2 px-5 bg-primary text-white font-bold">RESERVAR AHORA</span></a>
-            <?php endif; ?>
+
+                <a href="https://wa.me/51962736111?text=<?php echo rawurlencode(
+                                                            "Estoy interesado en el tour {$title}.\nDetalles:\n\nDuración: {$duracion}\nPrecio: US$ {$precio}\n" . esc_url($_SERVER['REQUEST_URI']) . "\n\nQuisiera más información, por favor."
+                                                        ); ?>" target="_blank">
+                    <span class="py-2 px-5 bg-primary text-white font-bold">RESERVAR AHORA</span>
+                </a> <?php endif; ?>
 
         </div>
     </div>

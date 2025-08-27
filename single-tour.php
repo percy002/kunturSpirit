@@ -1,4 +1,5 @@
 <?php
+
 /**
  * single-tour.php
  *
@@ -421,10 +422,13 @@ get_header();
                     <hr class="border-b-2 border-primary w-full">
                 </div>
 
-                <div class="mt-2">
-                    <button class="py-4 px-10 bg-primary w-fit"><span class="text-xl text-white font-semibold">Reserva
-                            Ahora</span></button>
 
+                <div class="mt-2">
+                    <a href="https://wa.me/51962736111?text=<?php echo rawurlencode(
+                                                                "Estoy interesado en el tour " . get_the_title() . ".\nDetalles:\n\nDuración: {$duracion}\nPrecio: US$ " . ($precio_oferta ?: $precio_regular) . "\n" . get_permalink() . "\n\nQuisiera más información, por favor."
+                                                            ); ?>" target="_blank" class="py-4 px-10 bg-primary w-fit flex items-center justify-center">
+                        <span class="text-xl text-white font-semibold">Reserva Ahora</span>
+                    </a>
                 </div>
 
             </div>
@@ -456,7 +460,7 @@ get_header();
     </div>
 </div>
 <script>
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', function() {
         const floatingBanner = document.getElementById('floating-banner');
         const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
