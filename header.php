@@ -47,48 +47,25 @@
                     <div class="sm:hidden">
                         <div class="flex gap-2.5 items-center">
                             <?php
-                            if (function_exists('pll_the_languages')):
+                            if (function_exists('pll_the_languages')) {
                                 $langs = pll_the_languages([
                                     'show_flags' => 1,
                                     'show_names' => 0,
                                     'hide_current' => 0,
-                                    'dropdown' => 1,
+                                    'dropdown' => 0,
                                     'raw' => 1
                                 ]);
-
-                                if ($langs): ?>
-                                    <div class="relative inline-block">
-                                        <details class="group">
-                                            <summary class="cursor-pointer flex items-center gap-1">
-                                                <?php
-                                                foreach ($langs as $lang) {
-                                                    if ($lang['current_lang']) {
-                                                        echo $lang['flag'];
-                                                        break;
-                                                    }
-                                                }
-                                                ?>
-                                                <i
-                                                    class="fa-solid fa-chevron-down text-sm ml-1 text-white group-open:rotate-180 transition-transform"></i>
-                                            </summary>
-                                            <ul class="absolute left-0 mt-2 bg-transparent shadow-lg z-50 w-fit">
-                                                <?php foreach ($langs as $lang): ?>
-                                                    <?php if (!$lang['current_lang']): ?>
-                                                        <li>
-                                                            <a href="<?php echo esc_url($lang['url']); ?>"
-                                                                class="flex items-center gap-2 pr-2 py-1 ">
-                                                                <?php echo $lang['flag']; ?>
-                                                            </a>
-                                                        </li>
-                                                    <?php endif; ?>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        </details>
-                                    </div>
-
-                            <?php endif;
-                            endif;
+                                if ($langs) {
+                                    foreach ($langs as $lang) {
+                                        if ($lang['current_lang']) {
+                                            echo $lang['flag'];
+                                            break; // Solo muestra el idioma actual
+                                        }
+                                    }
+                                }
+                            }
                             ?>
+                            
 
                         </div>
                     </div>
@@ -121,14 +98,21 @@
                     <div class="flex gap-2.5 items-center">
                         <?php
                         if (function_exists('pll_the_languages')) {
-                            pll_the_languages(array(
-                                'show_flags' => 1,      // Muestra banderas
-                                'show_names' => 0,      // Muestra nombres de idiomas
-                                'hide_current' => 0,    // Muestra el idioma actual
-                                'dropdown' => 0,         // Muestra como lista, no como dropdown
-                                'raw' => 0  // Mostrar HTML listo para usar
-
-                            ));
+                            $langs = pll_the_languages([
+                                'show_flags' => 1,
+                                'show_names' => 0,
+                                'hide_current' => 0,
+                                'dropdown' => 0,
+                                'raw' => 1
+                            ]);
+                            if ($langs) {
+                                foreach ($langs as $lang) {
+                                    if ($lang['current_lang']) {
+                                        echo $lang['flag'];
+                                        break;
+                                    }
+                                }
+                            }
                         }
                         ?>
                     </div>
