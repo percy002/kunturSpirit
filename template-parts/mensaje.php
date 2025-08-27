@@ -10,7 +10,7 @@
             </div>
             <div class="border-r border-white h-24 hidden lg:block"></div>
             <div class="">
-                <a href="" class="bg-white text-primary py-2.5 lg:py-4 px-10 lg:px-12 font-semibold"><span>CONTACTANOS</span></a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=51989583467&text=%C2%A1Hola!%20Vengo%20de%20la%20web%20de%20Kuntur%20Spirit.%20Quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20crear%20mi%20aventura%20perfecta%20con%20sus%20tours%20en%20Per%C3%BA." class="bg-white text-primary py-2.5 lg:py-4 px-10 lg:px-12 font-semibold"><span>Mas Información</span></a>
             </div>
         </div>
     </div>

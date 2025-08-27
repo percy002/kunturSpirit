@@ -140,10 +140,6 @@ get_header();
                 </article>
             <?php endforeach; ?>
         </div>
-        <div class="w-full flex justify-center">
-            <a href="" class="py-4 px-16 bg-primary text-white font-medium !no-underline"><span>VER MÁS
-                    EXPERIENCIAS</span></a>
-        </div>
     </div>
 </section>
 <!-- SECCION SLOGAN -->
@@ -254,9 +250,8 @@ get_header();
         <!-- Carrusel de trekking con Swiper -->
         <div class="container">
             <div class="flex flex-col gap-5">
-                <h1>Aventura - Trekking más populares</h1>
-                <p class="text-center">Explora las mejores rutas de trekking en Perú con KUNTUR SPIRIT Travel. Descubre
-                    aventuras inolvidables entre montañas, valles y paisajes impresionantes. ¡Empieza tu travesía hoy!
+                <h1>Lo Mejor de Cusco en un Día</h1>
+                <p class="text-center">Cada día en Cusco es una nueva oportunidad de asombro. Recorre paisajes andinos, lagunas turquesa, montañas multicolores y pueblos llenos de tradición. Diseñamos estas experiencias para viajeros que desean aprovechar al máximo su tiempo y regresar con recuerdos que durarán toda la vida.
                 </p>
             </div>
             <div class="swiper !h-fit trekkingSwiper mt-8">
