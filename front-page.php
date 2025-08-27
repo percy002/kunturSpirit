@@ -70,13 +70,9 @@ get_header();
 <!-- SECCION DE TOURS PERU -->
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
-        <h1>Experiencias Perú: ¡Explora el Perú de norte a sur!</h1>
+        <h1>Descubre los tours más destacados en Perú</h1>
         <p>
-            Descubrir Perú es embarcarse en una aventura llena de contrastes, historia milenaria y paisajes que quitan
-            el aliento. Desde la majestuosidad de Machu Picchu hasta la inmensidad del desierto de Paracas, cada rincón
-            del país ofrece una experiencia única e inolvidable. En este viaje, te llevaremos por los sabores de su
-            gastronomía, los misterios de sus antiguas civilizaciones y la calidez de su gente. Prepárate para explorar
-            un Perú que va mucho más allá de los destinos turísticos tradicionales.
+            Explorar Perú es descubrir una tierra llena de contrastes y riqueza cultural. Hemos reunido una selección de tours en Perú que muestran lo más representativo del país, desde sus paisajes andinos hasta la selva amazónica. Cada tour está diseñada para que disfrutes y sin prisas, con itinerarios que equilibran historia, naturaleza y vivencias locales. Una manera simple y cercana de conocer lo mejor que este destino tiene para ofrecer.
         </p>
     </div>
     <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
