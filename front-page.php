@@ -26,38 +26,34 @@ get_header();
                 'exclude' => [$excluded_id],
             ]);
             if (!empty($paquetes) && !is_wp_error($paquetes)):
+                $paquete = $paquetes[2];
 
-                foreach ($paquetes as $paquete):
-                    $img = get_field('imagen_encabezado', $paquete); // o el campo que uses
-                    $desc = get_field('descripcion_corta', $paquete);
-                    $link = get_term_link($paquete);
-                    ?>
-                    <div class="swiper-slide">
-                        <div class="h-full bg-no-repeat bg-cover"
-                            style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo $img['url'] ?? ''; ?>'); background-position: center bottom;">
-                            <div
-                                class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
-                                <div class="text-white flex-col gap-2.5 items-center">
-                                    <h1 class="text-white" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
-                                        <?php echo esc_html($paquete->name); ?></h1>
-                                    <p class="text-center text-[20px]" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
-                                        <?php echo esc_html($paquete->description); ?></p>
-                                </div>
-                                <a href="<?php echo esc_url($link); ?>"><span
-                                        class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
-                            </div>
+                $img = get_field('imagen_encabezado', $paquete);
+                $desc = get_field('descripcion_corta', $paquete);
+                $link = get_term_link($paquete);
+                ?>
+                <div class="h-full w-full bg-no-repeat bg-cover"
+                    style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo get_template_directory_uri() . '/assets/images/mapi.webp' ?>'); background-position: center bottom;">
+                    <div
+                        class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                        <div class="text-white flex-col gap-2.5 items-center">
+                            <h1 class="text-white" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
+                                Tours Perú | Kuntur Spirit
+                            </h1>
+                            <p class="text-center text-[20px]" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
+                                Con nuestros tours Perú tienes la oportunidad de organizar el viaje que siempre soñaste,
+                                combinando destinos icónicos como Cusco o Machu Picchu con rutas alternativas que muy pocos
+                                visitantes conocen. Todo pensado para que disfrutes de tus viajes bien planificadas desde el
+                                primer día.
+                            </p>
                         </div>
+                        <a target="_blank"
+                            href="https://api.whatsapp.com/send?phone=51989583467&text=%C2%A1Hola!%20Vengo%20de%20la%20web%20de%20Kuntur%20Spirit.%20Quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20tours%20en%20Per%C3%BA"><span
+                                class="py-2 px-5 bg-primary text-white font-medium">Comienza tu tour ahora</span></a>
                     </div>
-                <?php endforeach; ?>
+                </div>
             <?php endif; ?>
 
-        </div>
-        <!-- Botones de navegación -->
-        <div
-            class="swiper-button-next !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100 ">
-        </div>
-        <div
-            class="swiper-button-prev !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  ">
         </div>
 </section>
 
