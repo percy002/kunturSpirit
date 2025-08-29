@@ -31,16 +31,20 @@ get_header();
                     $img = get_field('imagen_encabezado', $paquete); // o el campo que uses
                     $desc = get_field('descripcion_corta', $paquete);
                     $link = get_term_link($paquete);
-            ?>
+                    ?>
                     <div class="swiper-slide">
                         <div class="h-full bg-no-repeat bg-cover"
                             style="background-image: linear-gradient(180deg, rgba(65,24,13,0.8) 0%, rgba(0,0,0,0) 100%), url('<?php echo $img['url'] ?? ''; ?>'); background-position: center bottom;">
-                            <div class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
+                            <div
+                                class="flex flex-col h-full pt-0 px-2.5 md:pr-[150px] md:pl-[150px] md:pb-[150px] justify-center md:justify-end gap-5 self-stretch items-center">
                                 <div class="text-white flex-col gap-2.5 items-center">
-                                    <h1 class="text-white" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)"><?php echo esc_html($paquete->name); ?></h1>
-                                    <p class="text-center text-[20px]" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)"><?php echo esc_html($paquete->description); ?></p>
+                                    <h1 class="text-white" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
+                                        <?php echo esc_html($paquete->name); ?></h1>
+                                    <p class="text-center text-[20px]" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, .5)">
+                                        <?php echo esc_html($paquete->description); ?></p>
                                 </div>
-                                <a href="<?php echo esc_url($link); ?>"><span class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
+                                <a href="<?php echo esc_url($link); ?>"><span
+                                        class="py-2 px-5 bg-primary text-white font-medium">mas información</span></a>
                             </div>
                         </div>
                     </div>
@@ -49,8 +53,12 @@ get_header();
 
         </div>
         <!-- Botones de navegación -->
-        <div class="swiper-button-next !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100 "></div>
-        <div class="swiper-button-prev !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  "></div>
+        <div
+            class="swiper-button-next !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100 ">
+        </div>
+        <div
+            class="swiper-button-prev !text-white !w-12 !h-12 rounded-3xl opacity-60 -translate-y-20 scale-75 md:scale-100  ">
+        </div>
 </section>
 
 <section>
@@ -74,7 +82,11 @@ get_header();
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
         <h1>Descubre los tours más destacados en Perú</h1>
         <p>
-            Explorar Perú es descubrir una tierra llena de contrastes y riqueza cultural. Hemos reunido una selección de tours en Perú que muestran lo más representativo del país, desde sus paisajes andinos hasta la selva amazónica. Cada tour está diseñada para que disfrutes y sin prisas, con itinerarios que equilibran historia, naturaleza y vivencias locales. Una manera simple y cercana de conocer lo mejor que este destino tiene para ofrecer.
+            Explorar Perú es descubrir una tierra llena de contrastes y riqueza cultural. Hemos reunido una selección de
+            tours en Perú que muestran lo más representativo del país, desde sus paisajes andinos hasta la selva
+            amazónica. Cada tour está diseñada para que disfrutes y sin prisas, con itinerarios que equilibran historia,
+            naturaleza y vivencias locales. Una manera simple y cercana de conocer lo mejor que este destino tiene para
+            ofrecer.
         </p>
     </div>
     <div class="pt-10 flex flex-col gap-10 md:pr-[100px] md:pl-[100px]">
@@ -92,7 +104,7 @@ get_header();
                 $precio_regular = get_field('precio_regular', $tour_id) ?: '';
                 $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
 
-            ?>
+                ?>
                 <article class="flex flex-col items-center bg-white max-w-[400px] flex-1" style="flex: 1 1 0;">
                     <div class="w-full">
                         <img class="w-full h-full object-cover object-center" src="<?php echo esc_url($img); ?>"
@@ -160,8 +172,10 @@ get_header();
                 los sueños."
             </h1>
             <div class="flex justify-end 2xl:justify-center">
-                <a target="__blank" href="https://api.whatsapp.com/send?phone=51989583467&text=%C2%A1Hola!%20Vengo%20de%20la%20web%20de%20Kuntur%20Spirit.%20Quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20crear%20mi%20aventura%20perfecta%20con%20sus%20tours%20en%20Per%C3%BA." class="py-2.5 lg:py-4 px-10 lg:px-12 text-white bg-primary"><span
-                        class="text-xl lg:text-2xl">Quiero más información</span></a>
+                <a target="__blank"
+                    href="https://api.whatsapp.com/send?phone=51989583467&text=%C2%A1Hola!%20Vengo%20de%20la%20web%20de%20Kuntur%20Spirit.%20Quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20crear%20mi%20aventura%20perfecta%20con%20sus%20tours%20en%20Per%C3%BA."
+                    class="py-2.5 lg:py-4 px-10 lg:px-12 text-white bg-primary"><span class="text-xl lg:text-2xl">Quiero
+                        más información</span></a>
             </div>
         </div>
     </div>
@@ -194,7 +208,7 @@ get_header();
                 $precio_regular = get_field('precio_regular', $tour_id) ?: '';
                 $precio_oferta = get_field('precio_oferta', $tour_id) ?: '';
 
-            ?>
+                ?>
                 <article class="flex flex-col items-center bg-white max-w-[400px] flex-1" style="flex: 1 1 0;">
                     <div class="w-full">
                         <img class="w-full h-full object-cover object-center" src="<?php echo esc_url($img); ?>"
@@ -253,7 +267,10 @@ get_header();
         <div class="container">
             <div class="flex flex-col gap-5">
                 <h1>Lo Mejor de Cusco en un Día</h1>
-                <p class="text-center">Cada día en Cusco es una nueva oportunidad de asombro. Recorre paisajes andinos, lagunas turquesa, montañas multicolores y pueblos llenos de tradición. Diseñamos estas experiencias para viajeros que desean aprovechar al máximo su tiempo y regresar con recuerdos que durarán toda la vida.
+                <p class="text-center">Cada día en Cusco es una nueva oportunidad de asombro. Recorre paisajes andinos,
+                    lagunas turquesa, montañas multicolores y pueblos llenos de tradición. Diseñamos estas experiencias
+                    para viajeros que desean aprovechar al máximo su tiempo y regresar con recuerdos que durarán toda la
+                    vida.
                 </p>
             </div>
             <div class="swiper !h-fit trekkingSwiper mt-8">
@@ -267,7 +284,7 @@ get_header();
                         $tipo_tour = get_field('tipo_tour', $tour_id) ?: 'GRUPAL / PRIVADO';
                         $descripcion = get_field('descripcion_corta', $tour_id);
                         $precio = get_field('precio_oferta', $tour_id) ?: get_field('precio_regular', $tour_id);
-                    ?>
+                        ?>
                         <article class="flex flex-col items-center bg-white swiper-slide h-full w-full max-w-[280px] !mr-0">
                             <div class="h-[220px] w-full">
                                 <img class="w-full h-full object-center object-cover" src="<?php echo esc_url($img); ?>"
@@ -328,7 +345,7 @@ get_header();
 
         </div>
     </section>
-
+    <?php get_template_part('template-parts/preguntasFrecuentesFrontpage', null); ?>
     <!-- <section>
         <div class="container flex flex-col gap-10">
             <div class="flex flex-col gap-5">
