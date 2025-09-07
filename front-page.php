@@ -59,7 +59,7 @@ get_header();
 
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
-        <h1>Kuntur Spirit</h1>
+        <h2>Kuntur Spirit</h2>
         <p class="text-center">Kuntur Spirit, que significa «El Espíritu del Cóndor», es una agencia de viajes local que
             ofrece una variedad
             de servicios turísticos en todo Perú. Nuestro equipo ha diseñado tres rutas únicas de Turismo Espiritual
@@ -76,7 +76,7 @@ get_header();
 <!-- SECCION DE TOURS PERU -->
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
-        <h1>Descubre los tours más destacados en Perú</h1>
+        <h2>Descubre los tours más destacados en Perú</h2>
         <p>
             Explorar Perú es descubrir una tierra llena de contrastes y riqueza cultural. Hemos reunido una selección de
             tours en Perú que muestran lo más representativo del país, desde sus paisajes andinos hasta la selva
@@ -119,7 +119,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="flex flex-col gap-1.5">
-                                <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
+                                <h2 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h2>
                                 <p class="text-center"><?= esc_html($descripcion); ?></p>
                             </div>
                         </div>
@@ -163,10 +163,10 @@ get_header();
         </div>
         <div
             class="px-2.5 absolute top-1/2 -translate-y-1/2 sm:right-[150px] 2xl:left-1/2 2xl:-translate-1/2 w-[500px] max-w-11/12 2xl:w-[1000px] text-white">
-            <h1 class="text-right text-white 2xl:text-center">"No nos dedicamos al negocio de los viajes. Nos dedicamos
+            <h2 class="text-right text-white 2xl:text-center">"No nos dedicamos al negocio de los viajes. Nos dedicamos
                 al negocio de
                 los sueños."
-            </h1>
+            </h2>
             <div class="flex justify-end 2xl:justify-center">
                 <a target="__blank"
                     href="https://api.whatsapp.com/send?phone=51989583467&text=%C2%A1Hola!%20Vengo%20de%20la%20web%20de%20Kuntur%20Spirit.%20Quisiera%20saber%20m%C3%A1s%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20crear%20mi%20aventura%20perfecta%20con%20sus%20tours%20en%20Per%C3%BA."
@@ -179,7 +179,7 @@ get_header();
 <!-- SECCION DE TOURS CUSCO -->
 <section>
     <div class="container flex flex-col gap-5 md:pr-[100px] md:pl-[100px]">
-        <h1>Descubre Cusco: experiencias únicas que no puedes perderte</h1>
+        <h2>Descubre Cusco: experiencias únicas que no puedes perderte</h2>
         <p>
             Descubre la magia del corazón de los Andes. Cusco, antigua capital del Imperio Inca, es un lugar donde la
             historia milenaria, la cultura viva y los paisajes impresionantes se entrelazan para ofrecerte una
@@ -223,7 +223,7 @@ get_header();
                                 </div>
                             </div>
                             <div class="flex flex-col gap-1.5">
-                                <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
+                                <h2 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h2>
                                 <p class="text-center"><?= esc_html($descripcion); ?></p>
                             </div>
                         </div>
@@ -262,7 +262,7 @@ get_header();
         <!-- Carrusel de trekking con Swiper -->
         <div class="container">
             <div class="flex flex-col gap-5">
-                <h1>Lo Mejor de Cusco en un Día</h1>
+                <h2>Lo Mejor de Cusco en un Día</h2>
                 <p class="text-center">Cada día en Cusco es una nueva oportunidad de asombro. Recorre paisajes andinos,
                     lagunas turquesa, montañas multicolores y pueblos llenos de tradición. Diseñamos estas experiencias
                     para viajeros que desean aprovechar al máximo su tiempo y regresar con recuerdos que durarán toda la
@@ -297,7 +297,7 @@ get_header();
                                     </div>
                                 </div>
                                 <div class="flex flex-col gap-1.5">
-                                    <h1 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h1>
+                                    <h2 class="text-2xl font-bold text-primary my-0"><?php echo esc_html($titulo); ?></h2>
                                     <p class="text-center"><?php echo esc_html($descripcion); ?></p>
                                 </div>
                                 <div class="w-full py-2.5 px-5 items-center">
@@ -327,13 +327,9 @@ get_header();
     <section>
         <div class="container flex flex-col gap-10">
             <div class="flex flex-col gap-5">
-                <h1>Lo que dicen nuestros clientes</h1>
+                <h2>Historias de viajeros que confiaron en nosotros</h2>
                 <p class="text-center">
-                    Estamos orgullosos de cuidar cada detalle de nuestros servicios para nuestros clientes, la
-                    satisfacción
-                    plena de nuestros viajeros es nuestra mejor recompensa y son ellos nuestros mejores defensores y
-                    quienes
-                    con frecuencia, nos recomiendan a familiares o amigos cuando planifican un viaje a nuestra región.
+                    Explorar los mejores tours en Perú es mucho más que visitar destinos: es vivir experiencias que dejan huella. Nuestros viajeros lo confirman con sus palabras, compartiendo cómo cada recorrido superó sus expectativas y les permitió descubrir el país de una forma auténtica.
                 </p>
             </div>
             <?php echo do_shortcode($comentarios) ?>

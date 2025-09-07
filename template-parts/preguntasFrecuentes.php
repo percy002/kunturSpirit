@@ -1,6 +1,7 @@
 <section>
     <div class="container">
-        <h1 class="">Preguntas frecuentes</h1>
+        <h2 class="">Preguntas frecuentes sobre nuestros tours Perú</h2>
+        <p class="text-center">Antes de lanzarte a la aventura, es normal que tengas preguntas sobre cómo funcionan los recorridos, qué incluyen o cuál es la mejor época para viajar. Aquí respondemos algunas de las inquietudes más comunes para que puedas planificar con mayor claridad.</p>
         <div class="flex flex-col gap-2.5">
             <details class="border rounded-lg bg-white px-2.5 md:px-12 py-3">
                 <summary class="cursor-pointer text-xl text-secondary select-none flex gap-2.5 justify-between items-center">

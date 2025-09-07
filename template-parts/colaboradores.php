@@ -36,7 +36,8 @@
 <section>
     <div class="container flex flex-col gap-10">
         <div class="flex flex-col gap-5">
-            <h1>Travel Associations & Certifications</h1>
+            <h2>Nuestros aliados en el camino</h2>
+            <p class="text-center">Contar con aliados estratégicos es clave para brindar confianza y respaldo en cada una de nuestras experiencias. Todos los tours estan verficados por instituciones y marcas que garantizan la calidad, la seguridad y la autenticidad de nuestros tours en Perú.</p>
         </div>
         <!-- logos enpresas -->
         <?php

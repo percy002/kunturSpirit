@@ -54,7 +54,7 @@
 
             <!-- CONTÁCTENOS -->
             <section class="flex flex-col p-0 justify-start py-5 gap-2.5 min-w-[200px]">
-                <h1 class="text-white m-0 text-2xl md:text-start font-normal">Contáctenos</h1>
+                <h2 class="text-white m-0 text-2xl md:text-start font-normal">Contáctenos</h2>
                 <ul class="flex flex-col gap-5 text-base">
                     <li class="flex items-center gap-2.5">
                         <i class="fa-solid fa-mobile-screen-button"></i>
@@ -81,9 +81,9 @@
 
             <!-- GENERAL -->
             <section class="flex flex-col p-0 justify-start py-5 gap-2.5 min-w-[200px]">
-                <h1 class="text-white m-0 text-2xl md:text-start font-normal">
+                <h2 class="text-white m-0 text-2xl md:text-start font-normal">
                     <?php esc_html_e('General', 'tailpress'); ?>
-                </h1>
+                </h2>
 
                 <?php
                 $menu_locations = get_nav_menu_locations();
@@ -129,7 +129,7 @@
                         alt="libro de reclamaciones">
                 </a>
                 <span>Libro de reclamaciones</span>
-                <h1 class="text-white m-0 text-2xl md:text-start font-normal">Aceptamos:</h1>
+                <h2 class="text-white m-0 text-2xl md:text-start font-normal">Aceptamos:</h2>
                 <div class="">
                     <img class="w-36 bg-white"
                         src='<?php echo get_template_directory_uri(); ?>/assets/images/cardskuntur.png'

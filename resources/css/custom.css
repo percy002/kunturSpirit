@@ -137,7 +137,7 @@ article {
   box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-h1 {
+h1,h2 {
   font-size: 32px;
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
   line-height: var(--text-5xl--line-height);
@@ -149,10 +149,21 @@ h1 {
   text-align: center;
   color: #41180D;
 }
-
+h3{
+  font-size: 30px;
+}
+h4{
+  font-size: 25px;
+}
+h5{
+  font-size: 20px;
+}
 @media(min-width: 768px) {
   h1 {
-    font-size: 50px;
+    font-size: 40px;
+  }
+  h2{
+    font-size: 35px;
   }
 }
 
